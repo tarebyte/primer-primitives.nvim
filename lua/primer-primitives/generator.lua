@@ -34,7 +34,17 @@ local function serialize(value, indent)
       end
       return '{ ' .. table.concat(parts, ', ') .. ' }'
     else
-      for k, v in pairs(value) do
+      -- Sort keys for deterministic output
+      local sorted_keys = {}
+      for k in pairs(value) do
+        table.insert(sorted_keys, k)
+      end
+      table.sort(sorted_keys, function(a, b)
+        return tostring(a) < tostring(b)
+      end)
+
+      for _, k in ipairs(sorted_keys) do
+        local v = value[k]
         local key
         if type(k) == 'string' and k:match('^[%a_][%w_]*$') then
           key = k
