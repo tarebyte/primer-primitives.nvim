@@ -215,7 +215,3 @@ nvim -l scripts/generate.lua
 
 - [Primer Primitives](https://github.com/primer/primitives) — The design system that powers this theme
 - [GitHub VS Code Theme](https://github.com/primer/github-vscode-theme) — The reference implementation
-
-## 📄 License
-
-MIT
