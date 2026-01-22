@@ -1101,6 +1101,114 @@ function M.build(p)
   groups.TreesitterContextBottom = { underline = true, sp = p.border.default }
   groups.TreesitterContextSeparator = { fg = p.border.default }
 
+  -- ============================================================
+  -- mini.nvim
+  -- ============================================================
+
+  -- mini.files
+  groups.MiniFilesBorder = { link = 'FloatBorder' }
+  groups.MiniFilesBorderModified = { fg = p.attention.fg, bg = p.canvas.overlay }
+  groups.MiniFilesCursorLine = { link = 'CursorLine' }
+  groups.MiniFilesDirectory = { fg = p.accent.fg }
+  groups.MiniFilesFile = { fg = p.fg.default }
+  groups.MiniFilesNormal = { link = 'NormalFloat' }
+  groups.MiniFilesTitle = { link = 'FloatTitle' }
+  groups.MiniFilesTitleFocused = { fg = p.accent.fg, bg = p.canvas.overlay, bold = true }
+
+  -- mini.pick
+  groups.MiniPickBorder = { link = 'FloatBorder' }
+  groups.MiniPickBorderBusy = { fg = p.attention.fg, bg = p.canvas.overlay }
+  groups.MiniPickBorderText = { fg = p.fg.muted, bg = p.canvas.overlay }
+  groups.MiniPickCursor = { link = 'Cursor' }
+  groups.MiniPickIconDirectory = { fg = p.accent.fg }
+  groups.MiniPickIconFile = { fg = p.fg.default }
+  groups.MiniPickHeader = { fg = p.accent.fg, bold = true }
+  groups.MiniPickMatchCurrent = { bg = p.accent.muted, blend = blend }
+  groups.MiniPickMatchMarked = { fg = p.success.fg, bg = p.success.muted }
+  groups.MiniPickMatchRanges = { fg = p.accent.fg, bold = true }
+  groups.MiniPickNormal = { link = 'NormalFloat' }
+  groups.MiniPickPreviewLine = { link = 'CursorLine' }
+  groups.MiniPickPreviewRegion = { link = 'Visual' }
+  groups.MiniPickPrompt = { fg = p.accent.fg, bg = p.canvas.overlay }
+  groups.MiniPickPromptCaret = { fg = p.accent.fg }
+  groups.MiniPickPromptPrefix = { fg = p.accent.fg }
+
+  -- mini.hipatterns
+  groups.MiniHipatternsFixme = { fg = p.fg.on_emphasis, bg = p.danger.emphasis, bold = true }
+  groups.MiniHipatternsHack = { fg = p.canvas.default, bg = p.attention.emphasis, bold = true }
+  groups.MiniHipatternsTodo = { fg = p.fg.on_emphasis, bg = p.accent.emphasis, bold = true }
+  groups.MiniHipatternsNote = { fg = p.fg.on_emphasis, bg = p.success.emphasis, bold = true }
+
+  -- mini.statusline
+  groups.MiniStatuslineModeNormal = { fg = p.fg.on_emphasis, bg = p.accent.emphasis, bold = true }
+  groups.MiniStatuslineModeInsert = { fg = p.fg.on_emphasis, bg = p.success.emphasis, bold = true }
+  groups.MiniStatuslineModeVisual = { fg = p.fg.on_emphasis, bg = p.done.emphasis, bold = true }
+  groups.MiniStatuslineModeReplace = { fg = p.fg.on_emphasis, bg = p.danger.emphasis, bold = true }
+  groups.MiniStatuslineModeCommand = { fg = p.canvas.default, bg = p.attention.emphasis, bold = true }
+  groups.MiniStatuslineModeOther = { fg = p.fg.default, bg = p.canvas.subtle, bold = true }
+  groups.MiniStatuslineDevinfo = { fg = p.fg.default, bg = p.canvas.subtle }
+  groups.MiniStatuslineFilename = { fg = p.fg.muted, bg = p.canvas.inset }
+  groups.MiniStatuslineFileinfo = { fg = p.fg.default, bg = p.canvas.subtle }
+  groups.MiniStatuslineInactive = { fg = p.fg.subtle, bg = p.canvas.inset }
+
+  -- mini.notify
+  groups.MiniNotifyBorder = { link = 'FloatBorder' }
+  groups.MiniNotifyNormal = { link = 'NormalFloat' }
+  groups.MiniNotifyTitle = { link = 'FloatTitle' }
+
+  -- mini.diff
+  groups.MiniDiffSignAdd = { fg = p.success.fg }
+  groups.MiniDiffSignChange = { fg = p.attention.fg }
+  groups.MiniDiffSignDelete = { fg = p.danger.fg }
+  groups.MiniDiffOverAdd = { bg = p.success.muted }
+  groups.MiniDiffOverChange = { bg = p.attention.muted }
+  groups.MiniDiffOverChangeBuf = { bg = p.attention.muted }
+  groups.MiniDiffOverContext = { bg = p.canvas.subtle }
+  groups.MiniDiffOverContextBuf = { bg = p.canvas.subtle }
+  groups.MiniDiffOverDelete = { bg = p.danger.muted }
+
+  -- mini.indentscope
+  groups.MiniIndentscopeSymbol = { fg = p.border.default }
+  groups.MiniIndentscopeSymbolOff = { fg = p.border.muted }
+
+  -- mini.jump
+  groups.MiniJump = { fg = p.fg.on_emphasis, bg = p.accent.emphasis }
+
+  -- mini.clue
+  groups.MiniClueBorder = { link = 'FloatBorder' }
+  groups.MiniClueDescGroup = { fg = p.done.fg }
+  groups.MiniClueDescSingle = { fg = p.fg.default }
+  groups.MiniClueNextKey = { fg = p.accent.fg }
+  groups.MiniClueNextKeyWithPostkeys = { fg = p.attention.fg }
+  groups.MiniClueSeparator = { fg = p.border.muted }
+  groups.MiniClueTitle = { link = 'FloatTitle' }
+
+  -- mini.tabline
+  groups.MiniTablineCurrent = { fg = p.fg.default, bg = p.canvas.default, bold = true }
+  groups.MiniTablineVisible = { fg = p.fg.muted, bg = p.canvas.subtle }
+  groups.MiniTablineHidden = { fg = p.fg.muted, bg = p.canvas.inset }
+  groups.MiniTablineModifiedCurrent = { fg = p.attention.fg, bg = p.canvas.default, bold = true }
+  groups.MiniTablineModifiedVisible = { fg = p.attention.fg, bg = p.canvas.subtle }
+  groups.MiniTablineModifiedHidden = { fg = p.attention.fg, bg = p.canvas.inset }
+  groups.MiniTablineFill = { bg = p.canvas.inset }
+  groups.MiniTablineTabpagesection = { fg = p.fg.on_emphasis, bg = p.accent.emphasis, bold = true }
+  groups.MiniTablineTrunc = { fg = p.fg.muted, bg = p.canvas.inset }
+
+  -- mini.starter
+  groups.MiniStarterCurrent = { bold = true }
+  groups.MiniStarterFooter = { fg = p.fg.muted, italic = true }
+  groups.MiniStarterHeader = { fg = p.accent.fg }
+  groups.MiniStarterInactive = { fg = p.fg.subtle }
+  groups.MiniStarterItem = { fg = p.fg.default }
+  groups.MiniStarterItemBullet = { fg = p.border.default }
+  groups.MiniStarterItemPrefix = { fg = p.attention.fg }
+  groups.MiniStarterSection = { fg = p.accent.fg, bold = true }
+  groups.MiniStarterQuery = { fg = p.accent.fg, bold = true }
+
+  -- mini.cursorword
+  groups.MiniCursorword = { underline = true }
+  groups.MiniCursorwordCurrent = { underline = true }
+
   return groups
 end
 

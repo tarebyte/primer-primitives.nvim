@@ -754,6 +754,205 @@ vim.api.nvim_set_hl(0, 'MatchParen', {
   blend = 85,
   bold = true
 })
+vim.api.nvim_set_hl(0, 'MiniClueBorder', { link = "FloatBorder" })
+vim.api.nvim_set_hl(0, 'MiniClueDescGroup', { fg = "#986ee2" })
+vim.api.nvim_set_hl(0, 'MiniClueDescSingle', { fg = "#d1d7e0" })
+vim.api.nvim_set_hl(0, 'MiniClueNextKey', { fg = "#478be6" })
+vim.api.nvim_set_hl(0, 'MiniClueNextKeyWithPostkeys', { fg = "#c69026" })
+vim.api.nvim_set_hl(0, 'MiniClueSeparator', { fg = "#353c44" })
+vim.api.nvim_set_hl(0, 'MiniClueTitle', { link = "FloatTitle" })
+vim.api.nvim_set_hl(0, 'MiniCursorword', { underline = true })
+vim.api.nvim_set_hl(0, 'MiniCursorwordCurrent', { underline = true })
+vim.api.nvim_set_hl(0, 'MiniDiffOverAdd', { bg = "#273834" })
+vim.api.nvim_set_hl(0, 'MiniDiffOverChange', { bg = "#36352c" })
+vim.api.nvim_set_hl(0, 'MiniDiffOverChangeBuf', { bg = "#36352c" })
+vim.api.nvim_set_hl(0, 'MiniDiffOverContext', { bg = "#262c36" })
+vim.api.nvim_set_hl(0, 'MiniDiffOverContextBuf', { bg = "#262c36" })
+vim.api.nvim_set_hl(0, 'MiniDiffOverDelete', { bg = "#352c33" })
+vim.api.nvim_set_hl(0, 'MiniDiffSignAdd', { fg = "#57ab5a" })
+vim.api.nvim_set_hl(0, 'MiniDiffSignChange', { fg = "#c69026" })
+vim.api.nvim_set_hl(0, 'MiniDiffSignDelete', { fg = "#e5534b" })
+vim.api.nvim_set_hl(0, 'MiniFilesBorder', { link = "FloatBorder" })
+vim.api.nvim_set_hl(0, 'MiniFilesBorderModified', {
+  bg = "#2a313c",
+  fg = "#c69026"
+})
+vim.api.nvim_set_hl(0, 'MiniFilesCursorLine', { link = "CursorLine" })
+vim.api.nvim_set_hl(0, 'MiniFilesDirectory', { fg = "#478be6" })
+vim.api.nvim_set_hl(0, 'MiniFilesFile', { fg = "#d1d7e0" })
+vim.api.nvim_set_hl(0, 'MiniFilesNormal', { link = "NormalFloat" })
+vim.api.nvim_set_hl(0, 'MiniFilesTitle', { link = "FloatTitle" })
+vim.api.nvim_set_hl(0, 'MiniFilesTitleFocused', {
+  bg = "#2a313c",
+  bold = true,
+  fg = "#478be6"
+})
+vim.api.nvim_set_hl(0, 'MiniHipatternsFixme', {
+  bg = "#c93c37",
+  bold = true,
+  fg = "#f0f6fc"
+})
+vim.api.nvim_set_hl(0, 'MiniHipatternsHack', {
+  bg = "#966600",
+  bold = true,
+  fg = "#212830"
+})
+vim.api.nvim_set_hl(0, 'MiniHipatternsNote', {
+  bg = "#347d39",
+  bold = true,
+  fg = "#f0f6fc"
+})
+vim.api.nvim_set_hl(0, 'MiniHipatternsTodo', {
+  bg = "#316dca",
+  bold = true,
+  fg = "#f0f6fc"
+})
+vim.api.nvim_set_hl(0, 'MiniIndentscopeSymbol', { fg = "#3d444d" })
+vim.api.nvim_set_hl(0, 'MiniIndentscopeSymbolOff', { fg = "#353c44" })
+vim.api.nvim_set_hl(0, 'MiniJump', {
+  bg = "#316dca",
+  fg = "#f0f6fc"
+})
+vim.api.nvim_set_hl(0, 'MiniNotifyBorder', { link = "FloatBorder" })
+vim.api.nvim_set_hl(0, 'MiniNotifyNormal', { link = "NormalFloat" })
+vim.api.nvim_set_hl(0, 'MiniNotifyTitle', { link = "FloatTitle" })
+vim.api.nvim_set_hl(0, 'MiniPickBorder', { link = "FloatBorder" })
+vim.api.nvim_set_hl(0, 'MiniPickBorderBusy', {
+  bg = "#2a313c",
+  fg = "#c69026"
+})
+vim.api.nvim_set_hl(0, 'MiniPickBorderText', {
+  bg = "#2a313c",
+  fg = "#9198a1"
+})
+vim.api.nvim_set_hl(0, 'MiniPickCursor', { link = "Cursor" })
+vim.api.nvim_set_hl(0, 'MiniPickHeader', {
+  bold = true,
+  fg = "#478be6"
+})
+vim.api.nvim_set_hl(0, 'MiniPickIconDirectory', { fg = "#478be6" })
+vim.api.nvim_set_hl(0, 'MiniPickIconFile', { fg = "#d1d7e0" })
+vim.api.nvim_set_hl(0, 'MiniPickMatchCurrent', {
+  bg = "#243142",
+  blend = 85
+})
+vim.api.nvim_set_hl(0, 'MiniPickMatchMarked', {
+  bg = "#273834",
+  fg = "#57ab5a"
+})
+vim.api.nvim_set_hl(0, 'MiniPickMatchRanges', {
+  bold = true,
+  fg = "#478be6"
+})
+vim.api.nvim_set_hl(0, 'MiniPickNormal', { link = "NormalFloat" })
+vim.api.nvim_set_hl(0, 'MiniPickPreviewLine', { link = "CursorLine" })
+vim.api.nvim_set_hl(0, 'MiniPickPreviewRegion', { link = "Visual" })
+vim.api.nvim_set_hl(0, 'MiniPickPrompt', {
+  bg = "#2a313c",
+  fg = "#478be6"
+})
+vim.api.nvim_set_hl(0, 'MiniPickPromptCaret', { fg = "#478be6" })
+vim.api.nvim_set_hl(0, 'MiniPickPromptPrefix', { fg = "#478be6" })
+vim.api.nvim_set_hl(0, 'MiniStarterCurrent', { bold = true })
+vim.api.nvim_set_hl(0, 'MiniStarterFooter', {
+  fg = "#9198a1",
+  italic = true
+})
+vim.api.nvim_set_hl(0, 'MiniStarterHeader', { fg = "#478be6" })
+vim.api.nvim_set_hl(0, 'MiniStarterInactive', { fg = "#9198a1" })
+vim.api.nvim_set_hl(0, 'MiniStarterItem', { fg = "#d1d7e0" })
+vim.api.nvim_set_hl(0, 'MiniStarterItemBullet', { fg = "#3d444d" })
+vim.api.nvim_set_hl(0, 'MiniStarterItemPrefix', { fg = "#c69026" })
+vim.api.nvim_set_hl(0, 'MiniStarterQuery', {
+  bold = true,
+  fg = "#478be6"
+})
+vim.api.nvim_set_hl(0, 'MiniStarterSection', {
+  bold = true,
+  fg = "#478be6"
+})
+vim.api.nvim_set_hl(0, 'MiniStatuslineDevinfo', {
+  bg = "#262c36",
+  fg = "#d1d7e0"
+})
+vim.api.nvim_set_hl(0, 'MiniStatuslineFileinfo', {
+  bg = "#262c36",
+  fg = "#d1d7e0"
+})
+vim.api.nvim_set_hl(0, 'MiniStatuslineFilename', {
+  bg = "#151b23",
+  fg = "#9198a1"
+})
+vim.api.nvim_set_hl(0, 'MiniStatuslineInactive', {
+  bg = "#151b23",
+  fg = "#9198a1"
+})
+vim.api.nvim_set_hl(0, 'MiniStatuslineModeCommand', {
+  bg = "#966600",
+  bold = true,
+  fg = "#212830"
+})
+vim.api.nvim_set_hl(0, 'MiniStatuslineModeInsert', {
+  bg = "#347d39",
+  bold = true,
+  fg = "#f0f6fc"
+})
+vim.api.nvim_set_hl(0, 'MiniStatuslineModeNormal', {
+  bg = "#316dca",
+  bold = true,
+  fg = "#f0f6fc"
+})
+vim.api.nvim_set_hl(0, 'MiniStatuslineModeOther', {
+  bg = "#262c36",
+  bold = true,
+  fg = "#d1d7e0"
+})
+vim.api.nvim_set_hl(0, 'MiniStatuslineModeReplace', {
+  bg = "#c93c37",
+  bold = true,
+  fg = "#f0f6fc"
+})
+vim.api.nvim_set_hl(0, 'MiniStatuslineModeVisual', {
+  bg = "#8256d0",
+  bold = true,
+  fg = "#f0f6fc"
+})
+vim.api.nvim_set_hl(0, 'MiniTablineCurrent', {
+  bg = "#212830",
+  bold = true,
+  fg = "#d1d7e0"
+})
+vim.api.nvim_set_hl(0, 'MiniTablineFill', { bg = "#151b23" })
+vim.api.nvim_set_hl(0, 'MiniTablineHidden', {
+  bg = "#151b23",
+  fg = "#9198a1"
+})
+vim.api.nvim_set_hl(0, 'MiniTablineModifiedCurrent', {
+  bg = "#212830",
+  bold = true,
+  fg = "#c69026"
+})
+vim.api.nvim_set_hl(0, 'MiniTablineModifiedHidden', {
+  bg = "#151b23",
+  fg = "#c69026"
+})
+vim.api.nvim_set_hl(0, 'MiniTablineModifiedVisible', {
+  bg = "#262c36",
+  fg = "#c69026"
+})
+vim.api.nvim_set_hl(0, 'MiniTablineTabpagesection', {
+  bg = "#316dca",
+  bold = true,
+  fg = "#f0f6fc"
+})
+vim.api.nvim_set_hl(0, 'MiniTablineTrunc', {
+  bg = "#151b23",
+  fg = "#9198a1"
+})
+vim.api.nvim_set_hl(0, 'MiniTablineVisible', {
+  bg = "#262c36",
+  fg = "#9198a1"
+})
 vim.api.nvim_set_hl(0, 'ModeMsg', {
   bold = true,
   fg = "#d1d7e0"
