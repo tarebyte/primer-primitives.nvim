@@ -14,15 +14,53 @@ primer-primitives.nvim/
 │   ├── primer_dark_dimmed.lua
 │   └── primer_dark_high_contrast.lua
 ├── lua/primer-primitives/
-│   ├── palettes/                        # Color definitions for each variant
+│   ├── palettes/                        # Auto-generated color definitions
 │   │   ├── dark.lua
 │   │   ├── light.lua
 │   │   ├── dark_dimmed.lua
 │   │   └── dark_high_contrast.lua
 │   ├── highlights.lua                   # Highlight group definitions
 │   └── generator.lua                    # Generates colors/*.lua files
-└── scripts/
-    └── generate.lua                     # CLI entry point for generation
+├── scripts/
+│   ├── extract-primitives.mjs           # Extracts colors from @primer/primitives
+│   └── generate.lua                     # CLI entry point for Lua generation
+├── package.json                         # npm scripts and dependencies
+└── node_modules/@primer/primitives/     # Source of truth for colors
+```
+
+## Build Workflow
+
+The colorscheme is generated in two steps:
+
+1. **Extract** - Node.js script reads from `@primer/primitives` npm package and generates Lua palette files
+2. **Generate** - Neovim Lua script combines palettes with highlight definitions to create standalone colorscheme files
+
+### Full build (extract + generate)
+
+```bash
+npm run build
+```
+
+### Extract palettes from @primer/primitives
+
+```bash
+npm run extract
+```
+
+This reads the JSON token files from `node_modules/@primer/primitives/dist/docs/functional/themes/` and generates the Lua palette files in `lua/primer-primitives/palettes/`.
+
+### Generate colorscheme files
+
+```bash
+npm run generate
+# or
+nvim -l scripts/generate.lua
+```
+
+### Update to latest @primer/primitives
+
+```bash
+npm update @primer/primitives && npm run build
 ```
 
 ## Key Concepts
@@ -69,10 +107,18 @@ Produces standalone Lua files that:
 
 ### Regenerate colorscheme files
 
-After modifying palettes or highlights:
+After modifying highlights:
 
 ```bash
+npm run generate
+# or
 nvim -l scripts/generate.lua
+```
+
+### Update colors from upstream
+
+```bash
+npm update @primer/primitives && npm run build
 ```
 
 ### Add a new highlight group
@@ -91,9 +137,8 @@ Then regenerate.
 
 ### Add a new color to palettes
 
-1. Add the color to ALL palette files in `lua/primer-primitives/palettes/`
-2. Use the color in `highlights.lua`
-3. Regenerate
+1. Edit `scripts/extract-primitives.mjs` to add the new token mapping
+2. Run `npm run build` to regenerate everything
 
 ### Test colorscheme loading
 
@@ -109,12 +154,31 @@ nvim -c "colorscheme primer_dark" -c "highlight Normal"
 
 ## Color Sources
 
-Colors come from GitHub's Primer Primitives:
-- https://primer.style/primitives
-- https://github.com/primer/primitives
+Colors are sourced directly from the `@primer/primitives` npm package:
+- Package: https://www.npmjs.com/package/@primer/primitives
+- Repository: https://github.com/primer/primitives
+- Design system: https://primer.style/primitives
 
 Reference the VS Code theme for comparison:
 - https://github.com/primer/github-vscode-theme
+
+### Token Mappings
+
+The extraction script maps primer/primitives tokens to our palette structure:
+
+| Our Token | Primer Primitives Token |
+|-----------|-------------------------|
+| `fg.default` | `fgColor-default` |
+| `fg.muted` | `fgColor-muted` |
+| `canvas.default` | `bgColor-default` |
+| `canvas.inset` | `bgColor-inset` |
+| `accent.fg` | `fgColor-accent` |
+| `accent.emphasis` | `bgColor-accent-emphasis` |
+| `accent.muted` | `bgColor-accent-muted` (blended) |
+| `syntax.comment` | `codeMirror-syntax-fgColor-comment` |
+| `ansi.*` | `color-ansi-*` |
+
+Alpha colors (8-digit hex) are blended with the background to produce opaque 6-digit hex values.
 
 ## Supported Plugins
 

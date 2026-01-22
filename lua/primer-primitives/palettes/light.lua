@@ -1,5 +1,6 @@
--- Primer Light palette from Primer Primitives
--- https://primer.style/primitives
+-- Primer Light palette
+-- Auto-generated from @primer/primitives
+-- https://github.com/primer/primitives
 
 return {
   name = 'primer_light',
@@ -10,7 +11,7 @@ return {
   fg = {
     default = '#1f2328',
     muted = '#59636e',
-    subtle = '#6e7781',
+    subtle = '#59636e',
     on_emphasis = '#ffffff',
   },
 
@@ -25,14 +26,14 @@ return {
   -- Border
   border = {
     default = '#d1d9e0',
-    muted = '#d1d9e0',
+    muted = '#dfe4e9',
   },
 
   -- Accent
   accent = {
     fg = '#0969da',
     emphasis = '#0969da',
-    muted = '#54aeff',
+    muted = '#ddf4ff',
   },
 
   -- Semantic: Danger
@@ -85,26 +86,27 @@ return {
     string = '#0a3069',
     variable = '#953800',
     func = '#6639ba',
-    tag = '#116329',
+    tag = '#0550ae',
   },
 
   -- ANSI colors
   ansi = {
-    black = '#24292f',
+    black = '#1f2328',
     red = '#cf222e',
     green = '#116329',
     yellow = '#4d2d00',
     blue = '#0969da',
     magenta = '#8250df',
     cyan = '#1b7c83',
-    white = '#6e7781',
-    bright_black = '#57606a',
+    white = '#59636e',
+    bright_black = '#393f46',
     bright_red = '#a40e26',
     bright_green = '#1a7f37',
     bright_yellow = '#633c01',
     bright_blue = '#218bff',
     bright_magenta = '#a475f9',
     bright_cyan = '#3192aa',
-    bright_white = '#8c959f',
+    bright_white = '#818b98',
   },
 }
+

@@ -1,0 +1,33 @@
+{
+  "name": "primer-primitives.nvim",
+  "version": "1.0.0",
+  "description": "A Neovim colorscheme based on GitHub's Primer Primitives design system.",
+  "type": "module",
+  "scripts": {
+    "extract": "node scripts/extract-primitives.mjs",
+    "generate": "nvim -l scripts/generate.lua",
+    "build": "npm run extract && npm run generate",
+    "test": "node --test scripts/*.test.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tarebyte/primer-primitives.nvim.git"
+  },
+  "keywords": [
+    "neovim",
+    "colorscheme",
+    "primer",
+    "github"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tarebyte/primer-primitives.nvim/issues"
+  },
+  "homepage": "https://github.com/tarebyte/primer-primitives.nvim#readme",
+  "devDependencies": {
+    "@primer/primitives": "^11.3.2",
+    "color": "^5.0.3",
+    "ejs": "^4.0.1"
+  }
+}
