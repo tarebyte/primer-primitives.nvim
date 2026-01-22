@@ -26,13 +26,13 @@ local p = {
   -- Border
   border = {
     default = "#d1d9e0",
-    muted = "#d1d9e080",
+    muted = "#d1d9e0",
   },
   -- Accent
   accent = {
     fg = "#0969da",
     emphasis = "#0969da",
-    muted = "#54aeff66",
+    muted = "#54aeff",
   },
   -- Semantic: Danger
   danger = {
