@@ -176,7 +176,7 @@ export async function main() {
 /**
  * Simple Lua palette parser (extracts hex colors from our palette format)
  */
-function parseLuaPalette(content, config) {
+export function parseLuaPalette(content, config) {
   const palette = {
     name: config.name,
     background: config.background,
@@ -195,18 +195,35 @@ function parseLuaPalette(content, config) {
     ansi: {},
   };
 
-  // Extract all hex color assignments
-  const hexPattern = /(\w+(?:\.\w+)?)\s*=\s*'(#[0-9a-fA-F]{6})'/g;
-  let match;
+  // Track current parent context when parsing nested tables
+  let currentParent = null;
 
-  while ((match = hexPattern.exec(content)) !== null) {
-    const [, path, value] = match;
-    const parts = path.split('.');
+  // Process line by line to track table nesting
+  const lines = content.split('\n');
+  for (const line of lines) {
+    // Check for table opening: parent = {
+    const tableMatch = line.match(/^\s*(\w+)\s*=\s*\{/);
+    if (tableMatch) {
+      const tableName = tableMatch[1];
+      if (palette[tableName] !== undefined) {
+        currentParent = tableName;
+      }
+      continue;
+    }
 
-    if (parts.length === 1 && palette[parts[0]] !== undefined) {
-      palette[parts[0]] = value;
-    } else if (parts.length === 2 && palette[parts[0]]) {
-      palette[parts[0]][parts[1]] = value;
+    // Check for table closing
+    if (line.match(/^\s*\}/)) {
+      currentParent = null;
+      continue;
+    }
+
+    // Extract hex color assignments
+    const hexMatch = line.match(/^\s*(\w+)\s*=\s*'(#[0-9a-fA-F]{6})'/);
+    if (hexMatch) {
+      const [, key, value] = hexMatch;
+      if (currentParent && palette[currentParent]) {
+        palette[currentParent][key] = value;
+      }
     }
   }
 

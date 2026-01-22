@@ -1,6 +1,6 @@
 {
   "name": "primer-primitives.nvim",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Neovim colorscheme based on GitHub's Primer Primitives design system.",
   "type": "module",
   "scripts": {

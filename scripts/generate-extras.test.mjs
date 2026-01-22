@@ -11,6 +11,7 @@ import {
   generateGhostty,
   generateIterm,
   generateTmux,
+  parseLuaPalette,
 } from './generate-extras.mjs';
 import { THEMES } from './extract-primitives.mjs';
 
@@ -305,5 +306,208 @@ describe('Extras file generation', () => {
       const matches = content.match(hexPattern);
       assert.ok(matches && matches.length > 0, `${config.name} should have hex colors`);
     }
+  });
+});
+
+describe('Lua palette parser', () => {
+  const sampleLuaContent = `-- Primer Dark palette
+-- Auto-generated from @primer/primitives
+-- https://github.com/primer/primitives
+
+return {
+  name = 'primer_dark',
+  background = 'dark',
+  blend = 85,
+
+  -- Foreground
+  fg = {
+    default = '#f0f6fc',
+    muted = '#9198a1',
+    subtle = '#9198a1',
+    on_emphasis = '#ffffff',
+  },
+
+  -- Canvas (backgrounds)
+  canvas = {
+    default = '#0d1117',
+    inset = '#010409',
+    subtle = '#151b23',
+    overlay = '#010409',
+  },
+
+  -- Border
+  border = {
+    default = '#3d444d',
+    muted = '#2f353d',
+  },
+
+  -- Accent
+  accent = {
+    fg = '#4493f8',
+    emphasis = '#1f6feb',
+    muted = '#111d2e',
+  },
+
+  -- Semantic: Danger
+  danger = {
+    fg = '#f85149',
+    emphasis = '#da3633',
+    muted = '#25181c',
+  },
+
+  -- Semantic: Success
+  success = {
+    fg = '#3fb950',
+    emphasis = '#238636',
+    muted = '#12261e',
+  },
+
+  -- Semantic: Attention/Warning
+  attention = {
+    fg = '#d29922',
+    emphasis = '#9e6a03',
+    muted = '#272215',
+  },
+
+  -- Semantic: Severe
+  severe = {
+    fg = '#db6d28',
+    emphasis = '#bd561d',
+    muted = '#221a19',
+  },
+
+  -- Semantic: Done
+  done = {
+    fg = '#ab7df8',
+    emphasis = '#8957e5',
+    muted = '#252139',
+  },
+
+  -- Color scales
+  scale = {
+    black = '#010409',
+    white = '#ffffff',
+  },
+
+  -- Syntax highlighting
+  syntax = {
+    comment = '#9198a1',
+    constant = '#79c0ff',
+    entity = '#d2a8ff',
+    keyword = '#ff7b72',
+    string = '#a5d6ff',
+    variable = '#ffa657',
+    func = '#d2a8ff',
+    tag = '#7ee787',
+  },
+
+  -- ANSI colors
+  ansi = {
+    black = '#2f3742',
+    red = '#ff7b72',
+    green = '#3fb950',
+    yellow = '#d29922',
+    blue = '#58a6ff',
+    magenta = '#be8fff',
+    cyan = '#39c5cf',
+    white = '#f0f6fc',
+    bright_black = '#656c76',
+    bright_red = '#ffa198',
+    bright_green = '#56d364',
+    bright_yellow = '#e3b341',
+    bright_blue = '#79c0ff',
+    bright_magenta = '#d2a8ff',
+    bright_cyan = '#56d4dd',
+    bright_white = '#ffffff',
+  },
+}
+`;
+
+  const config = {
+    name: 'primer_dark',
+    background: 'dark',
+    blend: 85,
+  };
+
+  it('parses nested Lua table structures correctly', () => {
+    const palette = parseLuaPalette(sampleLuaContent, config);
+
+    // Verify nested fg colors are parsed
+    assert.strictEqual(palette.fg.default, '#f0f6fc');
+    assert.strictEqual(palette.fg.muted, '#9198a1');
+    assert.strictEqual(palette.fg.on_emphasis, '#ffffff');
+  });
+
+  it('parses all ANSI colors', () => {
+    const palette = parseLuaPalette(sampleLuaContent, config);
+
+    // Verify all 16 ANSI colors are present
+    assert.strictEqual(palette.ansi.black, '#2f3742');
+    assert.strictEqual(palette.ansi.red, '#ff7b72');
+    assert.strictEqual(palette.ansi.green, '#3fb950');
+    assert.strictEqual(palette.ansi.yellow, '#d29922');
+    assert.strictEqual(palette.ansi.blue, '#58a6ff');
+    assert.strictEqual(palette.ansi.magenta, '#be8fff');
+    assert.strictEqual(palette.ansi.cyan, '#39c5cf');
+    assert.strictEqual(palette.ansi.white, '#f0f6fc');
+    assert.strictEqual(palette.ansi.bright_black, '#656c76');
+    assert.strictEqual(palette.ansi.bright_red, '#ffa198');
+    assert.strictEqual(palette.ansi.bright_green, '#56d364');
+    assert.strictEqual(palette.ansi.bright_yellow, '#e3b341');
+    assert.strictEqual(palette.ansi.bright_blue, '#79c0ff');
+    assert.strictEqual(palette.ansi.bright_magenta, '#d2a8ff');
+    assert.strictEqual(palette.ansi.bright_cyan, '#56d4dd');
+    assert.strictEqual(palette.ansi.bright_white, '#ffffff');
+  });
+
+  it('parses canvas background colors', () => {
+    const palette = parseLuaPalette(sampleLuaContent, config);
+
+    assert.strictEqual(palette.canvas.default, '#0d1117');
+    assert.strictEqual(palette.canvas.inset, '#010409');
+    assert.strictEqual(palette.canvas.subtle, '#151b23');
+    assert.strictEqual(palette.canvas.overlay, '#010409');
+  });
+
+  it('parses syntax highlighting colors', () => {
+    const palette = parseLuaPalette(sampleLuaContent, config);
+
+    assert.strictEqual(palette.syntax.comment, '#9198a1');
+    assert.strictEqual(palette.syntax.constant, '#79c0ff');
+    assert.strictEqual(palette.syntax.keyword, '#ff7b72');
+    assert.strictEqual(palette.syntax.string, '#a5d6ff');
+  });
+
+  it('parses semantic colors (accent, danger, success)', () => {
+    const palette = parseLuaPalette(sampleLuaContent, config);
+
+    assert.strictEqual(palette.accent.fg, '#4493f8');
+    assert.strictEqual(palette.accent.emphasis, '#1f6feb');
+    assert.strictEqual(palette.accent.muted, '#111d2e');
+
+    assert.strictEqual(palette.danger.fg, '#f85149');
+    assert.strictEqual(palette.success.fg, '#3fb950');
+    assert.strictEqual(palette.attention.fg, '#d29922');
+  });
+
+  it('preserves config values in output', () => {
+    const palette = parseLuaPalette(sampleLuaContent, config);
+
+    assert.strictEqual(palette.name, 'primer_dark');
+    assert.strictEqual(palette.background, 'dark');
+    assert.strictEqual(palette.blend, 85);
+  });
+
+  it('handles actual palette files from disk', () => {
+    // Test with real palette file to ensure no regression
+    const palettePath = join(PROJECT_ROOT, 'lua/primer-primitives/palettes/dark.lua');
+    const content = readFileSync(palettePath, 'utf-8');
+    const palette = parseLuaPalette(content, config);
+
+    // These should all be defined (not empty objects)
+    assert.ok(Object.keys(palette.fg).length > 0, 'fg should have colors');
+    assert.ok(Object.keys(palette.canvas).length > 0, 'canvas should have colors');
+    assert.ok(Object.keys(palette.ansi).length >= 16, 'ansi should have 16 colors');
+    assert.ok(Object.keys(palette.syntax).length > 0, 'syntax should have colors');
   });
 });
