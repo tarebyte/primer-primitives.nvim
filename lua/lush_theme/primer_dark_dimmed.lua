@@ -124,6 +124,7 @@ local theme = lush(function(injected_functions)
     NormalNC        { fg = p.fg.default, bg = p.canvas.default },
     FloatBorder     { fg = p.border.default, bg = p.canvas.overlay },
     FloatTitle      { fg = p.fg.default, bg = p.canvas.overlay, gui = "bold" },
+    FloatFooter     { fg = p.fg.muted, bg = p.canvas.overlay },
 
     Cursor          { fg = p.canvas.default, bg = p.fg.default },
     lCursor         { Cursor },
@@ -132,7 +133,11 @@ local theme = lush(function(injected_functions)
     TermCursorNC    { fg = p.canvas.default, bg = p.fg.muted },
 
     LineNr          { fg = p.fg.subtle },
+    LineNrAbove     { fg = p.fg.subtle },
+    LineNrBelow     { fg = p.fg.subtle },
     CursorLineNr    { fg = p.fg.default, gui = "bold" },
+    CursorLineFold  { fg = p.fg.subtle },
+    CursorLineSign  { bg = p.canvas.subtle },
     SignColumn      { fg = p.fg.subtle, bg = p.canvas.default },
     FoldColumn      { fg = p.fg.subtle, bg = p.canvas.default },
 
@@ -160,11 +165,21 @@ local theme = lush(function(injected_functions)
 
     Pmenu           { fg = p.fg.default, bg = p.canvas.overlay },
     PmenuSel        { fg = p.fg.default, bg = p.accent.muted },
+    PmenuKind       { fg = p.fg.muted, bg = p.canvas.overlay },
+    PmenuKindSel    { fg = p.fg.muted, bg = p.accent.muted },
+    PmenuExtra      { fg = p.fg.subtle, bg = p.canvas.overlay },
+    PmenuExtraSel   { fg = p.fg.subtle, bg = p.accent.muted },
     PmenuSbar       { bg = p.canvas.subtle },
     PmenuThumb      { bg = p.border.default },
+    PmenuMatch      { fg = p.accent.fg, bg = p.canvas.overlay, gui = "bold" },
+    PmenuMatchSel   { fg = p.accent.fg, bg = p.accent.muted, gui = "bold" },
+
+    ComplMatchIns   { fg = p.accent.fg },
 
     StatusLine      { fg = p.fg.muted, bg = p.canvas.inset },
     StatusLineNC    { fg = p.fg.subtle, bg = p.canvas.inset },
+    StatusLineTerm  { fg = p.fg.muted, bg = p.canvas.inset },
+    StatusLineTermNC { fg = p.fg.subtle, bg = p.canvas.inset },
 
     TabLine         { fg = p.fg.muted, bg = p.canvas.inset },
     TabLineFill     { bg = p.canvas.inset },
@@ -172,6 +187,8 @@ local theme = lush(function(injected_functions)
 
     WinSeparator    { fg = p.border.default },
     VertSplit       { WinSeparator },
+    WinBar          { fg = p.fg.default, bg = p.canvas.default, gui = "bold" },
+    WinBarNC        { fg = p.fg.muted, bg = p.canvas.default },
 
     Folded          { fg = p.fg.muted, bg = p.canvas.subtle },
 
@@ -192,6 +209,8 @@ local theme = lush(function(injected_functions)
     Title           { fg = p.accent.fg, gui = "bold" },
     Whitespace      { fg = p.fg.subtle },
     WildMenu        { PmenuSel },
+    QuickFixLine    { bg = p.accent.muted },
+    SnippetTabstop  { bg = p.canvas.subtle },
 
     -- ============================================================
     -- Syntax Highlighting
@@ -240,10 +259,140 @@ local theme = lush(function(injected_functions)
     Error           { fg = p.danger.fg },
     Todo            { fg = p.attention.fg, gui = "bold" },
 
+    Added           { fg = p.success.fg },
+    Changed         { fg = p.attention.fg },
+    Removed         { fg = p.danger.fg },
+
     -- ============================================================
     -- Treesitter
     -- ============================================================
 
+    -- Identifiers
+    sym"@variable"                { fg = p.fg.default },
+    sym"@variable.builtin"        { fg = p.syntax.constant },
+    sym"@variable.parameter"      { fg = p.fg.default },
+    sym"@variable.member"         { fg = p.syntax.variable },
+
+    -- Constants
+    sym"@constant"                { Constant },
+    sym"@constant.builtin"        { fg = p.syntax.constant },
+    sym"@constant.macro"          { Macro },
+
+    -- Modules/Namespaces
+    sym"@module"                  { fg = p.syntax.variable },
+    sym"@module.builtin"          { fg = p.syntax.constant },
+    sym"@label"                   { Label },
+
+    -- Strings
+    sym"@string"                  { String },
+    sym"@string.documentation"    { String },
+    sym"@string.escape"           { fg = p.syntax.constant },
+    sym"@string.regexp"           { fg = p.syntax.string },
+    sym"@string.special"          { fg = p.syntax.constant },
+    sym"@string.special.symbol"   { fg = p.syntax.constant },
+    sym"@string.special.path"     { fg = p.accent.fg },
+    sym"@string.special.url"      { fg = p.accent.fg, gui = "underline" },
+
+    -- Characters
+    sym"@character"               { Character },
+    sym"@character.special"       { SpecialChar },
+
+    -- Booleans/Numbers
+    sym"@boolean"                 { Boolean },
+    sym"@number"                  { Number },
+    sym"@number.float"            { Float },
+
+    -- Types
+    sym"@type"                    { Type },
+    sym"@type.builtin"            { fg = p.syntax.constant },
+    sym"@type.definition"         { Type },
+    sym"@type.qualifier"          { Keyword },
+
+    -- Attributes/Properties
+    sym"@attribute"               { fg = p.syntax.entity },
+    sym"@attribute.builtin"       { fg = p.syntax.entity },
+    sym"@property"                { fg = p.syntax.variable },
+
+    -- Functions
+    sym"@function"                { Function },
+    sym"@function.builtin"        { fg = p.syntax.func },
+    sym"@function.call"           { Function },
+    sym"@function.macro"          { Macro },
+    sym"@function.method"         { Function },
+    sym"@function.method.call"    { Function },
+
+    -- Constructors
+    sym"@constructor"             { fg = p.syntax.entity },
+
+    -- Operators
+    sym"@operator"                { Operator },
+
+    -- Keywords
+    sym"@keyword"                 { Keyword },
+    sym"@keyword.conditional"     { Conditional },
+    sym"@keyword.conditional.ternary" { Operator },
+    sym"@keyword.coroutine"       { Keyword },
+    sym"@keyword.debug"           { Debug },
+    sym"@keyword.directive"       { PreProc },
+    sym"@keyword.directive.define" { Define },
+    sym"@keyword.exception"       { Exception },
+    sym"@keyword.function"        { Keyword },
+    sym"@keyword.import"          { Include },
+    sym"@keyword.modifier"        { Keyword },
+    sym"@keyword.operator"        { Keyword },
+    sym"@keyword.repeat"          { Repeat },
+    sym"@keyword.return"          { Keyword },
+    sym"@keyword.type"            { Keyword },
+
+    -- Punctuation
+    sym"@punctuation"             { fg = p.fg.default },
+    sym"@punctuation.bracket"     { fg = p.fg.default },
+    sym"@punctuation.delimiter"   { fg = p.fg.default },
+    sym"@punctuation.special"     { fg = p.syntax.keyword },
+
+    -- Comments
+    sym"@comment"                 { Comment },
+    sym"@comment.documentation"   { Comment },
+    sym"@comment.error"           { fg = p.danger.fg, gui = "bold" },
+    sym"@comment.warning"         { fg = p.attention.fg, gui = "bold" },
+    sym"@comment.todo"            { Todo },
+    sym"@comment.note"            { fg = p.accent.fg, gui = "bold" },
+
+    -- Markup
+    sym"@markup.strong"           { gui = "bold" },
+    sym"@markup.italic"           { gui = "italic" },
+    sym"@markup.strikethrough"    { gui = "strikethrough" },
+    sym"@markup.underline"        { gui = "underline" },
+    sym"@markup.heading"          { Title },
+    sym"@markup.heading.1"        { fg = p.accent.fg, gui = "bold" },
+    sym"@markup.heading.2"        { fg = p.accent.fg, gui = "bold" },
+    sym"@markup.heading.3"        { fg = p.accent.fg, gui = "bold" },
+    sym"@markup.heading.4"        { fg = p.accent.fg, gui = "bold" },
+    sym"@markup.heading.5"        { fg = p.accent.fg, gui = "bold" },
+    sym"@markup.heading.6"        { fg = p.accent.fg, gui = "bold" },
+    sym"@markup.quote"            { fg = p.fg.muted, gui = "italic" },
+    sym"@markup.math"             { fg = p.syntax.constant },
+    sym"@markup.link"             { fg = p.accent.fg },
+    sym"@markup.link.label"       { fg = p.accent.fg },
+    sym"@markup.link.url"         { fg = p.accent.fg, gui = "underline" },
+    sym"@markup.raw"              { fg = p.syntax.string },
+    sym"@markup.raw.block"        { fg = p.syntax.string },
+    sym"@markup.list"             { fg = p.fg.default },
+    sym"@markup.list.checked"     { fg = p.success.fg },
+    sym"@markup.list.unchecked"   { fg = p.fg.muted },
+
+    -- Diff
+    sym"@diff.plus"               { fg = p.success.fg },
+    sym"@diff.minus"              { fg = p.danger.fg },
+    sym"@diff.delta"              { fg = p.attention.fg },
+
+    -- Tags (HTML/XML)
+    sym"@tag"                     { Tag },
+    sym"@tag.attribute"           { fg = p.syntax.variable },
+    sym"@tag.builtin"             { Tag },
+    sym"@tag.delimiter"           { fg = p.fg.default },
+
+    -- Legacy Treesitter captures (for compatibility)
     sym"@text"                    { fg = p.fg.default },
     sym"@text.literal"            { String },
     sym"@text.reference"          { fg = p.accent.fg },
@@ -251,72 +400,23 @@ local theme = lush(function(injected_functions)
     sym"@text.uri"                { fg = p.accent.fg, gui = "underline" },
     sym"@text.underline"          { gui = "underline" },
     sym"@text.todo"               { Todo },
-
-    sym"@comment"                 { Comment },
-    sym"@punctuation"             { fg = p.fg.default },
-    sym"@punctuation.bracket"     { fg = p.fg.default },
-    sym"@punctuation.delimiter"   { fg = p.fg.default },
-    sym"@punctuation.special"     { fg = p.syntax.keyword },
-
-    sym"@constant"                { Constant },
-    sym"@constant.builtin"        { fg = p.syntax.constant },
-    sym"@constant.macro"          { Macro },
-
     sym"@define"                  { Define },
     sym"@macro"                   { Macro },
-
-    sym"@string"                  { String },
-    sym"@string.escape"           { fg = p.syntax.constant },
-    sym"@string.special"          { fg = p.syntax.constant },
     sym"@string.regex"            { fg = p.syntax.string },
-
-    sym"@character"               { Character },
-    sym"@character.special"       { SpecialChar },
-    sym"@number"                  { Number },
-    sym"@boolean"                 { Boolean },
     sym"@float"                   { Float },
-
-    sym"@function"                { Function },
-    sym"@function.builtin"        { fg = p.syntax.func },
-    sym"@function.macro"          { Macro },
-    sym"@function.call"           { Function },
-
     sym"@parameter"               { fg = p.fg.default },
     sym"@method"                  { Function },
     sym"@method.call"             { Function },
     sym"@field"                   { fg = p.syntax.variable },
-    sym"@property"                { fg = p.syntax.variable },
-
-    sym"@constructor"             { fg = p.syntax.entity },
     sym"@conditional"             { Conditional },
     sym"@repeat"                  { Repeat },
-    sym"@label"                   { Label },
-    sym"@operator"                { Operator },
-    sym"@keyword"                 { Keyword },
-    sym"@keyword.function"        { Keyword },
-    sym"@keyword.operator"        { Keyword },
-    sym"@keyword.return"          { Keyword },
     sym"@exception"               { Exception },
-
-    sym"@variable"                { fg = p.fg.default },
-    sym"@variable.builtin"        { fg = p.syntax.constant },
-    sym"@type"                    { Type },
-    sym"@type.builtin"            { fg = p.syntax.constant },
-    sym"@type.qualifier"          { Keyword },
-    sym"@type.definition"         { Type },
-
     sym"@storageclass"            { StorageClass },
     sym"@structure"               { Structure },
     sym"@namespace"               { fg = p.syntax.variable },
     sym"@include"                 { Include },
     sym"@preproc"                 { PreProc },
-
     sym"@debug"                   { Debug },
-    sym"@tag"                     { Tag },
-    sym"@tag.attribute"           { fg = p.syntax.variable },
-    sym"@tag.delimiter"           { fg = p.fg.default },
-
-    sym"@attribute"               { fg = p.syntax.entity },
     sym"@error"                   { Error },
     sym"@warning"                 { fg = p.attention.fg },
     sym"@info"                    { fg = p.accent.fg },
@@ -326,20 +426,56 @@ local theme = lush(function(injected_functions)
     -- LSP Semantic Tokens
     -- ============================================================
 
+    -- Types
     sym"@lsp.type.class"          { fg = p.syntax.entity },
+    sym"@lsp.type.comment"        { Comment },
     sym"@lsp.type.decorator"      { fg = p.syntax.entity },
     sym"@lsp.type.enum"           { fg = p.syntax.entity },
     sym"@lsp.type.enumMember"     { fg = p.syntax.constant },
+    sym"@lsp.type.event"          { fg = p.syntax.entity },
     sym"@lsp.type.function"       { Function },
     sym"@lsp.type.interface"      { fg = p.syntax.entity },
     sym"@lsp.type.keyword"        { Keyword },
+    sym"@lsp.type.macro"          { Macro },
     sym"@lsp.type.method"         { Function },
+    sym"@lsp.type.modifier"       { Keyword },
     sym"@lsp.type.namespace"      { fg = p.syntax.variable },
+    sym"@lsp.type.number"         { Number },
+    sym"@lsp.type.operator"       { Operator },
     sym"@lsp.type.parameter"      { fg = p.fg.default },
     sym"@lsp.type.property"       { fg = p.syntax.variable },
+    sym"@lsp.type.regexp"         { fg = p.syntax.string },
+    sym"@lsp.type.string"         { String },
     sym"@lsp.type.struct"         { fg = p.syntax.entity },
     sym"@lsp.type.type"           { Type },
+    sym"@lsp.type.typeParameter"  { fg = p.syntax.variable },
     sym"@lsp.type.variable"       { fg = p.fg.default },
+
+    -- Modifiers
+    sym"@lsp.mod.abstract"        { gui = "italic" },
+    sym"@lsp.mod.async"           { gui = "bold" },
+    sym"@lsp.mod.declaration"     { },
+    sym"@lsp.mod.defaultLibrary"  { fg = p.syntax.constant },
+    sym"@lsp.mod.definition"      { },
+    sym"@lsp.mod.deprecated"      { gui = "strikethrough" },
+    sym"@lsp.mod.documentation"   { },
+    sym"@lsp.mod.modification"    { },
+    sym"@lsp.mod.readonly"        { },
+    sym"@lsp.mod.static"          { gui = "bold" },
+
+    -- ============================================================
+    -- LSP Highlights
+    -- ============================================================
+
+    LspReferenceText            { bg = p.accent.muted },
+    LspReferenceRead            { bg = p.accent.muted },
+    LspReferenceWrite           { bg = p.attention.muted },
+    LspReferenceTarget          { bg = p.accent.muted },
+
+    LspCodeLens                 { fg = p.fg.subtle },
+    LspCodeLensSeparator        { fg = p.fg.subtle },
+    LspSignatureActiveParameter { fg = p.accent.fg, gui = "bold,underline" },
+    LspInlayHint                { fg = p.fg.subtle, bg = p.canvas.subtle },
 
     -- ============================================================
     -- Diagnostics
@@ -355,21 +491,28 @@ local theme = lush(function(injected_functions)
     DiagnosticVirtualTextWarn   { fg = p.attention.fg, bg = p.attention.muted },
     DiagnosticVirtualTextInfo   { fg = p.accent.fg, bg = p.accent.muted },
     DiagnosticVirtualTextHint   { fg = p.success.fg, bg = p.success.muted },
+    DiagnosticVirtualTextOk     { fg = p.success.fg, bg = p.success.muted },
 
     DiagnosticUnderlineError    { sp = p.danger.fg, gui = "undercurl" },
     DiagnosticUnderlineWarn     { sp = p.attention.fg, gui = "undercurl" },
     DiagnosticUnderlineInfo     { sp = p.accent.fg, gui = "undercurl" },
     DiagnosticUnderlineHint     { sp = p.success.fg, gui = "undercurl" },
+    DiagnosticUnderlineOk       { sp = p.success.fg, gui = "undercurl" },
 
     DiagnosticFloatingError     { fg = p.danger.fg },
     DiagnosticFloatingWarn      { fg = p.attention.fg },
     DiagnosticFloatingInfo      { fg = p.accent.fg },
     DiagnosticFloatingHint      { fg = p.success.fg },
+    DiagnosticFloatingOk        { fg = p.success.fg },
 
     DiagnosticSignError         { fg = p.danger.fg },
     DiagnosticSignWarn          { fg = p.attention.fg },
     DiagnosticSignInfo          { fg = p.accent.fg },
     DiagnosticSignHint          { fg = p.success.fg },
+    DiagnosticSignOk            { fg = p.success.fg },
+
+    DiagnosticDeprecated        { gui = "strikethrough", sp = p.fg.subtle },
+    DiagnosticUnnecessary       { fg = p.fg.subtle },
 
     -- ============================================================
     -- Git Signs
