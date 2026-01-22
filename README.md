@@ -76,15 +76,22 @@ primer-primitives.nvim/
 │   ├── primer_dark_dimmed.lua
 │   ├── primer_dark_high_contrast.lua
 │   └── primer_light.lua
-├── lua/primer-primitives/
-│   ├── palettes/                        # Color palettes for each variant
-│   │   ├── dark.lua
-│   │   ├── dark_dimmed.lua
-│   │   ├── dark_high_contrast.lua
-│   │   └── light.lua
-│   ├── highlights.lua                   # Shared highlight definitions
-│   └── generator.lua                    # Theme generator
+├── lua/
+│   ├── primer-primitives/
+│   │   ├── palettes/                    # Color palettes for each variant
+│   │   │   ├── dark.lua
+│   │   │   ├── dark_dimmed.lua
+│   │   │   ├── dark_high_contrast.lua
+│   │   │   └── light.lua
+│   │   ├── highlights.lua               # Shared highlight definitions
+│   │   └── generator.lua                # Theme generator
+│   └── lualine/themes/                  # Built-in lualine themes
+│       ├── primer_dark.lua
+│       ├── primer_light.lua
+│       ├── primer_dark_dimmed.lua
+│       └── primer_dark_high_contrast.lua
 └── scripts/
+    ├── extract-primitives.mjs           # Extracts colors from @primer/primitives
     └── generate.lua                     # CLI to regenerate themes
 ```
 
@@ -95,12 +102,25 @@ primer-primitives.nvim/
 - [Diagnostics](https://neovim.io/doc/user/diagnostic.html)
 - [GitSigns](https://github.com/lewis6991/gitsigns.nvim)
 - [Telescope](https://github.com/nvim-telescope/telescope.nvim)
+- [fzf-lua](https://github.com/ibhagwan/fzf-lua)
 - [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
+- [blink.cmp](https://github.com/Saghen/blink.cmp)
 - [nvim-tree](https://github.com/nvim-tree/nvim-tree.lua)
 - [Neo-tree](https://github.com/nvim-neo-tree/neo-tree.nvim)
 - [Lazy.nvim](https://github.com/folke/lazy.nvim)
 - [Which-key](https://github.com/folke/which-key.nvim)
 - [Indent Blankline](https://github.com/lukas-reineke/indent-blankline.nvim)
+- [Lualine](https://github.com/nvim-lualine/lualine.nvim) (built-in themes)
+- [noice.nvim](https://github.com/folke/noice.nvim)
+- [snacks.nvim](https://github.com/folke/snacks.nvim)
+- [aerial.nvim](https://github.com/stevearc/aerial.nvim)
+- [nvim-navic](https://github.com/SmiteshP/nvim-navic)
+- [flash.nvim](https://github.com/folke/flash.nvim)
+- [nvim-treesitter-context](https://github.com/nvim-treesitter/nvim-treesitter-context)
+- [mason.nvim](https://github.com/williamboman/mason.nvim)
+- [trouble.nvim](https://github.com/folke/trouble.nvim)
+- [todo-comments.nvim](https://github.com/folke/todo-comments.nvim)
+- [grug-far.nvim](https://github.com/MagicDuck/grug-far.nvim)
 
 ## Extending the Theme
 
@@ -128,38 +148,17 @@ vim.api.nvim_create_autocmd('ColorScheme', {
 
 ## Lualine Integration
 
-You can create a matching lualine theme by extracting colors:
+This colorscheme includes built-in lualine themes that match each variant. Simply set the theme to match your colorscheme:
 
 ```lua
--- Example lualine theme using primer colors
-local colors = {
-  bg = '#0d1117',
-  fg = '#f0f6fc',
-  accent = '#4493f8',
-  muted = '#9198a1',
-}
-
 require("lualine").setup({
   options = {
-    theme = {
-      normal = {
-        a = { fg = colors.bg, bg = colors.accent, gui = "bold" },
-        b = { fg = colors.fg, bg = colors.bg },
-        c = { fg = colors.muted, bg = colors.bg },
-      },
-      insert = {
-        a = { fg = colors.bg, bg = '#3fb950', gui = 'bold' },
-      },
-      visual = {
-        a = { fg = colors.bg, bg = '#a371f7', gui = 'bold' },
-      },
-      command = {
-        a = { fg = colors.bg, bg = '#d29922', gui = 'bold' },
-      },
-    },
+    theme = "primer_dark",  -- or primer_light, primer_dark_dimmed, primer_dark_high_contrast
   },
 })
 ```
+
+The lualine theme will be automatically detected if you set `theme = "auto"` after loading the colorscheme.
 
 ## Development
 

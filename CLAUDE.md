@@ -13,17 +13,26 @@ primer-primitives.nvim/
 │   ├── primer_light.lua
 │   ├── primer_dark_dimmed.lua
 │   └── primer_dark_high_contrast.lua
-├── lua/primer-primitives/
-│   ├── palettes/                        # Auto-generated color definitions
-│   │   ├── dark.lua
-│   │   ├── light.lua
-│   │   ├── dark_dimmed.lua
-│   │   └── dark_high_contrast.lua
-│   ├── highlights.lua                   # Highlight group definitions
-│   └── generator.lua                    # Generates colors/*.lua files
+├── lua/
+│   ├── primer-primitives/
+│   │   ├── palettes/                    # Auto-generated color definitions
+│   │   │   ├── dark.lua
+│   │   │   ├── light.lua
+│   │   │   ├── dark_dimmed.lua
+│   │   │   └── dark_high_contrast.lua
+│   │   ├── highlights.lua               # Highlight group definitions
+│   │   └── generator.lua                # Generates colors/*.lua files
+│   └── lualine/themes/                  # Built-in lualine themes
+│       ├── primer_dark.lua
+│       ├── primer_light.lua
+│       ├── primer_dark_dimmed.lua
+│       └── primer_dark_high_contrast.lua
 ├── scripts/
 │   ├── extract-primitives.mjs           # Extracts colors from @primer/primitives
-│   └── generate.lua                     # CLI entry point for Lua generation
+│   ├── extract-primitives.test.mjs      # Tests for extraction script
+│   ├── generate.lua                     # CLI entry point for Lua generation
+│   └── templates/
+│       └── palette.lua.ejs              # Template for palette generation
 ├── package.json                         # npm scripts and dependencies
 └── node_modules/@primer/primitives/     # Source of truth for colors
 ```
@@ -73,10 +82,11 @@ Each palette file exports a table with:
 - `blend` - Transparency level for selection highlights (60-85)
 - `fg` - Foreground colors (`default`, `muted`, `subtle`, `on_emphasis`)
 - `canvas` - Background colors (`default`, `inset`, `subtle`, `overlay`)
-- `border` - Border colors
-- `accent`, `danger`, `success`, `attention`, `severe`, `done` - Semantic colors
-- `syntax` - Syntax highlighting colors
+- `border` - Border colors (`default`, `muted`)
+- `accent`, `danger`, `success`, `attention`, `severe`, `done` - Semantic colors (`fg`, `emphasis`, `muted`)
+- `syntax` - Syntax highlighting colors (`comment`, `constant`, `entity`, `keyword`, `string`, `variable`, `func`, `tag`)
 - `ansi` - Terminal colors (16 ANSI colors)
+- `scale` - Base scale colors (`black`, `white`)
 
 ### Highlights (`lua/primer-primitives/highlights.lua`)
 
@@ -183,17 +193,47 @@ Alpha colors (8-digit hex) are blended with the background to produce opaque 6-d
 ## Supported Plugins
 
 The theme includes highlight groups for:
+
+### Core
 - Treesitter (all `@` captures)
 - LSP semantic tokens (`@lsp.type.*`, `@lsp.mod.*`)
 - Diagnostics
+
+### Git
 - GitSigns
-- Telescope
+
+### Completion
 - nvim-cmp
+- blink.cmp
+
+### Fuzzy Finders
+- Telescope
+- fzf-lua
+
+### File Explorers
 - nvim-tree
 - Neo-tree
+
+### UI
 - Lazy.nvim
 - Which-key
 - Indent Blankline
+- Lualine (built-in themes)
+- noice.nvim
+- snacks.nvim
+
+### Navigation & Context
+- aerial.nvim
+- nvim-navic
+- flash.nvim
+- nvim-treesitter-context
+
+### Utilities
+- mason.nvim
+- trouble.nvim
+- todo-comments.nvim
+- grug-far.nvim
+- sidekick.nvim
 
 ## GUI Attributes Reference
 
