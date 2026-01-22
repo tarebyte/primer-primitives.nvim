@@ -11,6 +11,7 @@ import { dirname, join } from 'path';
 import { fileURLToPath } from 'url';
 import Color from 'color';
 import ejs from 'ejs';
+import { generateExtras } from './generate-extras.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const PROJECT_ROOT = join(__dirname, '..');
@@ -280,6 +281,12 @@ export function main() {
 
       writeFileSync(outputPath, lua + '\n');
       console.log(`  ✓ Generated: ${outputPath}`);
+
+      // Generate extras (Ghostty, iTerm2, tmux)
+      const extrasResults = generateExtras(palette);
+      for (const result of extrasResults) {
+        console.log(`  ✓ Generated: ${result.path}`);
+      }
     } catch (error) {
       console.error(`  ✗ Error processing ${themeName}:`, error.message);
     }

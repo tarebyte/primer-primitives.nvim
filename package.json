@@ -6,6 +6,7 @@
   "scripts": {
     "extract": "node scripts/extract-primitives.mjs",
     "generate": "nvim -l scripts/generate.lua",
+    "extras": "node scripts/generate-extras.mjs",
     "build": "npm run extract && npm run generate",
     "test": "node --test scripts/*.test.mjs"
   },

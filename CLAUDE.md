@@ -13,6 +13,10 @@ primer-primitives.nvim/
 │   ├── primer_light.lua
 │   ├── primer_dark_dimmed.lua
 │   └── primer_dark_high_contrast.lua
+├── extras/                              # Generated terminal emulator themes
+│   ├── ghostty/                         # Ghostty themes (no extension)
+│   ├── iterm/                           # iTerm2 themes (.itermcolors)
+│   └── tmux/                            # tmux themes (.tmux)
 ├── lua/
 │   ├── primer-primitives/
 │   │   ├── palettes/                    # Auto-generated color definitions
@@ -30,9 +34,14 @@ primer-primitives.nvim/
 ├── scripts/
 │   ├── extract-primitives.mjs           # Extracts colors from @primer/primitives
 │   ├── extract-primitives.test.mjs      # Tests for extraction script
+│   ├── generate-extras.mjs              # Generates terminal emulator themes
+│   ├── generate-extras.test.mjs         # Tests for extras generation
 │   ├── generate.lua                     # CLI entry point for Lua generation
 │   └── templates/
-│       └── palette.lua.ejs              # Template for palette generation
+│       ├── palette.lua.ejs              # Template for palette generation
+│       ├── ghostty.ejs                  # Template for Ghostty themes
+│       ├── iterm.itermcolors.ejs        # Template for iTerm2 themes
+│       └── tmux.tmux.ejs                # Template for tmux themes
 ├── package.json                         # npm scripts and dependencies
 └── node_modules/@primer/primitives/     # Source of truth for colors
 ```
@@ -41,7 +50,7 @@ primer-primitives.nvim/
 
 The colorscheme is generated in two steps:
 
-1. **Extract** - Node.js script reads from `@primer/primitives` npm package and generates Lua palette files
+1. **Extract** - Node.js script reads from `@primer/primitives` npm package and generates Lua palette files and terminal extras (Ghostty, iTerm2, tmux)
 2. **Generate** - Neovim Lua script combines palettes with highlight definitions to create standalone colorscheme files
 
 ### Full build (extract + generate)
@@ -56,7 +65,9 @@ npm run build
 npm run extract
 ```
 
-This reads the JSON token files from `node_modules/@primer/primitives/dist/docs/functional/themes/` and generates the Lua palette files in `lua/primer-primitives/palettes/`.
+This reads the JSON token files from `node_modules/@primer/primitives/dist/docs/functional/themes/` and generates:
+- Lua palette files in `lua/primer-primitives/palettes/`
+- Terminal emulator themes in `extras/`
 
 ### Generate colorscheme files
 
@@ -64,6 +75,12 @@ This reads the JSON token files from `node_modules/@primer/primitives/dist/docs/
 npm run generate
 # or
 nvim -l scripts/generate.lua
+```
+
+### Regenerate extras only
+
+```bash
+npm run extras
 ```
 
 ### Update to latest @primer/primitives
@@ -248,3 +265,39 @@ Available attributes for highlight groups:
 - `strikethrough` - Boolean
 - `blend` - Integer 0-100 for transparency
 - `link` - String name of group to link to
+
+## Terminal Extras
+
+The build process generates theme files for terminal emulators in the `extras/` directory.
+
+### Ghostty
+
+Copy the theme file to your Ghostty themes directory:
+
+```bash
+cp extras/ghostty/primer_dark ~/.config/ghostty/themes/
+```
+
+Then add to your Ghostty config:
+
+```
+theme = primer_dark
+```
+
+### iTerm2
+
+1. Open iTerm2 Preferences (Cmd+,)
+2. Go to Profiles > Colors
+3. Click "Color Presets..." dropdown
+4. Select "Import..." and choose `extras/iterm/primer_dark.itermcolors`
+5. Select "primer_dark" from the presets
+
+### tmux
+
+Source the theme in your tmux.conf:
+
+```bash
+source-file /path/to/extras/tmux/primer_dark.tmux
+```
+
+Or copy the settings directly into your tmux.conf.
