@@ -145,7 +145,7 @@ local theme = lush(function(injected_functions)
     CursorColumn    { CursorLine },
     ColorColumn     { bg = p.canvas.subtle },
 
-    Visual          { bg = p.accent.muted },
+    Visual          { bg = p.accent.muted, blend = 60 },
     VisualNOS       { Visual },
 
     Search          { fg = p.scale.black, bg = p.attention.emphasis },
@@ -164,15 +164,15 @@ local theme = lush(function(injected_functions)
     SpellRare       { sp = p.done.fg, gui = "undercurl" },
 
     Pmenu           { fg = p.fg.default, bg = p.canvas.overlay },
-    PmenuSel        { fg = p.fg.default, bg = p.accent.muted },
+    PmenuSel        { fg = p.fg.default, bg = p.accent.muted, blend = 60 },
     PmenuKind       { fg = p.fg.muted, bg = p.canvas.overlay },
-    PmenuKindSel    { fg = p.fg.muted, bg = p.accent.muted },
+    PmenuKindSel    { fg = p.fg.muted, bg = p.accent.muted, blend = 60 },
     PmenuExtra      { fg = p.fg.subtle, bg = p.canvas.overlay },
-    PmenuExtraSel   { fg = p.fg.subtle, bg = p.accent.muted },
+    PmenuExtraSel   { fg = p.fg.subtle, bg = p.accent.muted, blend = 60 },
     PmenuSbar       { bg = p.canvas.subtle },
     PmenuThumb      { bg = p.border.default },
     PmenuMatch      { fg = p.accent.fg, bg = p.canvas.overlay, gui = "bold" },
-    PmenuMatchSel   { fg = p.accent.fg, bg = p.accent.muted, gui = "bold" },
+    PmenuMatchSel   { fg = p.accent.fg, bg = p.accent.muted, gui = "bold", blend = 60 },
 
     ComplMatchIns   { fg = p.accent.fg },
 
@@ -203,13 +203,13 @@ local theme = lush(function(injected_functions)
     Conceal         { fg = p.fg.subtle },
     Directory       { fg = p.accent.fg },
     EndOfBuffer     { fg = p.fg.subtle },
-    MatchParen      { bg = p.accent.muted, gui = "bold" },
+    MatchParen      { bg = p.accent.muted, gui = "bold", blend = 60 },
     NonText         { fg = p.fg.subtle },
     SpecialKey      { fg = p.fg.subtle },
     Title           { fg = p.accent.fg, gui = "bold" },
     Whitespace      { fg = p.fg.subtle },
     WildMenu        { PmenuSel },
-    QuickFixLine    { bg = p.accent.muted },
+    QuickFixLine    { bg = p.accent.muted, blend = 60 },
     SnippetTabstop  { bg = p.canvas.subtle },
 
     -- ============================================================
@@ -467,10 +467,10 @@ local theme = lush(function(injected_functions)
     -- LSP Highlights
     -- ============================================================
 
-    LspReferenceText            { bg = p.accent.muted },
-    LspReferenceRead            { bg = p.accent.muted },
+    LspReferenceText            { bg = p.accent.muted, blend = 60 },
+    LspReferenceRead            { bg = p.accent.muted, blend = 60 },
     LspReferenceWrite           { bg = p.attention.muted },
-    LspReferenceTarget          { bg = p.accent.muted },
+    LspReferenceTarget          { bg = p.accent.muted, blend = 60 },
 
     LspCodeLens                 { fg = p.fg.subtle },
     LspCodeLensSeparator        { fg = p.fg.subtle },
@@ -489,7 +489,7 @@ local theme = lush(function(injected_functions)
 
     DiagnosticVirtualTextError  { fg = p.danger.fg, bg = p.danger.muted },
     DiagnosticVirtualTextWarn   { fg = p.attention.fg, bg = p.attention.muted },
-    DiagnosticVirtualTextInfo   { fg = p.accent.fg, bg = p.accent.muted },
+    DiagnosticVirtualTextInfo   { fg = p.accent.fg, bg = p.accent.muted, blend = 60 },
     DiagnosticVirtualTextHint   { fg = p.success.fg, bg = p.success.muted },
     DiagnosticVirtualTextOk     { fg = p.success.fg, bg = p.success.muted },
 
@@ -547,7 +547,7 @@ local theme = lush(function(injected_functions)
     TelescopePreviewTitle       { fg = p.fg.default, bg = p.canvas.overlay },
     TelescopeSelection          { PmenuSel },
     TelescopeSelectionCaret     { fg = p.accent.fg },
-    TelescopeMultiSelection     { fg = p.fg.default, bg = p.accent.muted },
+    TelescopeMultiSelection     { fg = p.fg.default, bg = p.accent.muted, blend = 60 },
     TelescopeMatching           { fg = p.accent.fg, gui = "bold" },
 
     -- ============================================================
