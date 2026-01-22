@@ -9,7 +9,7 @@ If you've ever wished your terminal felt a little more like home (a.k.a. GitHub)
 - 🌗 **4 beautiful variants** — Dark, Light, Dark Dimmed, and Dark High Contrast
 - 🔌 **Zero runtime dependencies** — Generated standalone colorscheme files load instantly
 - 🎯 **Accurate colors** — Extracted directly from `@primer/primitives`
-- 🧩 **Extensive plugin support** — 25+ popular plugins styled out of the box
+- 🧩 **Extensive plugin support** — 35+ popular plugins styled out of the box
 - 🖥️ **Terminal extras** — Matching themes for Ghostty, iTerm2, and tmux
 - 📊 **Built-in lualine themes** — Coordinated statusline themes included
 
@@ -112,6 +112,21 @@ vim.cmd("colorscheme primer_dark_high_contrast")
 - [trouble.nvim](https://github.com/folke/trouble.nvim)
 - [todo-comments.nvim](https://github.com/folke/todo-comments.nvim)
 - [grug-far.nvim](https://github.com/MagicDuck/grug-far.nvim)
+- [sidekick.nvim](https://github.com/sidebar-nvim/sidebar.nvim)
+
+### mini.nvim
+- [mini.files](https://github.com/echasnovski/mini.files)
+- [mini.pick](https://github.com/echasnovski/mini.pick)
+- [mini.hipatterns](https://github.com/echasnovski/mini.hipatterns)
+- [mini.statusline](https://github.com/echasnovski/mini.statusline)
+- [mini.notify](https://github.com/echasnovski/mini.notify)
+- [mini.diff](https://github.com/echasnovski/mini.diff)
+- [mini.indentscope](https://github.com/echasnovski/mini.indentscope)
+- [mini.jump](https://github.com/echasnovski/mini.jump)
+- [mini.clue](https://github.com/echasnovski/mini.clue)
+- [mini.tabline](https://github.com/echasnovski/mini.tabline)
+- [mini.starter](https://github.com/echasnovski/mini.starter)
+- [mini.cursorword](https://github.com/echasnovski/mini.cursorword)
 
 </details>
 
