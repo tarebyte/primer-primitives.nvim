@@ -109,4 +109,3 @@ return {
     bright_white = '#818b98',
   },
 }
-

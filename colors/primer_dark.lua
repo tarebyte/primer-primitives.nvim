@@ -11,1566 +11,1566 @@ vim.g.colors_name = 'primer_dark'
 vim.cmd('highlight clear')
 
 -- Set highlight groups
-vim.api.nvim_set_hl(0, '@attribute', { fg = "#d2a8ff" })
-vim.api.nvim_set_hl(0, '@attribute.builtin', { fg = "#d2a8ff" })
-vim.api.nvim_set_hl(0, '@boolean', { link = "Boolean" })
-vim.api.nvim_set_hl(0, '@character', { link = "Character" })
-vim.api.nvim_set_hl(0, '@character.special', { link = "SpecialChar" })
-vim.api.nvim_set_hl(0, '@comment', { link = "Comment" })
-vim.api.nvim_set_hl(0, '@comment.documentation', { fg = "#9198a1" })
+vim.api.nvim_set_hl(0, '@attribute', { fg = '#d2a8ff' })
+vim.api.nvim_set_hl(0, '@attribute.builtin', { fg = '#d2a8ff' })
+vim.api.nvim_set_hl(0, '@boolean', { link = 'Boolean' })
+vim.api.nvim_set_hl(0, '@character', { link = 'Character' })
+vim.api.nvim_set_hl(0, '@character.special', { link = 'SpecialChar' })
+vim.api.nvim_set_hl(0, '@comment', { link = 'Comment' })
+vim.api.nvim_set_hl(0, '@comment.documentation', { fg = '#9198a1' })
 vim.api.nvim_set_hl(0, '@comment.error', {
   bold = true,
-  fg = "#f85149"
+  fg = '#f85149',
 })
 vim.api.nvim_set_hl(0, '@comment.note', {
   bold = true,
-  fg = "#4493f8"
+  fg = '#4493f8',
 })
 vim.api.nvim_set_hl(0, '@comment.todo', {
   bold = true,
-  fg = "#d29922"
+  fg = '#d29922',
 })
 vim.api.nvim_set_hl(0, '@comment.warning', {
   bold = true,
-  fg = "#d29922"
+  fg = '#d29922',
 })
-vim.api.nvim_set_hl(0, '@conditional', { link = "Conditional" })
-vim.api.nvim_set_hl(0, '@constant', { link = "Constant" })
-vim.api.nvim_set_hl(0, '@constant.builtin', { fg = "#79c0ff" })
-vim.api.nvim_set_hl(0, '@constant.macro', { link = "Macro" })
-vim.api.nvim_set_hl(0, '@constructor', { fg = "#d2a8ff" })
-vim.api.nvim_set_hl(0, '@debug', { link = "Debug" })
-vim.api.nvim_set_hl(0, '@define', { link = "Define" })
-vim.api.nvim_set_hl(0, '@diff.delta', { fg = "#d29922" })
-vim.api.nvim_set_hl(0, '@diff.minus', { fg = "#f85149" })
-vim.api.nvim_set_hl(0, '@diff.plus', { fg = "#3fb950" })
-vim.api.nvim_set_hl(0, '@error', { link = "Error" })
-vim.api.nvim_set_hl(0, '@exception', { link = "Exception" })
-vim.api.nvim_set_hl(0, '@field', { fg = "#ffa657" })
-vim.api.nvim_set_hl(0, '@float', { link = "Float" })
-vim.api.nvim_set_hl(0, '@function', { link = "Function" })
-vim.api.nvim_set_hl(0, '@function.builtin', { fg = "#d2a8ff" })
-vim.api.nvim_set_hl(0, '@function.call', { link = "Function" })
-vim.api.nvim_set_hl(0, '@function.macro', { link = "Macro" })
-vim.api.nvim_set_hl(0, '@function.method', { link = "Function" })
-vim.api.nvim_set_hl(0, '@function.method.call', { link = "Function" })
-vim.api.nvim_set_hl(0, '@hint', { fg = "#3fb950" })
-vim.api.nvim_set_hl(0, '@include', { link = "Include" })
-vim.api.nvim_set_hl(0, '@info', { fg = "#4493f8" })
-vim.api.nvim_set_hl(0, '@keyword', { link = "Keyword" })
-vim.api.nvim_set_hl(0, '@keyword.conditional', { link = "Conditional" })
-vim.api.nvim_set_hl(0, '@keyword.conditional.ternary', { link = "Operator" })
-vim.api.nvim_set_hl(0, '@keyword.coroutine', { fg = "#ff7b72" })
-vim.api.nvim_set_hl(0, '@keyword.debug', { link = "Debug" })
-vim.api.nvim_set_hl(0, '@keyword.directive', { link = "PreProc" })
-vim.api.nvim_set_hl(0, '@keyword.directive.define', { link = "Define" })
-vim.api.nvim_set_hl(0, '@keyword.exception', { link = "Exception" })
-vim.api.nvim_set_hl(0, '@keyword.function', { link = "Keyword" })
-vim.api.nvim_set_hl(0, '@keyword.import', { link = "Include" })
-vim.api.nvim_set_hl(0, '@keyword.modifier', { link = "Keyword" })
-vim.api.nvim_set_hl(0, '@keyword.operator', { link = "Keyword" })
-vim.api.nvim_set_hl(0, '@keyword.repeat', { link = "Repeat" })
-vim.api.nvim_set_hl(0, '@keyword.return', { link = "Keyword" })
-vim.api.nvim_set_hl(0, '@keyword.type', { link = "Keyword" })
-vim.api.nvim_set_hl(0, '@label', { link = "Label" })
+vim.api.nvim_set_hl(0, '@conditional', { link = 'Conditional' })
+vim.api.nvim_set_hl(0, '@constant', { link = 'Constant' })
+vim.api.nvim_set_hl(0, '@constant.builtin', { fg = '#79c0ff' })
+vim.api.nvim_set_hl(0, '@constant.macro', { link = 'Macro' })
+vim.api.nvim_set_hl(0, '@constructor', { fg = '#d2a8ff' })
+vim.api.nvim_set_hl(0, '@debug', { link = 'Debug' })
+vim.api.nvim_set_hl(0, '@define', { link = 'Define' })
+vim.api.nvim_set_hl(0, '@diff.delta', { fg = '#d29922' })
+vim.api.nvim_set_hl(0, '@diff.minus', { fg = '#f85149' })
+vim.api.nvim_set_hl(0, '@diff.plus', { fg = '#3fb950' })
+vim.api.nvim_set_hl(0, '@error', { link = 'Error' })
+vim.api.nvim_set_hl(0, '@exception', { link = 'Exception' })
+vim.api.nvim_set_hl(0, '@field', { fg = '#ffa657' })
+vim.api.nvim_set_hl(0, '@float', { link = 'Float' })
+vim.api.nvim_set_hl(0, '@function', { link = 'Function' })
+vim.api.nvim_set_hl(0, '@function.builtin', { fg = '#d2a8ff' })
+vim.api.nvim_set_hl(0, '@function.call', { link = 'Function' })
+vim.api.nvim_set_hl(0, '@function.macro', { link = 'Macro' })
+vim.api.nvim_set_hl(0, '@function.method', { link = 'Function' })
+vim.api.nvim_set_hl(0, '@function.method.call', { link = 'Function' })
+vim.api.nvim_set_hl(0, '@hint', { fg = '#3fb950' })
+vim.api.nvim_set_hl(0, '@include', { link = 'Include' })
+vim.api.nvim_set_hl(0, '@info', { fg = '#4493f8' })
+vim.api.nvim_set_hl(0, '@keyword', { link = 'Keyword' })
+vim.api.nvim_set_hl(0, '@keyword.conditional', { link = 'Conditional' })
+vim.api.nvim_set_hl(0, '@keyword.conditional.ternary', { link = 'Operator' })
+vim.api.nvim_set_hl(0, '@keyword.coroutine', { fg = '#ff7b72' })
+vim.api.nvim_set_hl(0, '@keyword.debug', { link = 'Debug' })
+vim.api.nvim_set_hl(0, '@keyword.directive', { link = 'PreProc' })
+vim.api.nvim_set_hl(0, '@keyword.directive.define', { link = 'Define' })
+vim.api.nvim_set_hl(0, '@keyword.exception', { link = 'Exception' })
+vim.api.nvim_set_hl(0, '@keyword.function', { link = 'Keyword' })
+vim.api.nvim_set_hl(0, '@keyword.import', { link = 'Include' })
+vim.api.nvim_set_hl(0, '@keyword.modifier', { link = 'Keyword' })
+vim.api.nvim_set_hl(0, '@keyword.operator', { link = 'Keyword' })
+vim.api.nvim_set_hl(0, '@keyword.repeat', { link = 'Repeat' })
+vim.api.nvim_set_hl(0, '@keyword.return', { link = 'Keyword' })
+vim.api.nvim_set_hl(0, '@keyword.type', { link = 'Keyword' })
+vim.api.nvim_set_hl(0, '@label', { link = 'Label' })
 vim.api.nvim_set_hl(0, '@lsp.mod.abstract', { italic = true })
 vim.api.nvim_set_hl(0, '@lsp.mod.async', { italic = true })
-vim.api.nvim_set_hl(0, '@lsp.mod.defaultLibrary', { fg = "#79c0ff" })
+vim.api.nvim_set_hl(0, '@lsp.mod.defaultLibrary', { fg = '#79c0ff' })
 vim.api.nvim_set_hl(0, '@lsp.mod.deprecated', { strikethrough = true })
-vim.api.nvim_set_hl(0, '@lsp.mod.documentation', { fg = "#9198a1" })
-vim.api.nvim_set_hl(0, '@lsp.mod.readonly', { fg = "#79c0ff" })
+vim.api.nvim_set_hl(0, '@lsp.mod.documentation', { fg = '#9198a1' })
+vim.api.nvim_set_hl(0, '@lsp.mod.readonly', { fg = '#79c0ff' })
 vim.api.nvim_set_hl(0, '@lsp.mod.static', { italic = true })
-vim.api.nvim_set_hl(0, '@lsp.type.class', { fg = "#d2a8ff" })
-vim.api.nvim_set_hl(0, '@lsp.type.comment', { link = "Comment" })
-vim.api.nvim_set_hl(0, '@lsp.type.decorator', { fg = "#d2a8ff" })
-vim.api.nvim_set_hl(0, '@lsp.type.enum', { fg = "#d2a8ff" })
-vim.api.nvim_set_hl(0, '@lsp.type.enumMember', { fg = "#79c0ff" })
-vim.api.nvim_set_hl(0, '@lsp.type.event', { fg = "#d2a8ff" })
-vim.api.nvim_set_hl(0, '@lsp.type.function', { link = "Function" })
-vim.api.nvim_set_hl(0, '@lsp.type.interface', { fg = "#d2a8ff" })
-vim.api.nvim_set_hl(0, '@lsp.type.keyword', { link = "Keyword" })
-vim.api.nvim_set_hl(0, '@lsp.type.macro', { link = "Macro" })
-vim.api.nvim_set_hl(0, '@lsp.type.method', { link = "Function" })
-vim.api.nvim_set_hl(0, '@lsp.type.modifier', { link = "Keyword" })
-vim.api.nvim_set_hl(0, '@lsp.type.namespace', { fg = "#ffa657" })
-vim.api.nvim_set_hl(0, '@lsp.type.number', { link = "Number" })
-vim.api.nvim_set_hl(0, '@lsp.type.operator', { link = "Operator" })
-vim.api.nvim_set_hl(0, '@lsp.type.parameter', { fg = "#f0f6fc" })
-vim.api.nvim_set_hl(0, '@lsp.type.property', { fg = "#ffa657" })
-vim.api.nvim_set_hl(0, '@lsp.type.regexp', { fg = "#a5d6ff" })
-vim.api.nvim_set_hl(0, '@lsp.type.string', { link = "String" })
-vim.api.nvim_set_hl(0, '@lsp.type.struct', { fg = "#d2a8ff" })
-vim.api.nvim_set_hl(0, '@lsp.type.type', { link = "Type" })
-vim.api.nvim_set_hl(0, '@lsp.type.typeParameter', { fg = "#ffa657" })
-vim.api.nvim_set_hl(0, '@lsp.type.variable', { fg = "#f0f6fc" })
-vim.api.nvim_set_hl(0, '@macro', { link = "Macro" })
-vim.api.nvim_set_hl(0, '@markup.heading', { link = "Title" })
+vim.api.nvim_set_hl(0, '@lsp.type.class', { fg = '#d2a8ff' })
+vim.api.nvim_set_hl(0, '@lsp.type.comment', { link = 'Comment' })
+vim.api.nvim_set_hl(0, '@lsp.type.decorator', { fg = '#d2a8ff' })
+vim.api.nvim_set_hl(0, '@lsp.type.enum', { fg = '#d2a8ff' })
+vim.api.nvim_set_hl(0, '@lsp.type.enumMember', { fg = '#79c0ff' })
+vim.api.nvim_set_hl(0, '@lsp.type.event', { fg = '#d2a8ff' })
+vim.api.nvim_set_hl(0, '@lsp.type.function', { link = 'Function' })
+vim.api.nvim_set_hl(0, '@lsp.type.interface', { fg = '#d2a8ff' })
+vim.api.nvim_set_hl(0, '@lsp.type.keyword', { link = 'Keyword' })
+vim.api.nvim_set_hl(0, '@lsp.type.macro', { link = 'Macro' })
+vim.api.nvim_set_hl(0, '@lsp.type.method', { link = 'Function' })
+vim.api.nvim_set_hl(0, '@lsp.type.modifier', { link = 'Keyword' })
+vim.api.nvim_set_hl(0, '@lsp.type.namespace', { fg = '#ffa657' })
+vim.api.nvim_set_hl(0, '@lsp.type.number', { link = 'Number' })
+vim.api.nvim_set_hl(0, '@lsp.type.operator', { link = 'Operator' })
+vim.api.nvim_set_hl(0, '@lsp.type.parameter', { fg = '#f0f6fc' })
+vim.api.nvim_set_hl(0, '@lsp.type.property', { fg = '#ffa657' })
+vim.api.nvim_set_hl(0, '@lsp.type.regexp', { fg = '#a5d6ff' })
+vim.api.nvim_set_hl(0, '@lsp.type.string', { link = 'String' })
+vim.api.nvim_set_hl(0, '@lsp.type.struct', { fg = '#d2a8ff' })
+vim.api.nvim_set_hl(0, '@lsp.type.type', { link = 'Type' })
+vim.api.nvim_set_hl(0, '@lsp.type.typeParameter', { fg = '#ffa657' })
+vim.api.nvim_set_hl(0, '@lsp.type.variable', { fg = '#f0f6fc' })
+vim.api.nvim_set_hl(0, '@macro', { link = 'Macro' })
+vim.api.nvim_set_hl(0, '@markup.heading', { link = 'Title' })
 vim.api.nvim_set_hl(0, '@markup.heading.1', {
   bold = true,
-  fg = "#4493f8"
+  fg = '#4493f8',
 })
 vim.api.nvim_set_hl(0, '@markup.heading.2', {
   bold = true,
-  fg = "#4493f8"
+  fg = '#4493f8',
 })
 vim.api.nvim_set_hl(0, '@markup.heading.3', {
   bold = true,
-  fg = "#4493f8"
+  fg = '#4493f8',
 })
 vim.api.nvim_set_hl(0, '@markup.heading.4', {
   bold = true,
-  fg = "#4493f8"
+  fg = '#4493f8',
 })
 vim.api.nvim_set_hl(0, '@markup.heading.5', {
   bold = true,
-  fg = "#4493f8"
+  fg = '#4493f8',
 })
 vim.api.nvim_set_hl(0, '@markup.heading.6', {
   bold = true,
-  fg = "#4493f8"
+  fg = '#4493f8',
 })
 vim.api.nvim_set_hl(0, '@markup.italic', {
-  fg = "#f0f6fc",
-  italic = true
+  fg = '#f0f6fc',
+  italic = true,
 })
-vim.api.nvim_set_hl(0, '@markup.link', { fg = "#4493f8" })
-vim.api.nvim_set_hl(0, '@markup.link.label', { fg = "#4493f8" })
+vim.api.nvim_set_hl(0, '@markup.link', { fg = '#4493f8' })
+vim.api.nvim_set_hl(0, '@markup.link.label', { fg = '#4493f8' })
 vim.api.nvim_set_hl(0, '@markup.link.url', {
-  fg = "#4493f8",
-  underline = true
+  fg = '#4493f8',
+  underline = true,
 })
-vim.api.nvim_set_hl(0, '@markup.list', { fg = "#f0f6fc" })
-vim.api.nvim_set_hl(0, '@markup.list.checked', { fg = "#3fb950" })
-vim.api.nvim_set_hl(0, '@markup.list.unchecked', { fg = "#9198a1" })
-vim.api.nvim_set_hl(0, '@markup.math', { fg = "#79c0ff" })
+vim.api.nvim_set_hl(0, '@markup.list', { fg = '#f0f6fc' })
+vim.api.nvim_set_hl(0, '@markup.list.checked', { fg = '#3fb950' })
+vim.api.nvim_set_hl(0, '@markup.list.unchecked', { fg = '#9198a1' })
+vim.api.nvim_set_hl(0, '@markup.math', { fg = '#79c0ff' })
 vim.api.nvim_set_hl(0, '@markup.quote', {
-  fg = "#9198a1",
-  italic = true
+  fg = '#9198a1',
+  italic = true,
 })
-vim.api.nvim_set_hl(0, '@markup.raw', { fg = "#a5d6ff" })
-vim.api.nvim_set_hl(0, '@markup.raw.block', { fg = "#a5d6ff" })
+vim.api.nvim_set_hl(0, '@markup.raw', { fg = '#a5d6ff' })
+vim.api.nvim_set_hl(0, '@markup.raw.block', { fg = '#a5d6ff' })
 vim.api.nvim_set_hl(0, '@markup.strikethrough', {
-  fg = "#f0f6fc",
-  strikethrough = true
+  fg = '#f0f6fc',
+  strikethrough = true,
 })
 vim.api.nvim_set_hl(0, '@markup.strong', {
   bold = true,
-  fg = "#f0f6fc"
+  fg = '#f0f6fc',
 })
 vim.api.nvim_set_hl(0, '@markup.underline', { underline = true })
-vim.api.nvim_set_hl(0, '@method', { link = "Function" })
-vim.api.nvim_set_hl(0, '@method.call', { link = "Function" })
-vim.api.nvim_set_hl(0, '@module', { fg = "#ffa657" })
-vim.api.nvim_set_hl(0, '@module.builtin', { fg = "#79c0ff" })
-vim.api.nvim_set_hl(0, '@namespace', { fg = "#ffa657" })
-vim.api.nvim_set_hl(0, '@number', { link = "Number" })
-vim.api.nvim_set_hl(0, '@number.float', { link = "Float" })
-vim.api.nvim_set_hl(0, '@operator', { link = "Operator" })
-vim.api.nvim_set_hl(0, '@parameter', { fg = "#f0f6fc" })
-vim.api.nvim_set_hl(0, '@preproc', { link = "PreProc" })
-vim.api.nvim_set_hl(0, '@property', { fg = "#ffa657" })
-vim.api.nvim_set_hl(0, '@punctuation', { fg = "#f0f6fc" })
-vim.api.nvim_set_hl(0, '@punctuation.bracket', { fg = "#f0f6fc" })
-vim.api.nvim_set_hl(0, '@punctuation.delimiter', { fg = "#f0f6fc" })
-vim.api.nvim_set_hl(0, '@punctuation.special', { fg = "#ff7b72" })
-vim.api.nvim_set_hl(0, '@repeat', { link = "Repeat" })
-vim.api.nvim_set_hl(0, '@storageclass', { link = "StorageClass" })
-vim.api.nvim_set_hl(0, '@string', { link = "String" })
-vim.api.nvim_set_hl(0, '@string.documentation', { fg = "#9198a1" })
-vim.api.nvim_set_hl(0, '@string.escape', { fg = "#79c0ff" })
-vim.api.nvim_set_hl(0, '@string.regex', { fg = "#a5d6ff" })
-vim.api.nvim_set_hl(0, '@string.regexp', { fg = "#a5d6ff" })
-vim.api.nvim_set_hl(0, '@string.special', { fg = "#79c0ff" })
-vim.api.nvim_set_hl(0, '@string.special.path', { fg = "#a5d6ff" })
-vim.api.nvim_set_hl(0, '@string.special.symbol', { fg = "#79c0ff" })
+vim.api.nvim_set_hl(0, '@method', { link = 'Function' })
+vim.api.nvim_set_hl(0, '@method.call', { link = 'Function' })
+vim.api.nvim_set_hl(0, '@module', { fg = '#ffa657' })
+vim.api.nvim_set_hl(0, '@module.builtin', { fg = '#79c0ff' })
+vim.api.nvim_set_hl(0, '@namespace', { fg = '#ffa657' })
+vim.api.nvim_set_hl(0, '@number', { link = 'Number' })
+vim.api.nvim_set_hl(0, '@number.float', { link = 'Float' })
+vim.api.nvim_set_hl(0, '@operator', { link = 'Operator' })
+vim.api.nvim_set_hl(0, '@parameter', { fg = '#f0f6fc' })
+vim.api.nvim_set_hl(0, '@preproc', { link = 'PreProc' })
+vim.api.nvim_set_hl(0, '@property', { fg = '#ffa657' })
+vim.api.nvim_set_hl(0, '@punctuation', { fg = '#f0f6fc' })
+vim.api.nvim_set_hl(0, '@punctuation.bracket', { fg = '#f0f6fc' })
+vim.api.nvim_set_hl(0, '@punctuation.delimiter', { fg = '#f0f6fc' })
+vim.api.nvim_set_hl(0, '@punctuation.special', { fg = '#ff7b72' })
+vim.api.nvim_set_hl(0, '@repeat', { link = 'Repeat' })
+vim.api.nvim_set_hl(0, '@storageclass', { link = 'StorageClass' })
+vim.api.nvim_set_hl(0, '@string', { link = 'String' })
+vim.api.nvim_set_hl(0, '@string.documentation', { fg = '#9198a1' })
+vim.api.nvim_set_hl(0, '@string.escape', { fg = '#79c0ff' })
+vim.api.nvim_set_hl(0, '@string.regex', { fg = '#a5d6ff' })
+vim.api.nvim_set_hl(0, '@string.regexp', { fg = '#a5d6ff' })
+vim.api.nvim_set_hl(0, '@string.special', { fg = '#79c0ff' })
+vim.api.nvim_set_hl(0, '@string.special.path', { fg = '#a5d6ff' })
+vim.api.nvim_set_hl(0, '@string.special.symbol', { fg = '#79c0ff' })
 vim.api.nvim_set_hl(0, '@string.special.url', {
-  fg = "#4493f8",
-  underline = true
+  fg = '#4493f8',
+  underline = true,
 })
-vim.api.nvim_set_hl(0, '@structure', { link = "Structure" })
-vim.api.nvim_set_hl(0, '@tag', { link = "Tag" })
-vim.api.nvim_set_hl(0, '@tag.attribute', { fg = "#ffa657" })
-vim.api.nvim_set_hl(0, '@tag.builtin', { link = "Tag" })
-vim.api.nvim_set_hl(0, '@tag.delimiter', { fg = "#f0f6fc" })
-vim.api.nvim_set_hl(0, '@text', { fg = "#f0f6fc" })
-vim.api.nvim_set_hl(0, '@text.literal', { link = "String" })
-vim.api.nvim_set_hl(0, '@text.reference', { fg = "#4493f8" })
-vim.api.nvim_set_hl(0, '@text.title', { link = "Title" })
-vim.api.nvim_set_hl(0, '@text.todo', { link = "Todo" })
+vim.api.nvim_set_hl(0, '@structure', { link = 'Structure' })
+vim.api.nvim_set_hl(0, '@tag', { link = 'Tag' })
+vim.api.nvim_set_hl(0, '@tag.attribute', { fg = '#ffa657' })
+vim.api.nvim_set_hl(0, '@tag.builtin', { link = 'Tag' })
+vim.api.nvim_set_hl(0, '@tag.delimiter', { fg = '#f0f6fc' })
+vim.api.nvim_set_hl(0, '@text', { fg = '#f0f6fc' })
+vim.api.nvim_set_hl(0, '@text.literal', { link = 'String' })
+vim.api.nvim_set_hl(0, '@text.reference', { fg = '#4493f8' })
+vim.api.nvim_set_hl(0, '@text.title', { link = 'Title' })
+vim.api.nvim_set_hl(0, '@text.todo', { link = 'Todo' })
 vim.api.nvim_set_hl(0, '@text.underline', { underline = true })
 vim.api.nvim_set_hl(0, '@text.uri', {
-  fg = "#4493f8",
-  underline = true
+  fg = '#4493f8',
+  underline = true,
 })
-vim.api.nvim_set_hl(0, '@type', { link = "Type" })
-vim.api.nvim_set_hl(0, '@type.builtin', { fg = "#79c0ff" })
-vim.api.nvim_set_hl(0, '@type.definition', { link = "Type" })
-vim.api.nvim_set_hl(0, '@type.qualifier', { link = "Keyword" })
-vim.api.nvim_set_hl(0, '@variable', { fg = "#f0f6fc" })
-vim.api.nvim_set_hl(0, '@variable.builtin', { fg = "#79c0ff" })
-vim.api.nvim_set_hl(0, '@variable.member', { fg = "#ffa657" })
-vim.api.nvim_set_hl(0, '@variable.parameter', { fg = "#f0f6fc" })
-vim.api.nvim_set_hl(0, '@variable.parameter.builtin', { fg = "#79c0ff" })
-vim.api.nvim_set_hl(0, '@warning', { fg = "#d29922" })
-vim.api.nvim_set_hl(0, 'Added', { fg = "#3fb950" })
-vim.api.nvim_set_hl(0, 'AerialArrayIcon', { fg = "#ffa657" })
-vim.api.nvim_set_hl(0, 'AerialBooleanIcon', { fg = "#79c0ff" })
-vim.api.nvim_set_hl(0, 'AerialClassIcon', { fg = "#d2a8ff" })
-vim.api.nvim_set_hl(0, 'AerialConstantIcon', { fg = "#79c0ff" })
-vim.api.nvim_set_hl(0, 'AerialConstructorIcon', { fg = "#d2a8ff" })
-vim.api.nvim_set_hl(0, 'AerialEnumIcon', { fg = "#d2a8ff" })
-vim.api.nvim_set_hl(0, 'AerialEnumMemberIcon', { fg = "#79c0ff" })
-vim.api.nvim_set_hl(0, 'AerialEventIcon', { fg = "#ffa657" })
-vim.api.nvim_set_hl(0, 'AerialFieldIcon', { fg = "#ffa657" })
-vim.api.nvim_set_hl(0, 'AerialFileIcon', { fg = "#f0f6fc" })
-vim.api.nvim_set_hl(0, 'AerialFunctionIcon', { fg = "#d2a8ff" })
-vim.api.nvim_set_hl(0, 'AerialGuide', { fg = "#2f353d" })
-vim.api.nvim_set_hl(0, 'AerialInterfaceIcon', { fg = "#d2a8ff" })
-vim.api.nvim_set_hl(0, 'AerialKeyIcon', { fg = "#ff7b72" })
+vim.api.nvim_set_hl(0, '@type', { link = 'Type' })
+vim.api.nvim_set_hl(0, '@type.builtin', { fg = '#79c0ff' })
+vim.api.nvim_set_hl(0, '@type.definition', { link = 'Type' })
+vim.api.nvim_set_hl(0, '@type.qualifier', { link = 'Keyword' })
+vim.api.nvim_set_hl(0, '@variable', { fg = '#f0f6fc' })
+vim.api.nvim_set_hl(0, '@variable.builtin', { fg = '#79c0ff' })
+vim.api.nvim_set_hl(0, '@variable.member', { fg = '#ffa657' })
+vim.api.nvim_set_hl(0, '@variable.parameter', { fg = '#f0f6fc' })
+vim.api.nvim_set_hl(0, '@variable.parameter.builtin', { fg = '#79c0ff' })
+vim.api.nvim_set_hl(0, '@warning', { fg = '#d29922' })
+vim.api.nvim_set_hl(0, 'Added', { fg = '#3fb950' })
+vim.api.nvim_set_hl(0, 'AerialArrayIcon', { fg = '#ffa657' })
+vim.api.nvim_set_hl(0, 'AerialBooleanIcon', { fg = '#79c0ff' })
+vim.api.nvim_set_hl(0, 'AerialClassIcon', { fg = '#d2a8ff' })
+vim.api.nvim_set_hl(0, 'AerialConstantIcon', { fg = '#79c0ff' })
+vim.api.nvim_set_hl(0, 'AerialConstructorIcon', { fg = '#d2a8ff' })
+vim.api.nvim_set_hl(0, 'AerialEnumIcon', { fg = '#d2a8ff' })
+vim.api.nvim_set_hl(0, 'AerialEnumMemberIcon', { fg = '#79c0ff' })
+vim.api.nvim_set_hl(0, 'AerialEventIcon', { fg = '#ffa657' })
+vim.api.nvim_set_hl(0, 'AerialFieldIcon', { fg = '#ffa657' })
+vim.api.nvim_set_hl(0, 'AerialFileIcon', { fg = '#f0f6fc' })
+vim.api.nvim_set_hl(0, 'AerialFunctionIcon', { fg = '#d2a8ff' })
+vim.api.nvim_set_hl(0, 'AerialGuide', { fg = '#2f353d' })
+vim.api.nvim_set_hl(0, 'AerialInterfaceIcon', { fg = '#d2a8ff' })
+vim.api.nvim_set_hl(0, 'AerialKeyIcon', { fg = '#ff7b72' })
 vim.api.nvim_set_hl(0, 'AerialLine', {
-  bg = "#111d2e",
-  blend = 85
+  bg = '#111d2e',
+  blend = 85,
 })
-vim.api.nvim_set_hl(0, 'AerialLineNC', { link = "AerialLine" })
-vim.api.nvim_set_hl(0, 'AerialMethodIcon', { fg = "#d2a8ff" })
-vim.api.nvim_set_hl(0, 'AerialModuleIcon', { fg = "#ff7b72" })
-vim.api.nvim_set_hl(0, 'AerialNamespaceIcon', { fg = "#ff7b72" })
-vim.api.nvim_set_hl(0, 'AerialNormal', { fg = "#f0f6fc" })
-vim.api.nvim_set_hl(0, 'AerialNullIcon', { fg = "#79c0ff" })
-vim.api.nvim_set_hl(0, 'AerialNumberIcon', { fg = "#79c0ff" })
-vim.api.nvim_set_hl(0, 'AerialObjectIcon', { fg = "#d2a8ff" })
-vim.api.nvim_set_hl(0, 'AerialOperatorIcon', { fg = "#f0f6fc" })
-vim.api.nvim_set_hl(0, 'AerialPackageIcon', { fg = "#ff7b72" })
-vim.api.nvim_set_hl(0, 'AerialPrivate', { fg = "#9198a1" })
-vim.api.nvim_set_hl(0, 'AerialPropertyIcon', { fg = "#ffa657" })
-vim.api.nvim_set_hl(0, 'AerialProtected', { fg = "#9198a1" })
-vim.api.nvim_set_hl(0, 'AerialStringIcon', { fg = "#a5d6ff" })
-vim.api.nvim_set_hl(0, 'AerialStructIcon', { fg = "#d2a8ff" })
-vim.api.nvim_set_hl(0, 'AerialTypeParameterIcon', { fg = "#ffa657" })
-vim.api.nvim_set_hl(0, 'AerialVariableIcon', { fg = "#ffa657" })
-vim.api.nvim_set_hl(0, 'BlinkCmpDoc', { link = "NormalFloat" })
-vim.api.nvim_set_hl(0, 'BlinkCmpDocBorder', { link = "FloatBorder" })
-vim.api.nvim_set_hl(0, 'BlinkCmpDocCursorLine', { link = "Visual" })
-vim.api.nvim_set_hl(0, 'BlinkCmpDocSeparator', { fg = "#3d444d" })
-vim.api.nvim_set_hl(0, 'BlinkCmpGhostText', { fg = "#9198a1" })
-vim.api.nvim_set_hl(0, 'BlinkCmpKind', { fg = "#9198a1" })
-vim.api.nvim_set_hl(0, 'BlinkCmpKindClass', { fg = "#d2a8ff" })
-vim.api.nvim_set_hl(0, 'BlinkCmpKindColor', { fg = "#79c0ff" })
-vim.api.nvim_set_hl(0, 'BlinkCmpKindConstant', { fg = "#79c0ff" })
-vim.api.nvim_set_hl(0, 'BlinkCmpKindConstructor', { fg = "#d2a8ff" })
-vim.api.nvim_set_hl(0, 'BlinkCmpKindEnum', { fg = "#d2a8ff" })
-vim.api.nvim_set_hl(0, 'BlinkCmpKindEnumMember', { fg = "#79c0ff" })
-vim.api.nvim_set_hl(0, 'BlinkCmpKindEvent', { fg = "#d2a8ff" })
-vim.api.nvim_set_hl(0, 'BlinkCmpKindField', { fg = "#ffa657" })
-vim.api.nvim_set_hl(0, 'BlinkCmpKindFile', { fg = "#f0f6fc" })
-vim.api.nvim_set_hl(0, 'BlinkCmpKindFolder', { fg = "#4493f8" })
-vim.api.nvim_set_hl(0, 'BlinkCmpKindFunction', { fg = "#d2a8ff" })
-vim.api.nvim_set_hl(0, 'BlinkCmpKindInterface', { fg = "#d2a8ff" })
-vim.api.nvim_set_hl(0, 'BlinkCmpKindKeyword', { fg = "#ff7b72" })
-vim.api.nvim_set_hl(0, 'BlinkCmpKindMethod', { fg = "#d2a8ff" })
-vim.api.nvim_set_hl(0, 'BlinkCmpKindModule', { fg = "#ffa657" })
-vim.api.nvim_set_hl(0, 'BlinkCmpKindOperator', { fg = "#f0f6fc" })
-vim.api.nvim_set_hl(0, 'BlinkCmpKindProperty', { fg = "#ffa657" })
-vim.api.nvim_set_hl(0, 'BlinkCmpKindReference', { fg = "#ffa657" })
-vim.api.nvim_set_hl(0, 'BlinkCmpKindSnippet', { fg = "#ab7df8" })
-vim.api.nvim_set_hl(0, 'BlinkCmpKindStruct', { fg = "#d2a8ff" })
-vim.api.nvim_set_hl(0, 'BlinkCmpKindText', { fg = "#f0f6fc" })
-vim.api.nvim_set_hl(0, 'BlinkCmpKindTypeParameter', { fg = "#ffa657" })
-vim.api.nvim_set_hl(0, 'BlinkCmpKindUnit', { fg = "#79c0ff" })
-vim.api.nvim_set_hl(0, 'BlinkCmpKindValue', { fg = "#79c0ff" })
-vim.api.nvim_set_hl(0, 'BlinkCmpKindVariable', { fg = "#ffa657" })
-vim.api.nvim_set_hl(0, 'BlinkCmpLabel', { fg = "#f0f6fc" })
+vim.api.nvim_set_hl(0, 'AerialLineNC', { link = 'AerialLine' })
+vim.api.nvim_set_hl(0, 'AerialMethodIcon', { fg = '#d2a8ff' })
+vim.api.nvim_set_hl(0, 'AerialModuleIcon', { fg = '#ff7b72' })
+vim.api.nvim_set_hl(0, 'AerialNamespaceIcon', { fg = '#ff7b72' })
+vim.api.nvim_set_hl(0, 'AerialNormal', { fg = '#f0f6fc' })
+vim.api.nvim_set_hl(0, 'AerialNullIcon', { fg = '#79c0ff' })
+vim.api.nvim_set_hl(0, 'AerialNumberIcon', { fg = '#79c0ff' })
+vim.api.nvim_set_hl(0, 'AerialObjectIcon', { fg = '#d2a8ff' })
+vim.api.nvim_set_hl(0, 'AerialOperatorIcon', { fg = '#f0f6fc' })
+vim.api.nvim_set_hl(0, 'AerialPackageIcon', { fg = '#ff7b72' })
+vim.api.nvim_set_hl(0, 'AerialPrivate', { fg = '#9198a1' })
+vim.api.nvim_set_hl(0, 'AerialPropertyIcon', { fg = '#ffa657' })
+vim.api.nvim_set_hl(0, 'AerialProtected', { fg = '#9198a1' })
+vim.api.nvim_set_hl(0, 'AerialStringIcon', { fg = '#a5d6ff' })
+vim.api.nvim_set_hl(0, 'AerialStructIcon', { fg = '#d2a8ff' })
+vim.api.nvim_set_hl(0, 'AerialTypeParameterIcon', { fg = '#ffa657' })
+vim.api.nvim_set_hl(0, 'AerialVariableIcon', { fg = '#ffa657' })
+vim.api.nvim_set_hl(0, 'BlinkCmpDoc', { link = 'NormalFloat' })
+vim.api.nvim_set_hl(0, 'BlinkCmpDocBorder', { link = 'FloatBorder' })
+vim.api.nvim_set_hl(0, 'BlinkCmpDocCursorLine', { link = 'Visual' })
+vim.api.nvim_set_hl(0, 'BlinkCmpDocSeparator', { fg = '#3d444d' })
+vim.api.nvim_set_hl(0, 'BlinkCmpGhostText', { fg = '#9198a1' })
+vim.api.nvim_set_hl(0, 'BlinkCmpKind', { fg = '#9198a1' })
+vim.api.nvim_set_hl(0, 'BlinkCmpKindClass', { fg = '#d2a8ff' })
+vim.api.nvim_set_hl(0, 'BlinkCmpKindColor', { fg = '#79c0ff' })
+vim.api.nvim_set_hl(0, 'BlinkCmpKindConstant', { fg = '#79c0ff' })
+vim.api.nvim_set_hl(0, 'BlinkCmpKindConstructor', { fg = '#d2a8ff' })
+vim.api.nvim_set_hl(0, 'BlinkCmpKindEnum', { fg = '#d2a8ff' })
+vim.api.nvim_set_hl(0, 'BlinkCmpKindEnumMember', { fg = '#79c0ff' })
+vim.api.nvim_set_hl(0, 'BlinkCmpKindEvent', { fg = '#d2a8ff' })
+vim.api.nvim_set_hl(0, 'BlinkCmpKindField', { fg = '#ffa657' })
+vim.api.nvim_set_hl(0, 'BlinkCmpKindFile', { fg = '#f0f6fc' })
+vim.api.nvim_set_hl(0, 'BlinkCmpKindFolder', { fg = '#4493f8' })
+vim.api.nvim_set_hl(0, 'BlinkCmpKindFunction', { fg = '#d2a8ff' })
+vim.api.nvim_set_hl(0, 'BlinkCmpKindInterface', { fg = '#d2a8ff' })
+vim.api.nvim_set_hl(0, 'BlinkCmpKindKeyword', { fg = '#ff7b72' })
+vim.api.nvim_set_hl(0, 'BlinkCmpKindMethod', { fg = '#d2a8ff' })
+vim.api.nvim_set_hl(0, 'BlinkCmpKindModule', { fg = '#ffa657' })
+vim.api.nvim_set_hl(0, 'BlinkCmpKindOperator', { fg = '#f0f6fc' })
+vim.api.nvim_set_hl(0, 'BlinkCmpKindProperty', { fg = '#ffa657' })
+vim.api.nvim_set_hl(0, 'BlinkCmpKindReference', { fg = '#ffa657' })
+vim.api.nvim_set_hl(0, 'BlinkCmpKindSnippet', { fg = '#ab7df8' })
+vim.api.nvim_set_hl(0, 'BlinkCmpKindStruct', { fg = '#d2a8ff' })
+vim.api.nvim_set_hl(0, 'BlinkCmpKindText', { fg = '#f0f6fc' })
+vim.api.nvim_set_hl(0, 'BlinkCmpKindTypeParameter', { fg = '#ffa657' })
+vim.api.nvim_set_hl(0, 'BlinkCmpKindUnit', { fg = '#79c0ff' })
+vim.api.nvim_set_hl(0, 'BlinkCmpKindValue', { fg = '#79c0ff' })
+vim.api.nvim_set_hl(0, 'BlinkCmpKindVariable', { fg = '#ffa657' })
+vim.api.nvim_set_hl(0, 'BlinkCmpLabel', { fg = '#f0f6fc' })
 vim.api.nvim_set_hl(0, 'BlinkCmpLabelDeprecated', {
-  fg = "#9198a1",
-  strikethrough = true
+  fg = '#9198a1',
+  strikethrough = true,
 })
-vim.api.nvim_set_hl(0, 'BlinkCmpLabelDescription', { fg = "#9198a1" })
-vim.api.nvim_set_hl(0, 'BlinkCmpLabelDetail', { fg = "#9198a1" })
+vim.api.nvim_set_hl(0, 'BlinkCmpLabelDescription', { fg = '#9198a1' })
+vim.api.nvim_set_hl(0, 'BlinkCmpLabelDetail', { fg = '#9198a1' })
 vim.api.nvim_set_hl(0, 'BlinkCmpLabelMatch', {
   bold = true,
-  fg = "#4493f8"
+  fg = '#4493f8',
 })
-vim.api.nvim_set_hl(0, 'BlinkCmpMenu', { link = "Pmenu" })
-vim.api.nvim_set_hl(0, 'BlinkCmpMenuBorder', { link = "FloatBorder" })
-vim.api.nvim_set_hl(0, 'BlinkCmpMenuSelection', { link = "PmenuSel" })
-vim.api.nvim_set_hl(0, 'BlinkCmpScrollBarGutter', { link = "PmenuSbar" })
-vim.api.nvim_set_hl(0, 'BlinkCmpScrollBarThumb', { link = "PmenuThumb" })
-vim.api.nvim_set_hl(0, 'BlinkCmpSignatureHelp', { link = "NormalFloat" })
-vim.api.nvim_set_hl(0, 'BlinkCmpSignatureHelpActiveParameter', { link = "LspSignatureActiveParameter" })
-vim.api.nvim_set_hl(0, 'BlinkCmpSignatureHelpBorder', { link = "FloatBorder" })
-vim.api.nvim_set_hl(0, 'BlinkCmpSource', { fg = "#9198a1" })
-vim.api.nvim_set_hl(0, 'Boolean', { fg = "#79c0ff" })
-vim.api.nvim_set_hl(0, 'Changed', { fg = "#d29922" })
-vim.api.nvim_set_hl(0, 'Character', { fg = "#a5d6ff" })
-vim.api.nvim_set_hl(0, 'CmpItemAbbr', { fg = "#f0f6fc" })
+vim.api.nvim_set_hl(0, 'BlinkCmpMenu', { link = 'Pmenu' })
+vim.api.nvim_set_hl(0, 'BlinkCmpMenuBorder', { link = 'FloatBorder' })
+vim.api.nvim_set_hl(0, 'BlinkCmpMenuSelection', { link = 'PmenuSel' })
+vim.api.nvim_set_hl(0, 'BlinkCmpScrollBarGutter', { link = 'PmenuSbar' })
+vim.api.nvim_set_hl(0, 'BlinkCmpScrollBarThumb', { link = 'PmenuThumb' })
+vim.api.nvim_set_hl(0, 'BlinkCmpSignatureHelp', { link = 'NormalFloat' })
+vim.api.nvim_set_hl(0, 'BlinkCmpSignatureHelpActiveParameter', { link = 'LspSignatureActiveParameter' })
+vim.api.nvim_set_hl(0, 'BlinkCmpSignatureHelpBorder', { link = 'FloatBorder' })
+vim.api.nvim_set_hl(0, 'BlinkCmpSource', { fg = '#9198a1' })
+vim.api.nvim_set_hl(0, 'Boolean', { fg = '#79c0ff' })
+vim.api.nvim_set_hl(0, 'Changed', { fg = '#d29922' })
+vim.api.nvim_set_hl(0, 'Character', { fg = '#a5d6ff' })
+vim.api.nvim_set_hl(0, 'CmpItemAbbr', { fg = '#f0f6fc' })
 vim.api.nvim_set_hl(0, 'CmpItemAbbrDeprecated', {
-  fg = "#9198a1",
-  strikethrough = true
+  fg = '#9198a1',
+  strikethrough = true,
 })
 vim.api.nvim_set_hl(0, 'CmpItemAbbrMatch', {
   bold = true,
-  fg = "#4493f8"
+  fg = '#4493f8',
 })
-vim.api.nvim_set_hl(0, 'CmpItemAbbrMatchFuzzy', { fg = "#4493f8" })
-vim.api.nvim_set_hl(0, 'CmpItemKind', { fg = "#9198a1" })
-vim.api.nvim_set_hl(0, 'CmpItemKindClass', { fg = "#d2a8ff" })
-vim.api.nvim_set_hl(0, 'CmpItemKindColor', { fg = "#79c0ff" })
-vim.api.nvim_set_hl(0, 'CmpItemKindConstant', { fg = "#79c0ff" })
-vim.api.nvim_set_hl(0, 'CmpItemKindConstructor', { fg = "#d2a8ff" })
-vim.api.nvim_set_hl(0, 'CmpItemKindDefault', { fg = "#9198a1" })
-vim.api.nvim_set_hl(0, 'CmpItemKindEnum', { fg = "#d2a8ff" })
-vim.api.nvim_set_hl(0, 'CmpItemKindEnumMember', { fg = "#79c0ff" })
-vim.api.nvim_set_hl(0, 'CmpItemKindEvent', { fg = "#d2a8ff" })
-vim.api.nvim_set_hl(0, 'CmpItemKindField', { fg = "#ffa657" })
-vim.api.nvim_set_hl(0, 'CmpItemKindFile', { fg = "#f0f6fc" })
-vim.api.nvim_set_hl(0, 'CmpItemKindFolder', { fg = "#4493f8" })
-vim.api.nvim_set_hl(0, 'CmpItemKindFunction', { fg = "#d2a8ff" })
-vim.api.nvim_set_hl(0, 'CmpItemKindInterface', { fg = "#d2a8ff" })
-vim.api.nvim_set_hl(0, 'CmpItemKindKeyword', { fg = "#ff7b72" })
-vim.api.nvim_set_hl(0, 'CmpItemKindMethod', { fg = "#d2a8ff" })
-vim.api.nvim_set_hl(0, 'CmpItemKindModule', { fg = "#ffa657" })
-vim.api.nvim_set_hl(0, 'CmpItemKindOperator', { fg = "#f0f6fc" })
-vim.api.nvim_set_hl(0, 'CmpItemKindProperty', { fg = "#ffa657" })
-vim.api.nvim_set_hl(0, 'CmpItemKindReference', { fg = "#ffa657" })
-vim.api.nvim_set_hl(0, 'CmpItemKindSnippet', { fg = "#ab7df8" })
-vim.api.nvim_set_hl(0, 'CmpItemKindStruct', { fg = "#d2a8ff" })
-vim.api.nvim_set_hl(0, 'CmpItemKindText', { fg = "#f0f6fc" })
-vim.api.nvim_set_hl(0, 'CmpItemKindTypeParameter', { fg = "#ffa657" })
-vim.api.nvim_set_hl(0, 'CmpItemKindUnit', { fg = "#79c0ff" })
-vim.api.nvim_set_hl(0, 'CmpItemKindValue', { fg = "#79c0ff" })
-vim.api.nvim_set_hl(0, 'CmpItemKindVariable', { fg = "#ffa657" })
-vim.api.nvim_set_hl(0, 'CmpItemMenu', { fg = "#9198a1" })
-vim.api.nvim_set_hl(0, 'ColorColumn', { bg = "#151b23" })
+vim.api.nvim_set_hl(0, 'CmpItemAbbrMatchFuzzy', { fg = '#4493f8' })
+vim.api.nvim_set_hl(0, 'CmpItemKind', { fg = '#9198a1' })
+vim.api.nvim_set_hl(0, 'CmpItemKindClass', { fg = '#d2a8ff' })
+vim.api.nvim_set_hl(0, 'CmpItemKindColor', { fg = '#79c0ff' })
+vim.api.nvim_set_hl(0, 'CmpItemKindConstant', { fg = '#79c0ff' })
+vim.api.nvim_set_hl(0, 'CmpItemKindConstructor', { fg = '#d2a8ff' })
+vim.api.nvim_set_hl(0, 'CmpItemKindDefault', { fg = '#9198a1' })
+vim.api.nvim_set_hl(0, 'CmpItemKindEnum', { fg = '#d2a8ff' })
+vim.api.nvim_set_hl(0, 'CmpItemKindEnumMember', { fg = '#79c0ff' })
+vim.api.nvim_set_hl(0, 'CmpItemKindEvent', { fg = '#d2a8ff' })
+vim.api.nvim_set_hl(0, 'CmpItemKindField', { fg = '#ffa657' })
+vim.api.nvim_set_hl(0, 'CmpItemKindFile', { fg = '#f0f6fc' })
+vim.api.nvim_set_hl(0, 'CmpItemKindFolder', { fg = '#4493f8' })
+vim.api.nvim_set_hl(0, 'CmpItemKindFunction', { fg = '#d2a8ff' })
+vim.api.nvim_set_hl(0, 'CmpItemKindInterface', { fg = '#d2a8ff' })
+vim.api.nvim_set_hl(0, 'CmpItemKindKeyword', { fg = '#ff7b72' })
+vim.api.nvim_set_hl(0, 'CmpItemKindMethod', { fg = '#d2a8ff' })
+vim.api.nvim_set_hl(0, 'CmpItemKindModule', { fg = '#ffa657' })
+vim.api.nvim_set_hl(0, 'CmpItemKindOperator', { fg = '#f0f6fc' })
+vim.api.nvim_set_hl(0, 'CmpItemKindProperty', { fg = '#ffa657' })
+vim.api.nvim_set_hl(0, 'CmpItemKindReference', { fg = '#ffa657' })
+vim.api.nvim_set_hl(0, 'CmpItemKindSnippet', { fg = '#ab7df8' })
+vim.api.nvim_set_hl(0, 'CmpItemKindStruct', { fg = '#d2a8ff' })
+vim.api.nvim_set_hl(0, 'CmpItemKindText', { fg = '#f0f6fc' })
+vim.api.nvim_set_hl(0, 'CmpItemKindTypeParameter', { fg = '#ffa657' })
+vim.api.nvim_set_hl(0, 'CmpItemKindUnit', { fg = '#79c0ff' })
+vim.api.nvim_set_hl(0, 'CmpItemKindValue', { fg = '#79c0ff' })
+vim.api.nvim_set_hl(0, 'CmpItemKindVariable', { fg = '#ffa657' })
+vim.api.nvim_set_hl(0, 'CmpItemMenu', { fg = '#9198a1' })
+vim.api.nvim_set_hl(0, 'ColorColumn', { bg = '#151b23' })
 vim.api.nvim_set_hl(0, 'Comment', {
-  fg = "#9198a1",
-  italic = true
+  fg = '#9198a1',
+  italic = true,
 })
 vim.api.nvim_set_hl(0, 'ComplMatchIns', {
   bold = true,
-  fg = "#4493f8"
+  fg = '#4493f8',
 })
-vim.api.nvim_set_hl(0, 'Conceal', { fg = "#9198a1" })
-vim.api.nvim_set_hl(0, 'Conditional', { fg = "#ff7b72" })
-vim.api.nvim_set_hl(0, 'Constant', { fg = "#79c0ff" })
-vim.api.nvim_set_hl(0, 'CurSearch', { link = "IncSearch" })
+vim.api.nvim_set_hl(0, 'Conceal', { fg = '#9198a1' })
+vim.api.nvim_set_hl(0, 'Conditional', { fg = '#ff7b72' })
+vim.api.nvim_set_hl(0, 'Constant', { fg = '#79c0ff' })
+vim.api.nvim_set_hl(0, 'CurSearch', { link = 'IncSearch' })
 vim.api.nvim_set_hl(0, 'Cursor', {
-  bg = "#f0f6fc",
-  fg = "#0d1117"
+  bg = '#f0f6fc',
+  fg = '#0d1117',
 })
-vim.api.nvim_set_hl(0, 'CursorColumn', { link = "CursorLine" })
-vim.api.nvim_set_hl(0, 'CursorIM', { link = "Cursor" })
-vim.api.nvim_set_hl(0, 'CursorLine', { bg = "#151b23" })
+vim.api.nvim_set_hl(0, 'CursorColumn', { link = 'CursorLine' })
+vim.api.nvim_set_hl(0, 'CursorIM', { link = 'Cursor' })
+vim.api.nvim_set_hl(0, 'CursorLine', { bg = '#151b23' })
 vim.api.nvim_set_hl(0, 'CursorLineFold', {
-  bg = "#151b23",
-  fg = "#9198a1"
+  bg = '#151b23',
+  fg = '#9198a1',
 })
 vim.api.nvim_set_hl(0, 'CursorLineNr', {
   bold = true,
-  fg = "#f0f6fc"
+  fg = '#f0f6fc',
 })
-vim.api.nvim_set_hl(0, 'CursorLineSign', { bg = "#151b23" })
-vim.api.nvim_set_hl(0, 'Debug', { fg = "#d29922" })
-vim.api.nvim_set_hl(0, 'Define', { fg = "#ff7b72" })
-vim.api.nvim_set_hl(0, 'Delimiter', { fg = "#f0f6fc" })
+vim.api.nvim_set_hl(0, 'CursorLineSign', { bg = '#151b23' })
+vim.api.nvim_set_hl(0, 'Debug', { fg = '#d29922' })
+vim.api.nvim_set_hl(0, 'Define', { fg = '#ff7b72' })
+vim.api.nvim_set_hl(0, 'Delimiter', { fg = '#f0f6fc' })
 vim.api.nvim_set_hl(0, 'DiagnosticDeprecated', {
-  sp = "#f85149",
-  strikethrough = true
+  sp = '#f85149',
+  strikethrough = true,
 })
-vim.api.nvim_set_hl(0, 'DiagnosticError', { fg = "#f85149" })
-vim.api.nvim_set_hl(0, 'DiagnosticFloatingError', { fg = "#f85149" })
-vim.api.nvim_set_hl(0, 'DiagnosticFloatingHint', { fg = "#3fb950" })
-vim.api.nvim_set_hl(0, 'DiagnosticFloatingInfo', { fg = "#4493f8" })
-vim.api.nvim_set_hl(0, 'DiagnosticFloatingOk', { fg = "#3fb950" })
-vim.api.nvim_set_hl(0, 'DiagnosticFloatingWarn', { fg = "#d29922" })
-vim.api.nvim_set_hl(0, 'DiagnosticHint', { fg = "#3fb950" })
-vim.api.nvim_set_hl(0, 'DiagnosticInfo', { fg = "#4493f8" })
-vim.api.nvim_set_hl(0, 'DiagnosticOk', { fg = "#3fb950" })
-vim.api.nvim_set_hl(0, 'DiagnosticSignError', { fg = "#f85149" })
-vim.api.nvim_set_hl(0, 'DiagnosticSignHint', { fg = "#3fb950" })
-vim.api.nvim_set_hl(0, 'DiagnosticSignInfo', { fg = "#4493f8" })
-vim.api.nvim_set_hl(0, 'DiagnosticSignOk', { fg = "#3fb950" })
-vim.api.nvim_set_hl(0, 'DiagnosticSignWarn', { fg = "#d29922" })
+vim.api.nvim_set_hl(0, 'DiagnosticError', { fg = '#f85149' })
+vim.api.nvim_set_hl(0, 'DiagnosticFloatingError', { fg = '#f85149' })
+vim.api.nvim_set_hl(0, 'DiagnosticFloatingHint', { fg = '#3fb950' })
+vim.api.nvim_set_hl(0, 'DiagnosticFloatingInfo', { fg = '#4493f8' })
+vim.api.nvim_set_hl(0, 'DiagnosticFloatingOk', { fg = '#3fb950' })
+vim.api.nvim_set_hl(0, 'DiagnosticFloatingWarn', { fg = '#d29922' })
+vim.api.nvim_set_hl(0, 'DiagnosticHint', { fg = '#3fb950' })
+vim.api.nvim_set_hl(0, 'DiagnosticInfo', { fg = '#4493f8' })
+vim.api.nvim_set_hl(0, 'DiagnosticOk', { fg = '#3fb950' })
+vim.api.nvim_set_hl(0, 'DiagnosticSignError', { fg = '#f85149' })
+vim.api.nvim_set_hl(0, 'DiagnosticSignHint', { fg = '#3fb950' })
+vim.api.nvim_set_hl(0, 'DiagnosticSignInfo', { fg = '#4493f8' })
+vim.api.nvim_set_hl(0, 'DiagnosticSignOk', { fg = '#3fb950' })
+vim.api.nvim_set_hl(0, 'DiagnosticSignWarn', { fg = '#d29922' })
 vim.api.nvim_set_hl(0, 'DiagnosticUnderlineError', {
-  sp = "#f85149",
-  undercurl = true
+  sp = '#f85149',
+  undercurl = true,
 })
 vim.api.nvim_set_hl(0, 'DiagnosticUnderlineHint', {
-  sp = "#3fb950",
-  undercurl = true
+  sp = '#3fb950',
+  undercurl = true,
 })
 vim.api.nvim_set_hl(0, 'DiagnosticUnderlineInfo', {
-  sp = "#4493f8",
-  undercurl = true
+  sp = '#4493f8',
+  undercurl = true,
 })
 vim.api.nvim_set_hl(0, 'DiagnosticUnderlineOk', {
-  sp = "#3fb950",
-  undercurl = true
+  sp = '#3fb950',
+  undercurl = true,
 })
 vim.api.nvim_set_hl(0, 'DiagnosticUnderlineWarn', {
-  sp = "#d29922",
-  undercurl = true
+  sp = '#d29922',
+  undercurl = true,
 })
-vim.api.nvim_set_hl(0, 'DiagnosticUnnecessary', { fg = "#9198a1" })
+vim.api.nvim_set_hl(0, 'DiagnosticUnnecessary', { fg = '#9198a1' })
 vim.api.nvim_set_hl(0, 'DiagnosticVirtualTextError', {
-  bg = "#25181c",
-  fg = "#f85149"
+  bg = '#25181c',
+  fg = '#f85149',
 })
 vim.api.nvim_set_hl(0, 'DiagnosticVirtualTextHint', {
-  bg = "#12261e",
-  fg = "#3fb950"
+  bg = '#12261e',
+  fg = '#3fb950',
 })
 vim.api.nvim_set_hl(0, 'DiagnosticVirtualTextInfo', {
-  bg = "#111d2e",
+  bg = '#111d2e',
   blend = 85,
-  fg = "#4493f8"
+  fg = '#4493f8',
 })
 vim.api.nvim_set_hl(0, 'DiagnosticVirtualTextOk', {
-  bg = "#12261e",
-  fg = "#3fb950"
+  bg = '#12261e',
+  fg = '#3fb950',
 })
 vim.api.nvim_set_hl(0, 'DiagnosticVirtualTextWarn', {
-  bg = "#272215",
-  fg = "#d29922"
+  bg = '#272215',
+  fg = '#d29922',
 })
-vim.api.nvim_set_hl(0, 'DiagnosticWarn', { fg = "#d29922" })
-vim.api.nvim_set_hl(0, 'DiffAdd', { bg = "#12261e" })
-vim.api.nvim_set_hl(0, 'DiffChange', { bg = "#272215" })
-vim.api.nvim_set_hl(0, 'DiffDelete', { bg = "#25181c" })
-vim.api.nvim_set_hl(0, 'DiffText', { bg = "#9e6a03" })
-vim.api.nvim_set_hl(0, 'Directory', { fg = "#4493f8" })
-vim.api.nvim_set_hl(0, 'EndOfBuffer', { fg = "#9198a1" })
-vim.api.nvim_set_hl(0, 'Error', { fg = "#f85149" })
-vim.api.nvim_set_hl(0, 'ErrorMsg', { fg = "#f85149" })
-vim.api.nvim_set_hl(0, 'Exception', { fg = "#ff7b72" })
-vim.api.nvim_set_hl(0, 'FlashBackdrop', { fg = "#9198a1" })
+vim.api.nvim_set_hl(0, 'DiagnosticWarn', { fg = '#d29922' })
+vim.api.nvim_set_hl(0, 'DiffAdd', { bg = '#12261e' })
+vim.api.nvim_set_hl(0, 'DiffChange', { bg = '#272215' })
+vim.api.nvim_set_hl(0, 'DiffDelete', { bg = '#25181c' })
+vim.api.nvim_set_hl(0, 'DiffText', { bg = '#9e6a03' })
+vim.api.nvim_set_hl(0, 'Directory', { fg = '#4493f8' })
+vim.api.nvim_set_hl(0, 'EndOfBuffer', { fg = '#9198a1' })
+vim.api.nvim_set_hl(0, 'Error', { fg = '#f85149' })
+vim.api.nvim_set_hl(0, 'ErrorMsg', { fg = '#f85149' })
+vim.api.nvim_set_hl(0, 'Exception', { fg = '#ff7b72' })
+vim.api.nvim_set_hl(0, 'FlashBackdrop', { fg = '#9198a1' })
 vim.api.nvim_set_hl(0, 'FlashCurrent', {
-  bg = "#1f6feb",
-  fg = "#0d1117"
+  bg = '#1f6feb',
+  fg = '#0d1117',
 })
-vim.api.nvim_set_hl(0, 'FlashCursor', { link = "Cursor" })
+vim.api.nvim_set_hl(0, 'FlashCursor', { link = 'Cursor' })
 vim.api.nvim_set_hl(0, 'FlashLabel', {
-  bg = "#da3633",
+  bg = '#da3633',
   bold = true,
-  fg = "#ffffff"
+  fg = '#ffffff',
 })
 vim.api.nvim_set_hl(0, 'FlashMatch', {
-  bg = "#111d2e",
+  bg = '#111d2e',
   blend = 85,
-  fg = "#f0f6fc"
+  fg = '#f0f6fc',
 })
-vim.api.nvim_set_hl(0, 'FlashPrompt', { link = "MsgArea" })
-vim.api.nvim_set_hl(0, 'FlashPromptIcon', { fg = "#4493f8" })
-vim.api.nvim_set_hl(0, 'Float', { fg = "#79c0ff" })
+vim.api.nvim_set_hl(0, 'FlashPrompt', { link = 'MsgArea' })
+vim.api.nvim_set_hl(0, 'FlashPromptIcon', { fg = '#4493f8' })
+vim.api.nvim_set_hl(0, 'Float', { fg = '#79c0ff' })
 vim.api.nvim_set_hl(0, 'FloatBorder', {
-  bg = "#010409",
-  fg = "#3d444d"
+  bg = '#010409',
+  fg = '#3d444d',
 })
 vim.api.nvim_set_hl(0, 'FloatFooter', {
-  bg = "#010409",
-  fg = "#9198a1"
+  bg = '#010409',
+  fg = '#9198a1',
 })
 vim.api.nvim_set_hl(0, 'FloatTitle', {
-  bg = "#010409",
+  bg = '#010409',
   bold = true,
-  fg = "#f0f6fc"
+  fg = '#f0f6fc',
 })
 vim.api.nvim_set_hl(0, 'FoldColumn', {
-  bg = "#0d1117",
-  fg = "#9198a1"
+  bg = '#0d1117',
+  fg = '#9198a1',
 })
 vim.api.nvim_set_hl(0, 'Folded', {
-  bg = "#151b23",
-  fg = "#9198a1"
+  bg = '#151b23',
+  fg = '#9198a1',
 })
-vim.api.nvim_set_hl(0, 'Function', { fg = "#d2a8ff" })
-vim.api.nvim_set_hl(0, 'FzfLuaBackdrop', { bg = "#010409" })
-vim.api.nvim_set_hl(0, 'FzfLuaBorder', { link = "FloatBorder" })
-vim.api.nvim_set_hl(0, 'FzfLuaBufFlagAlt', { fg = "#ab7df8" })
-vim.api.nvim_set_hl(0, 'FzfLuaBufFlagCur', { fg = "#4493f8" })
-vim.api.nvim_set_hl(0, 'FzfLuaBufId', { fg = "#9198a1" })
-vim.api.nvim_set_hl(0, 'FzfLuaBufLineNr', { fg = "#d29922" })
-vim.api.nvim_set_hl(0, 'FzfLuaBufName', { fg = "#9198a1" })
-vim.api.nvim_set_hl(0, 'FzfLuaBufNr', { fg = "#4493f8" })
-vim.api.nvim_set_hl(0, 'FzfLuaCursor', { link = "Cursor" })
-vim.api.nvim_set_hl(0, 'FzfLuaCursorLine', { link = "CursorLine" })
-vim.api.nvim_set_hl(0, 'FzfLuaCursorLineNr', { link = "CursorLineNr" })
-vim.api.nvim_set_hl(0, 'FzfLuaDirIcon', { fg = "#4493f8" })
-vim.api.nvim_set_hl(0, 'FzfLuaDirPart', { fg = "#9198a1" })
-vim.api.nvim_set_hl(0, 'FzfLuaFilePart', { fg = "#f0f6fc" })
-vim.api.nvim_set_hl(0, 'FzfLuaFzfBorder', { fg = "#3d444d" })
+vim.api.nvim_set_hl(0, 'Function', { fg = '#d2a8ff' })
+vim.api.nvim_set_hl(0, 'FzfLuaBackdrop', { bg = '#010409' })
+vim.api.nvim_set_hl(0, 'FzfLuaBorder', { link = 'FloatBorder' })
+vim.api.nvim_set_hl(0, 'FzfLuaBufFlagAlt', { fg = '#ab7df8' })
+vim.api.nvim_set_hl(0, 'FzfLuaBufFlagCur', { fg = '#4493f8' })
+vim.api.nvim_set_hl(0, 'FzfLuaBufId', { fg = '#9198a1' })
+vim.api.nvim_set_hl(0, 'FzfLuaBufLineNr', { fg = '#d29922' })
+vim.api.nvim_set_hl(0, 'FzfLuaBufName', { fg = '#9198a1' })
+vim.api.nvim_set_hl(0, 'FzfLuaBufNr', { fg = '#4493f8' })
+vim.api.nvim_set_hl(0, 'FzfLuaCursor', { link = 'Cursor' })
+vim.api.nvim_set_hl(0, 'FzfLuaCursorLine', { link = 'CursorLine' })
+vim.api.nvim_set_hl(0, 'FzfLuaCursorLineNr', { link = 'CursorLineNr' })
+vim.api.nvim_set_hl(0, 'FzfLuaDirIcon', { fg = '#4493f8' })
+vim.api.nvim_set_hl(0, 'FzfLuaDirPart', { fg = '#9198a1' })
+vim.api.nvim_set_hl(0, 'FzfLuaFilePart', { fg = '#f0f6fc' })
+vim.api.nvim_set_hl(0, 'FzfLuaFzfBorder', { fg = '#3d444d' })
 vim.api.nvim_set_hl(0, 'FzfLuaFzfCursorLine', {
-  bg = "#111d2e",
-  blend = 85
+  bg = '#111d2e',
+  blend = 85,
 })
-vim.api.nvim_set_hl(0, 'FzfLuaFzfGutter', { bg = "#010409" })
-vim.api.nvim_set_hl(0, 'FzfLuaFzfHeader', { fg = "#9198a1" })
-vim.api.nvim_set_hl(0, 'FzfLuaFzfInfo', { fg = "#9198a1" })
-vim.api.nvim_set_hl(0, 'FzfLuaFzfMarker', { fg = "#3fb950" })
+vim.api.nvim_set_hl(0, 'FzfLuaFzfGutter', { bg = '#010409' })
+vim.api.nvim_set_hl(0, 'FzfLuaFzfHeader', { fg = '#9198a1' })
+vim.api.nvim_set_hl(0, 'FzfLuaFzfInfo', { fg = '#9198a1' })
+vim.api.nvim_set_hl(0, 'FzfLuaFzfMarker', { fg = '#3fb950' })
 vim.api.nvim_set_hl(0, 'FzfLuaFzfMatch', {
   bold = true,
-  fg = "#4493f8"
+  fg = '#4493f8',
 })
-vim.api.nvim_set_hl(0, 'FzfLuaFzfNormal', { fg = "#f0f6fc" })
-vim.api.nvim_set_hl(0, 'FzfLuaFzfPointer', { fg = "#4493f8" })
-vim.api.nvim_set_hl(0, 'FzfLuaFzfPrompt', { fg = "#4493f8" })
-vim.api.nvim_set_hl(0, 'FzfLuaFzfQuery', { fg = "#f0f6fc" })
-vim.api.nvim_set_hl(0, 'FzfLuaFzfScrollbar', { fg = "#4493f8" })
-vim.api.nvim_set_hl(0, 'FzfLuaFzfSeparator', { fg = "#3d444d" })
-vim.api.nvim_set_hl(0, 'FzfLuaFzfSpinner', { fg = "#4493f8" })
-vim.api.nvim_set_hl(0, 'FzfLuaHeaderBind', { fg = "#4493f8" })
-vim.api.nvim_set_hl(0, 'FzfLuaHeaderText', { fg = "#9198a1" })
-vim.api.nvim_set_hl(0, 'FzfLuaHelpBorder', { link = "FloatBorder" })
-vim.api.nvim_set_hl(0, 'FzfLuaHelpNormal', { link = "NormalFloat" })
+vim.api.nvim_set_hl(0, 'FzfLuaFzfNormal', { fg = '#f0f6fc' })
+vim.api.nvim_set_hl(0, 'FzfLuaFzfPointer', { fg = '#4493f8' })
+vim.api.nvim_set_hl(0, 'FzfLuaFzfPrompt', { fg = '#4493f8' })
+vim.api.nvim_set_hl(0, 'FzfLuaFzfQuery', { fg = '#f0f6fc' })
+vim.api.nvim_set_hl(0, 'FzfLuaFzfScrollbar', { fg = '#4493f8' })
+vim.api.nvim_set_hl(0, 'FzfLuaFzfSeparator', { fg = '#3d444d' })
+vim.api.nvim_set_hl(0, 'FzfLuaFzfSpinner', { fg = '#4493f8' })
+vim.api.nvim_set_hl(0, 'FzfLuaHeaderBind', { fg = '#4493f8' })
+vim.api.nvim_set_hl(0, 'FzfLuaHeaderText', { fg = '#9198a1' })
+vim.api.nvim_set_hl(0, 'FzfLuaHelpBorder', { link = 'FloatBorder' })
+vim.api.nvim_set_hl(0, 'FzfLuaHelpNormal', { link = 'NormalFloat' })
 vim.api.nvim_set_hl(0, 'FzfLuaLivePrompt', {
   bold = true,
-  fg = "#f85149"
+  fg = '#f85149',
 })
-vim.api.nvim_set_hl(0, 'FzfLuaLiveSym', { fg = "#f85149" })
-vim.api.nvim_set_hl(0, 'FzfLuaNormal', { link = "NormalFloat" })
-vim.api.nvim_set_hl(0, 'FzfLuaPathColNr', { fg = "#3fb950" })
-vim.api.nvim_set_hl(0, 'FzfLuaPathLineNr', { fg = "#d29922" })
-vim.api.nvim_set_hl(0, 'FzfLuaPreviewBorder', { link = "FloatBorder" })
-vim.api.nvim_set_hl(0, 'FzfLuaPreviewNormal', { link = "NormalFloat" })
-vim.api.nvim_set_hl(0, 'FzfLuaPreviewTitle', { link = "FloatTitle" })
-vim.api.nvim_set_hl(0, 'FzfLuaScrollBorderEmpty', { fg = "#2f353d" })
-vim.api.nvim_set_hl(0, 'FzfLuaScrollBorderFull', { fg = "#4493f8" })
-vim.api.nvim_set_hl(0, 'FzfLuaScrollFloatEmpty', { fg = "#2f353d" })
-vim.api.nvim_set_hl(0, 'FzfLuaScrollFloatFull', { fg = "#4493f8" })
-vim.api.nvim_set_hl(0, 'FzfLuaSearch', { link = "IncSearch" })
-vim.api.nvim_set_hl(0, 'FzfLuaTabMarker', { fg = "#4493f8" })
+vim.api.nvim_set_hl(0, 'FzfLuaLiveSym', { fg = '#f85149' })
+vim.api.nvim_set_hl(0, 'FzfLuaNormal', { link = 'NormalFloat' })
+vim.api.nvim_set_hl(0, 'FzfLuaPathColNr', { fg = '#3fb950' })
+vim.api.nvim_set_hl(0, 'FzfLuaPathLineNr', { fg = '#d29922' })
+vim.api.nvim_set_hl(0, 'FzfLuaPreviewBorder', { link = 'FloatBorder' })
+vim.api.nvim_set_hl(0, 'FzfLuaPreviewNormal', { link = 'NormalFloat' })
+vim.api.nvim_set_hl(0, 'FzfLuaPreviewTitle', { link = 'FloatTitle' })
+vim.api.nvim_set_hl(0, 'FzfLuaScrollBorderEmpty', { fg = '#2f353d' })
+vim.api.nvim_set_hl(0, 'FzfLuaScrollBorderFull', { fg = '#4493f8' })
+vim.api.nvim_set_hl(0, 'FzfLuaScrollFloatEmpty', { fg = '#2f353d' })
+vim.api.nvim_set_hl(0, 'FzfLuaScrollFloatFull', { fg = '#4493f8' })
+vim.api.nvim_set_hl(0, 'FzfLuaSearch', { link = 'IncSearch' })
+vim.api.nvim_set_hl(0, 'FzfLuaTabMarker', { fg = '#4493f8' })
 vim.api.nvim_set_hl(0, 'FzfLuaTabTitle', {
   bold = true,
-  fg = "#f0f6fc"
+  fg = '#f0f6fc',
 })
-vim.api.nvim_set_hl(0, 'FzfLuaTitle', { link = "FloatTitle" })
+vim.api.nvim_set_hl(0, 'FzfLuaTitle', { link = 'FloatTitle' })
 vim.api.nvim_set_hl(0, 'FzfLuaTitleFlags', {
   bold = true,
-  fg = "#4493f8"
+  fg = '#4493f8',
 })
-vim.api.nvim_set_hl(0, 'GitSignsAdd', { fg = "#3fb950" })
-vim.api.nvim_set_hl(0, 'GitSignsAddLn', { bg = "#12261e" })
-vim.api.nvim_set_hl(0, 'GitSignsAddNr', { fg = "#3fb950" })
-vim.api.nvim_set_hl(0, 'GitSignsChange', { fg = "#d29922" })
-vim.api.nvim_set_hl(0, 'GitSignsChangeLn', { bg = "#272215" })
-vim.api.nvim_set_hl(0, 'GitSignsChangeNr', { fg = "#d29922" })
-vim.api.nvim_set_hl(0, 'GitSignsDelete', { fg = "#f85149" })
-vim.api.nvim_set_hl(0, 'GitSignsDeleteLn', { bg = "#25181c" })
-vim.api.nvim_set_hl(0, 'GitSignsDeleteNr', { fg = "#f85149" })
+vim.api.nvim_set_hl(0, 'GitSignsAdd', { fg = '#3fb950' })
+vim.api.nvim_set_hl(0, 'GitSignsAddLn', { bg = '#12261e' })
+vim.api.nvim_set_hl(0, 'GitSignsAddNr', { fg = '#3fb950' })
+vim.api.nvim_set_hl(0, 'GitSignsChange', { fg = '#d29922' })
+vim.api.nvim_set_hl(0, 'GitSignsChangeLn', { bg = '#272215' })
+vim.api.nvim_set_hl(0, 'GitSignsChangeNr', { fg = '#d29922' })
+vim.api.nvim_set_hl(0, 'GitSignsDelete', { fg = '#f85149' })
+vim.api.nvim_set_hl(0, 'GitSignsDeleteLn', { bg = '#25181c' })
+vim.api.nvim_set_hl(0, 'GitSignsDeleteNr', { fg = '#f85149' })
 vim.api.nvim_set_hl(0, 'GrugFarHelpHeader', {
   bold = true,
-  fg = "#4493f8"
+  fg = '#4493f8',
 })
 vim.api.nvim_set_hl(0, 'GrugFarHelpHeaderKey', {
   bold = true,
-  fg = "#d29922"
+  fg = '#d29922',
 })
-vim.api.nvim_set_hl(0, 'GrugFarHelpWinActionDescription', { fg = "#9198a1" })
-vim.api.nvim_set_hl(0, 'GrugFarHelpWinActionKey', { fg = "#d29922" })
-vim.api.nvim_set_hl(0, 'GrugFarHelpWinActionPrefix', { fg = "#ab7df8" })
-vim.api.nvim_set_hl(0, 'GrugFarHelpWinActionText', { fg = "#f0f6fc" })
+vim.api.nvim_set_hl(0, 'GrugFarHelpWinActionDescription', { fg = '#9198a1' })
+vim.api.nvim_set_hl(0, 'GrugFarHelpWinActionKey', { fg = '#d29922' })
+vim.api.nvim_set_hl(0, 'GrugFarHelpWinActionPrefix', { fg = '#ab7df8' })
+vim.api.nvim_set_hl(0, 'GrugFarHelpWinActionText', { fg = '#f0f6fc' })
 vim.api.nvim_set_hl(0, 'GrugFarHelpWinHeader', {
   bold = true,
-  fg = "#4493f8"
+  fg = '#4493f8',
 })
 vim.api.nvim_set_hl(0, 'GrugFarInputLabel', {
   bold = true,
-  fg = "#4493f8"
+  fg = '#4493f8',
 })
-vim.api.nvim_set_hl(0, 'GrugFarInputPlaceholder', { fg = "#9198a1" })
-vim.api.nvim_set_hl(0, 'GrugFarResultsActionMessage', { fg = "#3fb950" })
-vim.api.nvim_set_hl(0, 'GrugFarResultsAddIndicator', { fg = "#3fb950" })
-vim.api.nvim_set_hl(0, 'GrugFarResultsChangeIndicator', { fg = "#d29922" })
-vim.api.nvim_set_hl(0, 'GrugFarResultsCmdHeader', { fg = "#9198a1" })
-vim.api.nvim_set_hl(0, 'GrugFarResultsColumnNr', { fg = "#9198a1" })
+vim.api.nvim_set_hl(0, 'GrugFarInputPlaceholder', { fg = '#9198a1' })
+vim.api.nvim_set_hl(0, 'GrugFarResultsActionMessage', { fg = '#3fb950' })
+vim.api.nvim_set_hl(0, 'GrugFarResultsAddIndicator', { fg = '#3fb950' })
+vim.api.nvim_set_hl(0, 'GrugFarResultsChangeIndicator', { fg = '#d29922' })
+vim.api.nvim_set_hl(0, 'GrugFarResultsCmdHeader', { fg = '#9198a1' })
+vim.api.nvim_set_hl(0, 'GrugFarResultsColumnNr', { fg = '#9198a1' })
 vim.api.nvim_set_hl(0, 'GrugFarResultsCursorLineNo', {
   bold = true,
-  fg = "#f0f6fc"
+  fg = '#f0f6fc',
 })
-vim.api.nvim_set_hl(0, 'GrugFarResultsDiffSeparatorIndicator', { fg = "#3d444d" })
+vim.api.nvim_set_hl(0, 'GrugFarResultsDiffSeparatorIndicator', { fg = '#3d444d' })
 vim.api.nvim_set_hl(0, 'GrugFarResultsHeader', {
   bold = true,
-  fg = "#4493f8"
+  fg = '#4493f8',
 })
-vim.api.nvim_set_hl(0, 'GrugFarResultsLineNr', { fg = "#9198a1" })
-vim.api.nvim_set_hl(0, 'GrugFarResultsLongLineStr', { fg = "#9198a1" })
+vim.api.nvim_set_hl(0, 'GrugFarResultsLineNr', { fg = '#9198a1' })
+vim.api.nvim_set_hl(0, 'GrugFarResultsLongLineStr', { fg = '#9198a1' })
 vim.api.nvim_set_hl(0, 'GrugFarResultsMatch', {
-  bg = "#9e6a03",
-  fg = "#ffffff"
+  bg = '#9e6a03',
+  fg = '#ffffff',
 })
 vim.api.nvim_set_hl(0, 'GrugFarResultsMatchAdded', {
-  bg = "#238636",
-  fg = "#ffffff"
+  bg = '#238636',
+  fg = '#ffffff',
 })
 vim.api.nvim_set_hl(0, 'GrugFarResultsMatchRemoved', {
-  bg = "#da3633",
-  fg = "#ffffff"
+  bg = '#da3633',
+  fg = '#ffffff',
 })
-vim.api.nvim_set_hl(0, 'GrugFarResultsNumberLabel', { fg = "#ab7df8" })
-vim.api.nvim_set_hl(0, 'GrugFarResultsNumbersSeparator', { fg = "#9198a1" })
+vim.api.nvim_set_hl(0, 'GrugFarResultsNumberLabel', { fg = '#ab7df8' })
+vim.api.nvim_set_hl(0, 'GrugFarResultsNumbersSeparator', { fg = '#9198a1' })
 vim.api.nvim_set_hl(0, 'GrugFarResultsPath', {
-  fg = "#4493f8",
-  underline = true
+  fg = '#4493f8',
+  underline = true,
 })
-vim.api.nvim_set_hl(0, 'GrugFarResultsRemoveIndicator', { fg = "#f85149" })
-vim.api.nvim_set_hl(0, 'GrugFarResultsStats', { fg = "#9198a1" })
+vim.api.nvim_set_hl(0, 'GrugFarResultsRemoveIndicator', { fg = '#f85149' })
+vim.api.nvim_set_hl(0, 'GrugFarResultsStats', { fg = '#9198a1' })
 vim.api.nvim_set_hl(0, 'GrugFarVisualBufrange', {
-  bg = "#111d2e",
-  blend = 85
+  bg = '#111d2e',
+  blend = 85,
 })
-vim.api.nvim_set_hl(0, 'IblIndent', { fg = "#2f353d" })
-vim.api.nvim_set_hl(0, 'IblScope', { fg = "#3d444d" })
-vim.api.nvim_set_hl(0, 'IblWhitespace', { fg = "#2f353d" })
-vim.api.nvim_set_hl(0, 'Identifier', { fg = "#f0f6fc" })
-vim.api.nvim_set_hl(0, 'Ignore', { fg = "#9198a1" })
+vim.api.nvim_set_hl(0, 'IblIndent', { fg = '#2f353d' })
+vim.api.nvim_set_hl(0, 'IblScope', { fg = '#3d444d' })
+vim.api.nvim_set_hl(0, 'IblWhitespace', { fg = '#2f353d' })
+vim.api.nvim_set_hl(0, 'Identifier', { fg = '#f0f6fc' })
+vim.api.nvim_set_hl(0, 'Ignore', { fg = '#9198a1' })
 vim.api.nvim_set_hl(0, 'IncSearch', {
-  bg = "#1f6feb",
-  fg = "#0d1117"
+  bg = '#1f6feb',
+  fg = '#0d1117',
 })
-vim.api.nvim_set_hl(0, 'Include', { fg = "#ff7b72" })
-vim.api.nvim_set_hl(0, 'IndentBlanklineChar', { fg = "#2f353d" })
-vim.api.nvim_set_hl(0, 'IndentBlanklineContextChar', { fg = "#3d444d" })
+vim.api.nvim_set_hl(0, 'Include', { fg = '#ff7b72' })
+vim.api.nvim_set_hl(0, 'IndentBlanklineChar', { fg = '#2f353d' })
+vim.api.nvim_set_hl(0, 'IndentBlanklineContextChar', { fg = '#3d444d' })
 vim.api.nvim_set_hl(0, 'IndentBlanklineContextStart', {
-  sp = "#3d444d",
-  underline = true
+  sp = '#3d444d',
+  underline = true,
 })
-vim.api.nvim_set_hl(0, 'IndentBlanklineSpaceChar', { fg = "#2f353d" })
-vim.api.nvim_set_hl(0, 'IndentBlanklineSpaceCharBlankline', { fg = "#2f353d" })
-vim.api.nvim_set_hl(0, 'Keyword', { fg = "#ff7b72" })
-vim.api.nvim_set_hl(0, 'Label', { fg = "#ff7b72" })
+vim.api.nvim_set_hl(0, 'IndentBlanklineSpaceChar', { fg = '#2f353d' })
+vim.api.nvim_set_hl(0, 'IndentBlanklineSpaceCharBlankline', { fg = '#2f353d' })
+vim.api.nvim_set_hl(0, 'Keyword', { fg = '#ff7b72' })
+vim.api.nvim_set_hl(0, 'Label', { fg = '#ff7b72' })
 vim.api.nvim_set_hl(0, 'LazyButton', {
-  bg = "#151b23",
-  fg = "#f0f6fc"
+  bg = '#151b23',
+  fg = '#f0f6fc',
 })
 vim.api.nvim_set_hl(0, 'LazyButtonActive', {
-  bg = "#1f6feb",
-  fg = "#ffffff"
+  bg = '#1f6feb',
+  fg = '#ffffff',
 })
-vim.api.nvim_set_hl(0, 'LazyCommit', { fg = "#9198a1" })
-vim.api.nvim_set_hl(0, 'LazyCommitType', { fg = "#3fb950" })
+vim.api.nvim_set_hl(0, 'LazyCommit', { fg = '#9198a1' })
+vim.api.nvim_set_hl(0, 'LazyCommitType', { fg = '#3fb950' })
 vim.api.nvim_set_hl(0, 'LazyH1', {
-  bg = "#1f6feb",
+  bg = '#1f6feb',
   bold = true,
-  fg = "#ffffff"
+  fg = '#ffffff',
 })
 vim.api.nvim_set_hl(0, 'LazyH2', {
   bold = true,
-  fg = "#4493f8"
+  fg = '#4493f8',
 })
-vim.api.nvim_set_hl(0, 'LazyNormal', { link = "NormalFloat" })
-vim.api.nvim_set_hl(0, 'LazyReasonCmd', { fg = "#4493f8" })
-vim.api.nvim_set_hl(0, 'LazyReasonEvent', { fg = "#d29922" })
-vim.api.nvim_set_hl(0, 'LazyReasonFt', { fg = "#3fb950" })
-vim.api.nvim_set_hl(0, 'LazyReasonKeys', { fg = "#ab7df8" })
-vim.api.nvim_set_hl(0, 'LazyReasonPlugin', { fg = "#ab7df8" })
-vim.api.nvim_set_hl(0, 'LazyReasonStart', { fg = "#f85149" })
-vim.api.nvim_set_hl(0, 'LazySpecial', { fg = "#4493f8" })
-vim.api.nvim_set_hl(0, 'LineNr', { fg = "#9198a1" })
-vim.api.nvim_set_hl(0, 'LineNrAbove', { fg = "#9198a1" })
-vim.api.nvim_set_hl(0, 'LineNrBelow', { fg = "#9198a1" })
-vim.api.nvim_set_hl(0, 'LspCodeLens', { fg = "#9198a1" })
-vim.api.nvim_set_hl(0, 'LspCodeLensSeparator', { fg = "#9198a1" })
+vim.api.nvim_set_hl(0, 'LazyNormal', { link = 'NormalFloat' })
+vim.api.nvim_set_hl(0, 'LazyReasonCmd', { fg = '#4493f8' })
+vim.api.nvim_set_hl(0, 'LazyReasonEvent', { fg = '#d29922' })
+vim.api.nvim_set_hl(0, 'LazyReasonFt', { fg = '#3fb950' })
+vim.api.nvim_set_hl(0, 'LazyReasonKeys', { fg = '#ab7df8' })
+vim.api.nvim_set_hl(0, 'LazyReasonPlugin', { fg = '#ab7df8' })
+vim.api.nvim_set_hl(0, 'LazyReasonStart', { fg = '#f85149' })
+vim.api.nvim_set_hl(0, 'LazySpecial', { fg = '#4493f8' })
+vim.api.nvim_set_hl(0, 'LineNr', { fg = '#9198a1' })
+vim.api.nvim_set_hl(0, 'LineNrAbove', { fg = '#9198a1' })
+vim.api.nvim_set_hl(0, 'LineNrBelow', { fg = '#9198a1' })
+vim.api.nvim_set_hl(0, 'LspCodeLens', { fg = '#9198a1' })
+vim.api.nvim_set_hl(0, 'LspCodeLensSeparator', { fg = '#9198a1' })
 vim.api.nvim_set_hl(0, 'LspInlayHint', {
-  bg = "#151b23",
-  fg = "#9198a1"
+  bg = '#151b23',
+  fg = '#9198a1',
 })
 vim.api.nvim_set_hl(0, 'LspReferenceRead', {
-  bg = "#111d2e",
-  blend = 85
+  bg = '#111d2e',
+  blend = 85,
 })
 vim.api.nvim_set_hl(0, 'LspReferenceTarget', {
-  bg = "#111d2e",
-  blend = 85
+  bg = '#111d2e',
+  blend = 85,
 })
 vim.api.nvim_set_hl(0, 'LspReferenceText', {
-  bg = "#111d2e",
-  blend = 85
+  bg = '#111d2e',
+  blend = 85,
 })
 vim.api.nvim_set_hl(0, 'LspReferenceWrite', {
-  bg = "#111d2e",
-  blend = 85
+  bg = '#111d2e',
+  blend = 85,
 })
 vim.api.nvim_set_hl(0, 'LspSignatureActiveParameter', {
   bold = true,
-  fg = "#4493f8",
-  underline = true
+  fg = '#4493f8',
+  underline = true,
 })
-vim.api.nvim_set_hl(0, 'Macro', { fg = "#79c0ff" })
-vim.api.nvim_set_hl(0, 'MasonError', { fg = "#f85149" })
+vim.api.nvim_set_hl(0, 'Macro', { fg = '#79c0ff' })
+vim.api.nvim_set_hl(0, 'MasonError', { fg = '#f85149' })
 vim.api.nvim_set_hl(0, 'MasonHeader', {
-  bg = "#1f6feb",
+  bg = '#1f6feb',
   bold = true,
-  fg = "#0d1117"
+  fg = '#0d1117',
 })
 vim.api.nvim_set_hl(0, 'MasonHeaderSecondary', {
-  bg = "#238636",
+  bg = '#238636',
   bold = true,
-  fg = "#0d1117"
+  fg = '#0d1117',
 })
 vim.api.nvim_set_hl(0, 'MasonHeading', {
   bold = true,
-  fg = "#f0f6fc"
+  fg = '#f0f6fc',
 })
-vim.api.nvim_set_hl(0, 'MasonHighlight', { fg = "#4493f8" })
+vim.api.nvim_set_hl(0, 'MasonHighlight', { fg = '#4493f8' })
 vim.api.nvim_set_hl(0, 'MasonHighlightBlock', {
-  bg = "#1f6feb",
-  fg = "#0d1117"
+  bg = '#1f6feb',
+  fg = '#0d1117',
 })
 vim.api.nvim_set_hl(0, 'MasonHighlightBlockBold', {
-  bg = "#1f6feb",
+  bg = '#1f6feb',
   bold = true,
-  fg = "#0d1117"
+  fg = '#0d1117',
 })
 vim.api.nvim_set_hl(0, 'MasonHighlightBlockBoldSecondary', {
-  bg = "#238636",
+  bg = '#238636',
   bold = true,
-  fg = "#0d1117"
+  fg = '#0d1117',
 })
 vim.api.nvim_set_hl(0, 'MasonHighlightBlockSecondary', {
-  bg = "#238636",
-  fg = "#0d1117"
+  bg = '#238636',
+  fg = '#0d1117',
 })
-vim.api.nvim_set_hl(0, 'MasonHighlightSecondary', { fg = "#3fb950" })
+vim.api.nvim_set_hl(0, 'MasonHighlightSecondary', { fg = '#3fb950' })
 vim.api.nvim_set_hl(0, 'MasonLink', {
-  fg = "#4493f8",
-  underline = true
+  fg = '#4493f8',
+  underline = true,
 })
-vim.api.nvim_set_hl(0, 'MasonMuted', { fg = "#9198a1" })
+vim.api.nvim_set_hl(0, 'MasonMuted', { fg = '#9198a1' })
 vim.api.nvim_set_hl(0, 'MasonMutedBlock', {
-  bg = "#151b23",
-  fg = "#f0f6fc"
+  bg = '#151b23',
+  fg = '#f0f6fc',
 })
 vim.api.nvim_set_hl(0, 'MasonMutedBlockBold', {
-  bg = "#151b23",
+  bg = '#151b23',
   bold = true,
-  fg = "#f0f6fc"
+  fg = '#f0f6fc',
 })
 vim.api.nvim_set_hl(0, 'MasonNormal', {
-  bg = "#010409",
-  fg = "#f0f6fc"
+  bg = '#010409',
+  fg = '#f0f6fc',
 })
-vim.api.nvim_set_hl(0, 'MasonWarning', { fg = "#d29922" })
+vim.api.nvim_set_hl(0, 'MasonWarning', { fg = '#d29922' })
 vim.api.nvim_set_hl(0, 'MatchParen', {
-  bg = "#111d2e",
+  bg = '#111d2e',
   blend = 85,
-  bold = true
+  bold = true,
 })
-vim.api.nvim_set_hl(0, 'MiniClueBorder', { link = "FloatBorder" })
-vim.api.nvim_set_hl(0, 'MiniClueDescGroup', { fg = "#ab7df8" })
-vim.api.nvim_set_hl(0, 'MiniClueDescSingle', { fg = "#f0f6fc" })
-vim.api.nvim_set_hl(0, 'MiniClueNextKey', { fg = "#4493f8" })
-vim.api.nvim_set_hl(0, 'MiniClueNextKeyWithPostkeys', { fg = "#d29922" })
-vim.api.nvim_set_hl(0, 'MiniClueSeparator', { fg = "#2f353d" })
-vim.api.nvim_set_hl(0, 'MiniClueTitle', { link = "FloatTitle" })
+vim.api.nvim_set_hl(0, 'MiniClueBorder', { link = 'FloatBorder' })
+vim.api.nvim_set_hl(0, 'MiniClueDescGroup', { fg = '#ab7df8' })
+vim.api.nvim_set_hl(0, 'MiniClueDescSingle', { fg = '#f0f6fc' })
+vim.api.nvim_set_hl(0, 'MiniClueNextKey', { fg = '#4493f8' })
+vim.api.nvim_set_hl(0, 'MiniClueNextKeyWithPostkeys', { fg = '#d29922' })
+vim.api.nvim_set_hl(0, 'MiniClueSeparator', { fg = '#2f353d' })
+vim.api.nvim_set_hl(0, 'MiniClueTitle', { link = 'FloatTitle' })
 vim.api.nvim_set_hl(0, 'MiniCursorword', { underline = true })
 vim.api.nvim_set_hl(0, 'MiniCursorwordCurrent', { underline = true })
-vim.api.nvim_set_hl(0, 'MiniDiffOverAdd', { bg = "#12261e" })
-vim.api.nvim_set_hl(0, 'MiniDiffOverChange', { bg = "#272215" })
-vim.api.nvim_set_hl(0, 'MiniDiffOverChangeBuf', { bg = "#272215" })
-vim.api.nvim_set_hl(0, 'MiniDiffOverContext', { bg = "#151b23" })
-vim.api.nvim_set_hl(0, 'MiniDiffOverContextBuf', { bg = "#151b23" })
-vim.api.nvim_set_hl(0, 'MiniDiffOverDelete', { bg = "#25181c" })
-vim.api.nvim_set_hl(0, 'MiniDiffSignAdd', { fg = "#3fb950" })
-vim.api.nvim_set_hl(0, 'MiniDiffSignChange', { fg = "#d29922" })
-vim.api.nvim_set_hl(0, 'MiniDiffSignDelete', { fg = "#f85149" })
-vim.api.nvim_set_hl(0, 'MiniFilesBorder', { link = "FloatBorder" })
+vim.api.nvim_set_hl(0, 'MiniDiffOverAdd', { bg = '#12261e' })
+vim.api.nvim_set_hl(0, 'MiniDiffOverChange', { bg = '#272215' })
+vim.api.nvim_set_hl(0, 'MiniDiffOverChangeBuf', { bg = '#272215' })
+vim.api.nvim_set_hl(0, 'MiniDiffOverContext', { bg = '#151b23' })
+vim.api.nvim_set_hl(0, 'MiniDiffOverContextBuf', { bg = '#151b23' })
+vim.api.nvim_set_hl(0, 'MiniDiffOverDelete', { bg = '#25181c' })
+vim.api.nvim_set_hl(0, 'MiniDiffSignAdd', { fg = '#3fb950' })
+vim.api.nvim_set_hl(0, 'MiniDiffSignChange', { fg = '#d29922' })
+vim.api.nvim_set_hl(0, 'MiniDiffSignDelete', { fg = '#f85149' })
+vim.api.nvim_set_hl(0, 'MiniFilesBorder', { link = 'FloatBorder' })
 vim.api.nvim_set_hl(0, 'MiniFilesBorderModified', {
-  bg = "#010409",
-  fg = "#d29922"
+  bg = '#010409',
+  fg = '#d29922',
 })
-vim.api.nvim_set_hl(0, 'MiniFilesCursorLine', { link = "CursorLine" })
-vim.api.nvim_set_hl(0, 'MiniFilesDirectory', { fg = "#4493f8" })
-vim.api.nvim_set_hl(0, 'MiniFilesFile', { fg = "#f0f6fc" })
-vim.api.nvim_set_hl(0, 'MiniFilesNormal', { link = "NormalFloat" })
-vim.api.nvim_set_hl(0, 'MiniFilesTitle', { link = "FloatTitle" })
+vim.api.nvim_set_hl(0, 'MiniFilesCursorLine', { link = 'CursorLine' })
+vim.api.nvim_set_hl(0, 'MiniFilesDirectory', { fg = '#4493f8' })
+vim.api.nvim_set_hl(0, 'MiniFilesFile', { fg = '#f0f6fc' })
+vim.api.nvim_set_hl(0, 'MiniFilesNormal', { link = 'NormalFloat' })
+vim.api.nvim_set_hl(0, 'MiniFilesTitle', { link = 'FloatTitle' })
 vim.api.nvim_set_hl(0, 'MiniFilesTitleFocused', {
-  bg = "#010409",
+  bg = '#010409',
   bold = true,
-  fg = "#4493f8"
+  fg = '#4493f8',
 })
 vim.api.nvim_set_hl(0, 'MiniHipatternsFixme', {
-  bg = "#da3633",
+  bg = '#da3633',
   bold = true,
-  fg = "#ffffff"
+  fg = '#ffffff',
 })
 vim.api.nvim_set_hl(0, 'MiniHipatternsHack', {
-  bg = "#9e6a03",
+  bg = '#9e6a03',
   bold = true,
-  fg = "#0d1117"
+  fg = '#0d1117',
 })
 vim.api.nvim_set_hl(0, 'MiniHipatternsNote', {
-  bg = "#238636",
+  bg = '#238636',
   bold = true,
-  fg = "#ffffff"
+  fg = '#ffffff',
 })
 vim.api.nvim_set_hl(0, 'MiniHipatternsTodo', {
-  bg = "#1f6feb",
+  bg = '#1f6feb',
   bold = true,
-  fg = "#ffffff"
+  fg = '#ffffff',
 })
-vim.api.nvim_set_hl(0, 'MiniIndentscopeSymbol', { fg = "#3d444d" })
-vim.api.nvim_set_hl(0, 'MiniIndentscopeSymbolOff', { fg = "#2f353d" })
+vim.api.nvim_set_hl(0, 'MiniIndentscopeSymbol', { fg = '#3d444d' })
+vim.api.nvim_set_hl(0, 'MiniIndentscopeSymbolOff', { fg = '#2f353d' })
 vim.api.nvim_set_hl(0, 'MiniJump', {
-  bg = "#1f6feb",
-  fg = "#ffffff"
+  bg = '#1f6feb',
+  fg = '#ffffff',
 })
-vim.api.nvim_set_hl(0, 'MiniNotifyBorder', { link = "FloatBorder" })
-vim.api.nvim_set_hl(0, 'MiniNotifyNormal', { link = "NormalFloat" })
-vim.api.nvim_set_hl(0, 'MiniNotifyTitle', { link = "FloatTitle" })
-vim.api.nvim_set_hl(0, 'MiniPickBorder', { link = "FloatBorder" })
+vim.api.nvim_set_hl(0, 'MiniNotifyBorder', { link = 'FloatBorder' })
+vim.api.nvim_set_hl(0, 'MiniNotifyNormal', { link = 'NormalFloat' })
+vim.api.nvim_set_hl(0, 'MiniNotifyTitle', { link = 'FloatTitle' })
+vim.api.nvim_set_hl(0, 'MiniPickBorder', { link = 'FloatBorder' })
 vim.api.nvim_set_hl(0, 'MiniPickBorderBusy', {
-  bg = "#010409",
-  fg = "#d29922"
+  bg = '#010409',
+  fg = '#d29922',
 })
 vim.api.nvim_set_hl(0, 'MiniPickBorderText', {
-  bg = "#010409",
-  fg = "#9198a1"
+  bg = '#010409',
+  fg = '#9198a1',
 })
-vim.api.nvim_set_hl(0, 'MiniPickCursor', { link = "Cursor" })
+vim.api.nvim_set_hl(0, 'MiniPickCursor', { link = 'Cursor' })
 vim.api.nvim_set_hl(0, 'MiniPickHeader', {
   bold = true,
-  fg = "#4493f8"
+  fg = '#4493f8',
 })
-vim.api.nvim_set_hl(0, 'MiniPickIconDirectory', { fg = "#4493f8" })
-vim.api.nvim_set_hl(0, 'MiniPickIconFile', { fg = "#f0f6fc" })
+vim.api.nvim_set_hl(0, 'MiniPickIconDirectory', { fg = '#4493f8' })
+vim.api.nvim_set_hl(0, 'MiniPickIconFile', { fg = '#f0f6fc' })
 vim.api.nvim_set_hl(0, 'MiniPickMatchCurrent', {
-  bg = "#111d2e",
-  blend = 85
+  bg = '#111d2e',
+  blend = 85,
 })
 vim.api.nvim_set_hl(0, 'MiniPickMatchMarked', {
-  bg = "#12261e",
-  fg = "#3fb950"
+  bg = '#12261e',
+  fg = '#3fb950',
 })
 vim.api.nvim_set_hl(0, 'MiniPickMatchRanges', {
   bold = true,
-  fg = "#4493f8"
+  fg = '#4493f8',
 })
-vim.api.nvim_set_hl(0, 'MiniPickNormal', { link = "NormalFloat" })
-vim.api.nvim_set_hl(0, 'MiniPickPreviewLine', { link = "CursorLine" })
-vim.api.nvim_set_hl(0, 'MiniPickPreviewRegion', { link = "Visual" })
+vim.api.nvim_set_hl(0, 'MiniPickNormal', { link = 'NormalFloat' })
+vim.api.nvim_set_hl(0, 'MiniPickPreviewLine', { link = 'CursorLine' })
+vim.api.nvim_set_hl(0, 'MiniPickPreviewRegion', { link = 'Visual' })
 vim.api.nvim_set_hl(0, 'MiniPickPrompt', {
-  bg = "#010409",
-  fg = "#4493f8"
+  bg = '#010409',
+  fg = '#4493f8',
 })
-vim.api.nvim_set_hl(0, 'MiniPickPromptCaret', { fg = "#4493f8" })
-vim.api.nvim_set_hl(0, 'MiniPickPromptPrefix', { fg = "#4493f8" })
+vim.api.nvim_set_hl(0, 'MiniPickPromptCaret', { fg = '#4493f8' })
+vim.api.nvim_set_hl(0, 'MiniPickPromptPrefix', { fg = '#4493f8' })
 vim.api.nvim_set_hl(0, 'MiniStarterCurrent', { bold = true })
 vim.api.nvim_set_hl(0, 'MiniStarterFooter', {
-  fg = "#9198a1",
-  italic = true
+  fg = '#9198a1',
+  italic = true,
 })
-vim.api.nvim_set_hl(0, 'MiniStarterHeader', { fg = "#4493f8" })
-vim.api.nvim_set_hl(0, 'MiniStarterInactive', { fg = "#9198a1" })
-vim.api.nvim_set_hl(0, 'MiniStarterItem', { fg = "#f0f6fc" })
-vim.api.nvim_set_hl(0, 'MiniStarterItemBullet', { fg = "#3d444d" })
-vim.api.nvim_set_hl(0, 'MiniStarterItemPrefix', { fg = "#d29922" })
+vim.api.nvim_set_hl(0, 'MiniStarterHeader', { fg = '#4493f8' })
+vim.api.nvim_set_hl(0, 'MiniStarterInactive', { fg = '#9198a1' })
+vim.api.nvim_set_hl(0, 'MiniStarterItem', { fg = '#f0f6fc' })
+vim.api.nvim_set_hl(0, 'MiniStarterItemBullet', { fg = '#3d444d' })
+vim.api.nvim_set_hl(0, 'MiniStarterItemPrefix', { fg = '#d29922' })
 vim.api.nvim_set_hl(0, 'MiniStarterQuery', {
   bold = true,
-  fg = "#4493f8"
+  fg = '#4493f8',
 })
 vim.api.nvim_set_hl(0, 'MiniStarterSection', {
   bold = true,
-  fg = "#4493f8"
+  fg = '#4493f8',
 })
 vim.api.nvim_set_hl(0, 'MiniStatuslineDevinfo', {
-  bg = "#151b23",
-  fg = "#f0f6fc"
+  bg = '#151b23',
+  fg = '#f0f6fc',
 })
 vim.api.nvim_set_hl(0, 'MiniStatuslineFileinfo', {
-  bg = "#151b23",
-  fg = "#f0f6fc"
+  bg = '#151b23',
+  fg = '#f0f6fc',
 })
 vim.api.nvim_set_hl(0, 'MiniStatuslineFilename', {
-  bg = "#010409",
-  fg = "#9198a1"
+  bg = '#010409',
+  fg = '#9198a1',
 })
 vim.api.nvim_set_hl(0, 'MiniStatuslineInactive', {
-  bg = "#010409",
-  fg = "#9198a1"
+  bg = '#010409',
+  fg = '#9198a1',
 })
 vim.api.nvim_set_hl(0, 'MiniStatuslineModeCommand', {
-  bg = "#9e6a03",
+  bg = '#9e6a03',
   bold = true,
-  fg = "#0d1117"
+  fg = '#0d1117',
 })
 vim.api.nvim_set_hl(0, 'MiniStatuslineModeInsert', {
-  bg = "#238636",
+  bg = '#238636',
   bold = true,
-  fg = "#ffffff"
+  fg = '#ffffff',
 })
 vim.api.nvim_set_hl(0, 'MiniStatuslineModeNormal', {
-  bg = "#1f6feb",
+  bg = '#1f6feb',
   bold = true,
-  fg = "#ffffff"
+  fg = '#ffffff',
 })
 vim.api.nvim_set_hl(0, 'MiniStatuslineModeOther', {
-  bg = "#151b23",
+  bg = '#151b23',
   bold = true,
-  fg = "#f0f6fc"
+  fg = '#f0f6fc',
 })
 vim.api.nvim_set_hl(0, 'MiniStatuslineModeReplace', {
-  bg = "#da3633",
+  bg = '#da3633',
   bold = true,
-  fg = "#ffffff"
+  fg = '#ffffff',
 })
 vim.api.nvim_set_hl(0, 'MiniStatuslineModeVisual', {
-  bg = "#8957e5",
+  bg = '#8957e5',
   bold = true,
-  fg = "#ffffff"
+  fg = '#ffffff',
 })
 vim.api.nvim_set_hl(0, 'MiniTablineCurrent', {
-  bg = "#0d1117",
+  bg = '#0d1117',
   bold = true,
-  fg = "#f0f6fc"
+  fg = '#f0f6fc',
 })
-vim.api.nvim_set_hl(0, 'MiniTablineFill', { bg = "#010409" })
+vim.api.nvim_set_hl(0, 'MiniTablineFill', { bg = '#010409' })
 vim.api.nvim_set_hl(0, 'MiniTablineHidden', {
-  bg = "#010409",
-  fg = "#9198a1"
+  bg = '#010409',
+  fg = '#9198a1',
 })
 vim.api.nvim_set_hl(0, 'MiniTablineModifiedCurrent', {
-  bg = "#0d1117",
+  bg = '#0d1117',
   bold = true,
-  fg = "#d29922"
+  fg = '#d29922',
 })
 vim.api.nvim_set_hl(0, 'MiniTablineModifiedHidden', {
-  bg = "#010409",
-  fg = "#d29922"
+  bg = '#010409',
+  fg = '#d29922',
 })
 vim.api.nvim_set_hl(0, 'MiniTablineModifiedVisible', {
-  bg = "#151b23",
-  fg = "#d29922"
+  bg = '#151b23',
+  fg = '#d29922',
 })
 vim.api.nvim_set_hl(0, 'MiniTablineTabpagesection', {
-  bg = "#1f6feb",
+  bg = '#1f6feb',
   bold = true,
-  fg = "#ffffff"
+  fg = '#ffffff',
 })
 vim.api.nvim_set_hl(0, 'MiniTablineTrunc', {
-  bg = "#010409",
-  fg = "#9198a1"
+  bg = '#010409',
+  fg = '#9198a1',
 })
 vim.api.nvim_set_hl(0, 'MiniTablineVisible', {
-  bg = "#151b23",
-  fg = "#9198a1"
+  bg = '#151b23',
+  fg = '#9198a1',
 })
 vim.api.nvim_set_hl(0, 'ModeMsg', {
   bold = true,
-  fg = "#f0f6fc"
+  fg = '#f0f6fc',
 })
 vim.api.nvim_set_hl(0, 'MoreMsg', {
   bold = true,
-  fg = "#3fb950"
+  fg = '#3fb950',
 })
-vim.api.nvim_set_hl(0, 'MsgArea', { fg = "#f0f6fc" })
-vim.api.nvim_set_hl(0, 'MsgSeparator', { fg = "#3d444d" })
-vim.api.nvim_set_hl(0, 'NavicIconsArray', { fg = "#ffa657" })
-vim.api.nvim_set_hl(0, 'NavicIconsBoolean', { fg = "#79c0ff" })
-vim.api.nvim_set_hl(0, 'NavicIconsClass', { fg = "#d2a8ff" })
-vim.api.nvim_set_hl(0, 'NavicIconsConstant', { fg = "#79c0ff" })
-vim.api.nvim_set_hl(0, 'NavicIconsConstructor', { fg = "#d2a8ff" })
-vim.api.nvim_set_hl(0, 'NavicIconsEnum', { fg = "#d2a8ff" })
-vim.api.nvim_set_hl(0, 'NavicIconsEnumMember', { fg = "#79c0ff" })
-vim.api.nvim_set_hl(0, 'NavicIconsEvent', { fg = "#ffa657" })
-vim.api.nvim_set_hl(0, 'NavicIconsField', { fg = "#ffa657" })
-vim.api.nvim_set_hl(0, 'NavicIconsFile', { fg = "#f0f6fc" })
-vim.api.nvim_set_hl(0, 'NavicIconsFunction', { fg = "#d2a8ff" })
-vim.api.nvim_set_hl(0, 'NavicIconsInterface', { fg = "#d2a8ff" })
-vim.api.nvim_set_hl(0, 'NavicIconsKey', { fg = "#ff7b72" })
-vim.api.nvim_set_hl(0, 'NavicIconsMethod', { fg = "#d2a8ff" })
-vim.api.nvim_set_hl(0, 'NavicIconsModule', { fg = "#ff7b72" })
-vim.api.nvim_set_hl(0, 'NavicIconsNamespace', { fg = "#ff7b72" })
-vim.api.nvim_set_hl(0, 'NavicIconsNull', { fg = "#79c0ff" })
-vim.api.nvim_set_hl(0, 'NavicIconsNumber', { fg = "#79c0ff" })
-vim.api.nvim_set_hl(0, 'NavicIconsObject', { fg = "#d2a8ff" })
-vim.api.nvim_set_hl(0, 'NavicIconsOperator', { fg = "#f0f6fc" })
-vim.api.nvim_set_hl(0, 'NavicIconsPackage', { fg = "#ff7b72" })
-vim.api.nvim_set_hl(0, 'NavicIconsProperty', { fg = "#ffa657" })
-vim.api.nvim_set_hl(0, 'NavicIconsString', { fg = "#a5d6ff" })
-vim.api.nvim_set_hl(0, 'NavicIconsStruct', { fg = "#d2a8ff" })
-vim.api.nvim_set_hl(0, 'NavicIconsTypeParameter', { fg = "#ffa657" })
-vim.api.nvim_set_hl(0, 'NavicIconsVariable', { fg = "#ffa657" })
-vim.api.nvim_set_hl(0, 'NavicSeparator', { fg = "#9198a1" })
-vim.api.nvim_set_hl(0, 'NavicText', { fg = "#f0f6fc" })
-vim.api.nvim_set_hl(0, 'NeoTreeDirectoryIcon', { fg = "#4493f8" })
-vim.api.nvim_set_hl(0, 'NeoTreeDirectoryName', { fg = "#f0f6fc" })
-vim.api.nvim_set_hl(0, 'NeoTreeEndOfBuffer', { fg = "#010409" })
-vim.api.nvim_set_hl(0, 'NeoTreeFileIcon', { fg = "#f0f6fc" })
-vim.api.nvim_set_hl(0, 'NeoTreeFileName', { fg = "#f0f6fc" })
-vim.api.nvim_set_hl(0, 'NeoTreeGitAdded', { fg = "#3fb950" })
-vim.api.nvim_set_hl(0, 'NeoTreeGitConflict', { fg = "#f85149" })
-vim.api.nvim_set_hl(0, 'NeoTreeGitDeleted', { fg = "#f85149" })
-vim.api.nvim_set_hl(0, 'NeoTreeGitIgnored', { fg = "#9198a1" })
-vim.api.nvim_set_hl(0, 'NeoTreeGitModified', { fg = "#d29922" })
-vim.api.nvim_set_hl(0, 'NeoTreeGitStaged', { fg = "#3fb950" })
-vim.api.nvim_set_hl(0, 'NeoTreeGitUnstaged', { fg = "#d29922" })
-vim.api.nvim_set_hl(0, 'NeoTreeGitUntracked', { fg = "#3fb950" })
-vim.api.nvim_set_hl(0, 'NeoTreeIndentMarker', { fg = "#2f353d" })
+vim.api.nvim_set_hl(0, 'MsgArea', { fg = '#f0f6fc' })
+vim.api.nvim_set_hl(0, 'MsgSeparator', { fg = '#3d444d' })
+vim.api.nvim_set_hl(0, 'NavicIconsArray', { fg = '#ffa657' })
+vim.api.nvim_set_hl(0, 'NavicIconsBoolean', { fg = '#79c0ff' })
+vim.api.nvim_set_hl(0, 'NavicIconsClass', { fg = '#d2a8ff' })
+vim.api.nvim_set_hl(0, 'NavicIconsConstant', { fg = '#79c0ff' })
+vim.api.nvim_set_hl(0, 'NavicIconsConstructor', { fg = '#d2a8ff' })
+vim.api.nvim_set_hl(0, 'NavicIconsEnum', { fg = '#d2a8ff' })
+vim.api.nvim_set_hl(0, 'NavicIconsEnumMember', { fg = '#79c0ff' })
+vim.api.nvim_set_hl(0, 'NavicIconsEvent', { fg = '#ffa657' })
+vim.api.nvim_set_hl(0, 'NavicIconsField', { fg = '#ffa657' })
+vim.api.nvim_set_hl(0, 'NavicIconsFile', { fg = '#f0f6fc' })
+vim.api.nvim_set_hl(0, 'NavicIconsFunction', { fg = '#d2a8ff' })
+vim.api.nvim_set_hl(0, 'NavicIconsInterface', { fg = '#d2a8ff' })
+vim.api.nvim_set_hl(0, 'NavicIconsKey', { fg = '#ff7b72' })
+vim.api.nvim_set_hl(0, 'NavicIconsMethod', { fg = '#d2a8ff' })
+vim.api.nvim_set_hl(0, 'NavicIconsModule', { fg = '#ff7b72' })
+vim.api.nvim_set_hl(0, 'NavicIconsNamespace', { fg = '#ff7b72' })
+vim.api.nvim_set_hl(0, 'NavicIconsNull', { fg = '#79c0ff' })
+vim.api.nvim_set_hl(0, 'NavicIconsNumber', { fg = '#79c0ff' })
+vim.api.nvim_set_hl(0, 'NavicIconsObject', { fg = '#d2a8ff' })
+vim.api.nvim_set_hl(0, 'NavicIconsOperator', { fg = '#f0f6fc' })
+vim.api.nvim_set_hl(0, 'NavicIconsPackage', { fg = '#ff7b72' })
+vim.api.nvim_set_hl(0, 'NavicIconsProperty', { fg = '#ffa657' })
+vim.api.nvim_set_hl(0, 'NavicIconsString', { fg = '#a5d6ff' })
+vim.api.nvim_set_hl(0, 'NavicIconsStruct', { fg = '#d2a8ff' })
+vim.api.nvim_set_hl(0, 'NavicIconsTypeParameter', { fg = '#ffa657' })
+vim.api.nvim_set_hl(0, 'NavicIconsVariable', { fg = '#ffa657' })
+vim.api.nvim_set_hl(0, 'NavicSeparator', { fg = '#9198a1' })
+vim.api.nvim_set_hl(0, 'NavicText', { fg = '#f0f6fc' })
+vim.api.nvim_set_hl(0, 'NeoTreeDirectoryIcon', { fg = '#4493f8' })
+vim.api.nvim_set_hl(0, 'NeoTreeDirectoryName', { fg = '#f0f6fc' })
+vim.api.nvim_set_hl(0, 'NeoTreeEndOfBuffer', { fg = '#010409' })
+vim.api.nvim_set_hl(0, 'NeoTreeFileIcon', { fg = '#f0f6fc' })
+vim.api.nvim_set_hl(0, 'NeoTreeFileName', { fg = '#f0f6fc' })
+vim.api.nvim_set_hl(0, 'NeoTreeGitAdded', { fg = '#3fb950' })
+vim.api.nvim_set_hl(0, 'NeoTreeGitConflict', { fg = '#f85149' })
+vim.api.nvim_set_hl(0, 'NeoTreeGitDeleted', { fg = '#f85149' })
+vim.api.nvim_set_hl(0, 'NeoTreeGitIgnored', { fg = '#9198a1' })
+vim.api.nvim_set_hl(0, 'NeoTreeGitModified', { fg = '#d29922' })
+vim.api.nvim_set_hl(0, 'NeoTreeGitStaged', { fg = '#3fb950' })
+vim.api.nvim_set_hl(0, 'NeoTreeGitUnstaged', { fg = '#d29922' })
+vim.api.nvim_set_hl(0, 'NeoTreeGitUntracked', { fg = '#3fb950' })
+vim.api.nvim_set_hl(0, 'NeoTreeIndentMarker', { fg = '#2f353d' })
 vim.api.nvim_set_hl(0, 'NeoTreeNormal', {
-  bg = "#010409",
-  fg = "#f0f6fc"
+  bg = '#010409',
+  fg = '#f0f6fc',
 })
 vim.api.nvim_set_hl(0, 'NeoTreeNormalNC', {
-  bg = "#010409",
-  fg = "#f0f6fc"
+  bg = '#010409',
+  fg = '#f0f6fc',
 })
 vim.api.nvim_set_hl(0, 'NeoTreeRootName', {
   bold = true,
-  fg = "#9198a1"
+  fg = '#9198a1',
 })
-vim.api.nvim_set_hl(0, 'NoiceCmdline', { fg = "#f0f6fc" })
-vim.api.nvim_set_hl(0, 'NoiceCmdlineIcon', { fg = "#4493f8" })
-vim.api.nvim_set_hl(0, 'NoiceCmdlineIconSearch', { fg = "#d29922" })
+vim.api.nvim_set_hl(0, 'NoiceCmdline', { fg = '#f0f6fc' })
+vim.api.nvim_set_hl(0, 'NoiceCmdlineIcon', { fg = '#4493f8' })
+vim.api.nvim_set_hl(0, 'NoiceCmdlineIconSearch', { fg = '#d29922' })
 vim.api.nvim_set_hl(0, 'NoiceCmdlinePopup', {
-  bg = "#010409",
-  fg = "#f0f6fc"
+  bg = '#010409',
+  fg = '#f0f6fc',
 })
 vim.api.nvim_set_hl(0, 'NoiceCmdlinePopupBorder', {
-  bg = "#010409",
-  fg = "#4493f8"
+  bg = '#010409',
+  fg = '#4493f8',
 })
 vim.api.nvim_set_hl(0, 'NoiceCmdlinePopupBorderSearch', {
-  bg = "#010409",
-  fg = "#d29922"
+  bg = '#010409',
+  fg = '#d29922',
 })
-vim.api.nvim_set_hl(0, 'NoiceCmdlinePopupTitle', { fg = "#4493f8" })
+vim.api.nvim_set_hl(0, 'NoiceCmdlinePopupTitle', { fg = '#4493f8' })
 vim.api.nvim_set_hl(0, 'NoiceCmdlinePrompt', {
   bold = true,
-  fg = "#4493f8"
+  fg = '#4493f8',
 })
 vim.api.nvim_set_hl(0, 'NoiceConfirm', {
-  bg = "#010409",
-  fg = "#f0f6fc"
+  bg = '#010409',
+  fg = '#f0f6fc',
 })
 vim.api.nvim_set_hl(0, 'NoiceConfirmBorder', {
-  bg = "#010409",
-  fg = "#4493f8"
+  bg = '#010409',
+  fg = '#4493f8',
 })
-vim.api.nvim_set_hl(0, 'NoiceCursor', { link = "Cursor" })
-vim.api.nvim_set_hl(0, 'NoiceFormatConfirm', { bg = "#151b23" })
+vim.api.nvim_set_hl(0, 'NoiceCursor', { link = 'Cursor' })
+vim.api.nvim_set_hl(0, 'NoiceFormatConfirm', { bg = '#151b23' })
 vim.api.nvim_set_hl(0, 'NoiceFormatConfirmDefault', {
-  bg = "#111d2e",
-  blend = 85
+  bg = '#111d2e',
+  blend = 85,
 })
-vim.api.nvim_set_hl(0, 'NoiceFormatDate', { fg = "#4493f8" })
-vim.api.nvim_set_hl(0, 'NoiceFormatEvent', { fg = "#9198a1" })
-vim.api.nvim_set_hl(0, 'NoiceFormatKind', { fg = "#9198a1" })
-vim.api.nvim_set_hl(0, 'NoiceFormatLevelDebug', { fg = "#9198a1" })
-vim.api.nvim_set_hl(0, 'NoiceFormatLevelError', { fg = "#f85149" })
-vim.api.nvim_set_hl(0, 'NoiceFormatLevelInfo', { fg = "#4493f8" })
-vim.api.nvim_set_hl(0, 'NoiceFormatLevelOff', { fg = "#9198a1" })
-vim.api.nvim_set_hl(0, 'NoiceFormatLevelTrace', { fg = "#9198a1" })
-vim.api.nvim_set_hl(0, 'NoiceFormatLevelWarn', { fg = "#d29922" })
+vim.api.nvim_set_hl(0, 'NoiceFormatDate', { fg = '#4493f8' })
+vim.api.nvim_set_hl(0, 'NoiceFormatEvent', { fg = '#9198a1' })
+vim.api.nvim_set_hl(0, 'NoiceFormatKind', { fg = '#9198a1' })
+vim.api.nvim_set_hl(0, 'NoiceFormatLevelDebug', { fg = '#9198a1' })
+vim.api.nvim_set_hl(0, 'NoiceFormatLevelError', { fg = '#f85149' })
+vim.api.nvim_set_hl(0, 'NoiceFormatLevelInfo', { fg = '#4493f8' })
+vim.api.nvim_set_hl(0, 'NoiceFormatLevelOff', { fg = '#9198a1' })
+vim.api.nvim_set_hl(0, 'NoiceFormatLevelTrace', { fg = '#9198a1' })
+vim.api.nvim_set_hl(0, 'NoiceFormatLevelWarn', { fg = '#d29922' })
 vim.api.nvim_set_hl(0, 'NoiceFormatProgressDone', {
-  bg = "#1f6feb",
-  fg = "#ffffff"
+  bg = '#1f6feb',
+  fg = '#ffffff',
 })
-vim.api.nvim_set_hl(0, 'NoiceFormatProgressTodo', { bg = "#151b23" })
+vim.api.nvim_set_hl(0, 'NoiceFormatProgressTodo', { bg = '#151b23' })
 vim.api.nvim_set_hl(0, 'NoiceFormatTitle', {
   bold = true,
-  fg = "#4493f8"
+  fg = '#4493f8',
 })
 vim.api.nvim_set_hl(0, 'NoiceLspProgressClient', {
   bold = true,
-  fg = "#4493f8"
+  fg = '#4493f8',
 })
-vim.api.nvim_set_hl(0, 'NoiceLspProgressSpinner', { fg = "#4493f8" })
-vim.api.nvim_set_hl(0, 'NoiceLspProgressTitle', { fg = "#9198a1" })
+vim.api.nvim_set_hl(0, 'NoiceLspProgressSpinner', { fg = '#4493f8' })
+vim.api.nvim_set_hl(0, 'NoiceLspProgressTitle', { fg = '#9198a1' })
 vim.api.nvim_set_hl(0, 'NoiceMini', {
-  bg = "#151b23",
-  fg = "#f0f6fc"
+  bg = '#151b23',
+  fg = '#f0f6fc',
 })
 vim.api.nvim_set_hl(0, 'NoicePopup', {
-  bg = "#010409",
-  fg = "#f0f6fc"
+  bg = '#010409',
+  fg = '#f0f6fc',
 })
 vim.api.nvim_set_hl(0, 'NoicePopupBorder', {
-  bg = "#010409",
-  fg = "#3d444d"
+  bg = '#010409',
+  fg = '#3d444d',
 })
 vim.api.nvim_set_hl(0, 'NoicePopupmenu', {
-  bg = "#010409",
-  fg = "#f0f6fc"
+  bg = '#010409',
+  fg = '#f0f6fc',
 })
 vim.api.nvim_set_hl(0, 'NoicePopupmenuBorder', {
-  bg = "#010409",
-  fg = "#3d444d"
+  bg = '#010409',
+  fg = '#3d444d',
 })
 vim.api.nvim_set_hl(0, 'NoicePopupmenuMatch', {
   bold = true,
-  fg = "#4493f8"
+  fg = '#4493f8',
 })
 vim.api.nvim_set_hl(0, 'NoicePopupmenuSelected', {
-  bg = "#111d2e",
-  blend = 85
+  bg = '#111d2e',
+  blend = 85,
 })
-vim.api.nvim_set_hl(0, 'NoiceScrollbar', { bg = "#151b23" })
-vim.api.nvim_set_hl(0, 'NoiceScrollbarThumb', { bg = "#3d444d" })
+vim.api.nvim_set_hl(0, 'NoiceScrollbar', { bg = '#151b23' })
+vim.api.nvim_set_hl(0, 'NoiceScrollbarThumb', { bg = '#3d444d' })
 vim.api.nvim_set_hl(0, 'NoiceSplit', {
-  bg = "#010409",
-  fg = "#f0f6fc"
+  bg = '#010409',
+  fg = '#f0f6fc',
 })
 vim.api.nvim_set_hl(0, 'NoiceSplitBorder', {
-  bg = "#010409",
-  fg = "#3d444d"
+  bg = '#010409',
+  fg = '#3d444d',
 })
-vim.api.nvim_set_hl(0, 'NoiceVirtualText', { fg = "#4493f8" })
-vim.api.nvim_set_hl(0, 'NonText', { fg = "#9198a1" })
+vim.api.nvim_set_hl(0, 'NoiceVirtualText', { fg = '#4493f8' })
+vim.api.nvim_set_hl(0, 'NonText', { fg = '#9198a1' })
 vim.api.nvim_set_hl(0, 'Normal', {
-  bg = "#0d1117",
-  fg = "#f0f6fc"
+  bg = '#0d1117',
+  fg = '#f0f6fc',
 })
 vim.api.nvim_set_hl(0, 'NormalFloat', {
-  bg = "#010409",
-  fg = "#f0f6fc"
+  bg = '#010409',
+  fg = '#f0f6fc',
 })
 vim.api.nvim_set_hl(0, 'NormalNC', {
-  bg = "#0d1117",
-  fg = "#f0f6fc"
+  bg = '#0d1117',
+  fg = '#f0f6fc',
 })
-vim.api.nvim_set_hl(0, 'Number', { fg = "#79c0ff" })
-vim.api.nvim_set_hl(0, 'NvimTreeEmptyFolderName', { fg = "#9198a1" })
-vim.api.nvim_set_hl(0, 'NvimTreeEndOfBuffer', { fg = "#010409" })
-vim.api.nvim_set_hl(0, 'NvimTreeFolderIcon', { fg = "#4493f8" })
-vim.api.nvim_set_hl(0, 'NvimTreeFolderName', { fg = "#f0f6fc" })
-vim.api.nvim_set_hl(0, 'NvimTreeGitDeleted', { fg = "#f85149" })
-vim.api.nvim_set_hl(0, 'NvimTreeGitDirty', { fg = "#d29922" })
-vim.api.nvim_set_hl(0, 'NvimTreeGitNew', { fg = "#3fb950" })
-vim.api.nvim_set_hl(0, 'NvimTreeImageFile', { fg = "#f0f6fc" })
-vim.api.nvim_set_hl(0, 'NvimTreeIndentMarker', { fg = "#2f353d" })
+vim.api.nvim_set_hl(0, 'Number', { fg = '#79c0ff' })
+vim.api.nvim_set_hl(0, 'NvimTreeEmptyFolderName', { fg = '#9198a1' })
+vim.api.nvim_set_hl(0, 'NvimTreeEndOfBuffer', { fg = '#010409' })
+vim.api.nvim_set_hl(0, 'NvimTreeFolderIcon', { fg = '#4493f8' })
+vim.api.nvim_set_hl(0, 'NvimTreeFolderName', { fg = '#f0f6fc' })
+vim.api.nvim_set_hl(0, 'NvimTreeGitDeleted', { fg = '#f85149' })
+vim.api.nvim_set_hl(0, 'NvimTreeGitDirty', { fg = '#d29922' })
+vim.api.nvim_set_hl(0, 'NvimTreeGitNew', { fg = '#3fb950' })
+vim.api.nvim_set_hl(0, 'NvimTreeImageFile', { fg = '#f0f6fc' })
+vim.api.nvim_set_hl(0, 'NvimTreeIndentMarker', { fg = '#2f353d' })
 vim.api.nvim_set_hl(0, 'NvimTreeNormal', {
-  bg = "#010409",
-  fg = "#f0f6fc"
+  bg = '#010409',
+  fg = '#f0f6fc',
 })
-vim.api.nvim_set_hl(0, 'NvimTreeOpenedFolderName', { fg = "#f0f6fc" })
+vim.api.nvim_set_hl(0, 'NvimTreeOpenedFolderName', { fg = '#f0f6fc' })
 vim.api.nvim_set_hl(0, 'NvimTreeRootFolder', {
   bold = true,
-  fg = "#9198a1"
+  fg = '#9198a1',
 })
-vim.api.nvim_set_hl(0, 'NvimTreeSpecialFile', { fg = "#4493f8" })
-vim.api.nvim_set_hl(0, 'NvimTreeSymlink', { fg = "#4493f8" })
-vim.api.nvim_set_hl(0, 'Operator', { fg = "#f0f6fc" })
+vim.api.nvim_set_hl(0, 'NvimTreeSpecialFile', { fg = '#4493f8' })
+vim.api.nvim_set_hl(0, 'NvimTreeSymlink', { fg = '#4493f8' })
+vim.api.nvim_set_hl(0, 'Operator', { fg = '#f0f6fc' })
 vim.api.nvim_set_hl(0, 'Pmenu', {
-  bg = "#010409",
-  fg = "#f0f6fc"
+  bg = '#010409',
+  fg = '#f0f6fc',
 })
 vim.api.nvim_set_hl(0, 'PmenuExtra', {
-  bg = "#010409",
-  fg = "#9198a1"
+  bg = '#010409',
+  fg = '#9198a1',
 })
 vim.api.nvim_set_hl(0, 'PmenuExtraSel', {
-  bg = "#111d2e",
+  bg = '#111d2e',
   blend = 85,
-  fg = "#9198a1"
+  fg = '#9198a1',
 })
 vim.api.nvim_set_hl(0, 'PmenuKind', {
-  bg = "#010409",
-  fg = "#9198a1"
+  bg = '#010409',
+  fg = '#9198a1',
 })
 vim.api.nvim_set_hl(0, 'PmenuKindSel', {
-  bg = "#111d2e",
+  bg = '#111d2e',
   blend = 85,
-  fg = "#9198a1"
+  fg = '#9198a1',
 })
 vim.api.nvim_set_hl(0, 'PmenuMatch', {
-  bg = "#010409",
+  bg = '#010409',
   bold = true,
-  fg = "#4493f8"
+  fg = '#4493f8',
 })
 vim.api.nvim_set_hl(0, 'PmenuMatchSel', {
-  bg = "#111d2e",
+  bg = '#111d2e',
   blend = 85,
   bold = true,
-  fg = "#4493f8"
+  fg = '#4493f8',
 })
-vim.api.nvim_set_hl(0, 'PmenuSbar', { bg = "#151b23" })
+vim.api.nvim_set_hl(0, 'PmenuSbar', { bg = '#151b23' })
 vim.api.nvim_set_hl(0, 'PmenuSel', {
-  bg = "#111d2e",
+  bg = '#111d2e',
   blend = 85,
-  fg = "#f0f6fc"
+  fg = '#f0f6fc',
 })
-vim.api.nvim_set_hl(0, 'PmenuThumb', { bg = "#3d444d" })
-vim.api.nvim_set_hl(0, 'PreCondit', { fg = "#ff7b72" })
-vim.api.nvim_set_hl(0, 'PreProc', { fg = "#ff7b72" })
-vim.api.nvim_set_hl(0, 'Question', { fg = "#4493f8" })
+vim.api.nvim_set_hl(0, 'PmenuThumb', { bg = '#3d444d' })
+vim.api.nvim_set_hl(0, 'PreCondit', { fg = '#ff7b72' })
+vim.api.nvim_set_hl(0, 'PreProc', { fg = '#ff7b72' })
+vim.api.nvim_set_hl(0, 'Question', { fg = '#4493f8' })
 vim.api.nvim_set_hl(0, 'QuickFixLine', {
-  bg = "#111d2e",
-  blend = 85
+  bg = '#111d2e',
+  blend = 85,
 })
-vim.api.nvim_set_hl(0, 'Removed', { fg = "#f85149" })
-vim.api.nvim_set_hl(0, 'Repeat', { fg = "#ff7b72" })
+vim.api.nvim_set_hl(0, 'Removed', { fg = '#f85149' })
+vim.api.nvim_set_hl(0, 'Repeat', { fg = '#ff7b72' })
 vim.api.nvim_set_hl(0, 'Search', {
-  bg = "#9e6a03",
-  fg = "#010409"
+  bg = '#9e6a03',
+  fg = '#010409',
 })
 vim.api.nvim_set_hl(0, 'SidekickChat', {
-  bg = "#010409",
-  fg = "#f0f6fc"
+  bg = '#010409',
+  fg = '#f0f6fc',
 })
-vim.api.nvim_set_hl(0, 'SidekickCliAttached', { fg = "#ab7df8" })
-vim.api.nvim_set_hl(0, 'SidekickCliInstalled', { fg = "#3fb950" })
-vim.api.nvim_set_hl(0, 'SidekickCliMissing', { fg = "#f85149" })
-vim.api.nvim_set_hl(0, 'SidekickCliStarted', { fg = "#d29922" })
-vim.api.nvim_set_hl(0, 'SidekickCliUnavailable', { fg = "#f85149" })
-vim.api.nvim_set_hl(0, 'SidekickDiffAdd', { bg = "#12261e" })
-vim.api.nvim_set_hl(0, 'SidekickDiffContext', { bg = "#272215" })
-vim.api.nvim_set_hl(0, 'SidekickDiffDelete', { bg = "#25181c" })
-vim.api.nvim_set_hl(0, 'SidekickLocCol', { link = "SidekickLocDelim" })
-vim.api.nvim_set_hl(0, 'SidekickLocDelim', { fg = "#9198a1" })
+vim.api.nvim_set_hl(0, 'SidekickCliAttached', { fg = '#ab7df8' })
+vim.api.nvim_set_hl(0, 'SidekickCliInstalled', { fg = '#3fb950' })
+vim.api.nvim_set_hl(0, 'SidekickCliMissing', { fg = '#f85149' })
+vim.api.nvim_set_hl(0, 'SidekickCliStarted', { fg = '#d29922' })
+vim.api.nvim_set_hl(0, 'SidekickCliUnavailable', { fg = '#f85149' })
+vim.api.nvim_set_hl(0, 'SidekickDiffAdd', { bg = '#12261e' })
+vim.api.nvim_set_hl(0, 'SidekickDiffContext', { bg = '#272215' })
+vim.api.nvim_set_hl(0, 'SidekickDiffDelete', { bg = '#25181c' })
+vim.api.nvim_set_hl(0, 'SidekickLocCol', { link = 'SidekickLocDelim' })
+vim.api.nvim_set_hl(0, 'SidekickLocDelim', { fg = '#9198a1' })
 vim.api.nvim_set_hl(0, 'SidekickLocFile', {
-  fg = "#4493f8",
-  underline = true
+  fg = '#4493f8',
+  underline = true,
 })
-vim.api.nvim_set_hl(0, 'SidekickLocNum', { fg = "#ffa657" })
-vim.api.nvim_set_hl(0, 'SidekickLocRow', { link = "SidekickLocDelim" })
-vim.api.nvim_set_hl(0, 'SidekickSign', { fg = "#ab7df8" })
+vim.api.nvim_set_hl(0, 'SidekickLocNum', { fg = '#ffa657' })
+vim.api.nvim_set_hl(0, 'SidekickLocRow', { link = 'SidekickLocDelim' })
+vim.api.nvim_set_hl(0, 'SidekickSign', { fg = '#ab7df8' })
 vim.api.nvim_set_hl(0, 'SignColumn', {
-  bg = "#0d1117",
-  fg = "#9198a1"
+  bg = '#0d1117',
+  fg = '#9198a1',
 })
-vim.api.nvim_set_hl(0, 'SnacksDashboardDesc', { fg = "#9198a1" })
-vim.api.nvim_set_hl(0, 'SnacksDashboardDir', { fg = "#9198a1" })
-vim.api.nvim_set_hl(0, 'SnacksDashboardFile', { fg = "#4493f8" })
-vim.api.nvim_set_hl(0, 'SnacksDashboardFooter', { fg = "#9198a1" })
-vim.api.nvim_set_hl(0, 'SnacksDashboardHeader', { fg = "#4493f8" })
-vim.api.nvim_set_hl(0, 'SnacksDashboardIcon', { fg = "#4493f8" })
-vim.api.nvim_set_hl(0, 'SnacksDashboardKey', { fg = "#d29922" })
+vim.api.nvim_set_hl(0, 'SnacksDashboardDesc', { fg = '#9198a1' })
+vim.api.nvim_set_hl(0, 'SnacksDashboardDir', { fg = '#9198a1' })
+vim.api.nvim_set_hl(0, 'SnacksDashboardFile', { fg = '#4493f8' })
+vim.api.nvim_set_hl(0, 'SnacksDashboardFooter', { fg = '#9198a1' })
+vim.api.nvim_set_hl(0, 'SnacksDashboardHeader', { fg = '#4493f8' })
+vim.api.nvim_set_hl(0, 'SnacksDashboardIcon', { fg = '#4493f8' })
+vim.api.nvim_set_hl(0, 'SnacksDashboardKey', { fg = '#d29922' })
 vim.api.nvim_set_hl(0, 'SnacksDashboardNormal', {
-  bg = "#0d1117",
-  fg = "#f0f6fc"
+  bg = '#0d1117',
+  fg = '#f0f6fc',
 })
-vim.api.nvim_set_hl(0, 'SnacksDashboardSpecial', { fg = "#ab7df8" })
+vim.api.nvim_set_hl(0, 'SnacksDashboardSpecial', { fg = '#ab7df8' })
 vim.api.nvim_set_hl(0, 'SnacksDashboardTitle', {
   bold = true,
-  fg = "#4493f8"
+  fg = '#4493f8',
 })
-vim.api.nvim_set_hl(0, 'SnacksIndent', { fg = "#2f353d" })
-vim.api.nvim_set_hl(0, 'SnacksIndentScope', { fg = "#3d444d" })
-vim.api.nvim_set_hl(0, 'SnacksNotifierBorderDebug', { fg = "#3d444d" })
-vim.api.nvim_set_hl(0, 'SnacksNotifierBorderError', { fg = "#f85149" })
-vim.api.nvim_set_hl(0, 'SnacksNotifierBorderInfo', { fg = "#4493f8" })
-vim.api.nvim_set_hl(0, 'SnacksNotifierBorderTrace', { fg = "#3d444d" })
-vim.api.nvim_set_hl(0, 'SnacksNotifierBorderWarn', { fg = "#d29922" })
+vim.api.nvim_set_hl(0, 'SnacksIndent', { fg = '#2f353d' })
+vim.api.nvim_set_hl(0, 'SnacksIndentScope', { fg = '#3d444d' })
+vim.api.nvim_set_hl(0, 'SnacksNotifierBorderDebug', { fg = '#3d444d' })
+vim.api.nvim_set_hl(0, 'SnacksNotifierBorderError', { fg = '#f85149' })
+vim.api.nvim_set_hl(0, 'SnacksNotifierBorderInfo', { fg = '#4493f8' })
+vim.api.nvim_set_hl(0, 'SnacksNotifierBorderTrace', { fg = '#3d444d' })
+vim.api.nvim_set_hl(0, 'SnacksNotifierBorderWarn', { fg = '#d29922' })
 vim.api.nvim_set_hl(0, 'SnacksNotifierDebug', {
-  bg = "#010409",
-  fg = "#f0f6fc"
+  bg = '#010409',
+  fg = '#f0f6fc',
 })
 vim.api.nvim_set_hl(0, 'SnacksNotifierError', {
-  bg = "#010409",
-  fg = "#f0f6fc"
+  bg = '#010409',
+  fg = '#f0f6fc',
 })
-vim.api.nvim_set_hl(0, 'SnacksNotifierFooterDebug', { fg = "#9198a1" })
-vim.api.nvim_set_hl(0, 'SnacksNotifierFooterError', { fg = "#9198a1" })
-vim.api.nvim_set_hl(0, 'SnacksNotifierFooterInfo', { fg = "#9198a1" })
-vim.api.nvim_set_hl(0, 'SnacksNotifierFooterTrace', { fg = "#9198a1" })
-vim.api.nvim_set_hl(0, 'SnacksNotifierFooterWarn', { fg = "#9198a1" })
-vim.api.nvim_set_hl(0, 'SnacksNotifierHistory', { link = "NormalFloat" })
-vim.api.nvim_set_hl(0, 'SnacksNotifierHistoryDateTime', { fg = "#9198a1" })
-vim.api.nvim_set_hl(0, 'SnacksNotifierHistoryTitle', { link = "FloatTitle" })
-vim.api.nvim_set_hl(0, 'SnacksNotifierIconDebug', { fg = "#9198a1" })
-vim.api.nvim_set_hl(0, 'SnacksNotifierIconError', { fg = "#f85149" })
-vim.api.nvim_set_hl(0, 'SnacksNotifierIconInfo', { fg = "#4493f8" })
-vim.api.nvim_set_hl(0, 'SnacksNotifierIconTrace', { fg = "#9198a1" })
-vim.api.nvim_set_hl(0, 'SnacksNotifierIconWarn', { fg = "#d29922" })
+vim.api.nvim_set_hl(0, 'SnacksNotifierFooterDebug', { fg = '#9198a1' })
+vim.api.nvim_set_hl(0, 'SnacksNotifierFooterError', { fg = '#9198a1' })
+vim.api.nvim_set_hl(0, 'SnacksNotifierFooterInfo', { fg = '#9198a1' })
+vim.api.nvim_set_hl(0, 'SnacksNotifierFooterTrace', { fg = '#9198a1' })
+vim.api.nvim_set_hl(0, 'SnacksNotifierFooterWarn', { fg = '#9198a1' })
+vim.api.nvim_set_hl(0, 'SnacksNotifierHistory', { link = 'NormalFloat' })
+vim.api.nvim_set_hl(0, 'SnacksNotifierHistoryDateTime', { fg = '#9198a1' })
+vim.api.nvim_set_hl(0, 'SnacksNotifierHistoryTitle', { link = 'FloatTitle' })
+vim.api.nvim_set_hl(0, 'SnacksNotifierIconDebug', { fg = '#9198a1' })
+vim.api.nvim_set_hl(0, 'SnacksNotifierIconError', { fg = '#f85149' })
+vim.api.nvim_set_hl(0, 'SnacksNotifierIconInfo', { fg = '#4493f8' })
+vim.api.nvim_set_hl(0, 'SnacksNotifierIconTrace', { fg = '#9198a1' })
+vim.api.nvim_set_hl(0, 'SnacksNotifierIconWarn', { fg = '#d29922' })
 vim.api.nvim_set_hl(0, 'SnacksNotifierInfo', {
-  bg = "#010409",
-  fg = "#f0f6fc"
+  bg = '#010409',
+  fg = '#f0f6fc',
 })
-vim.api.nvim_set_hl(0, 'SnacksNotifierMinimal', { link = "NormalFloat" })
-vim.api.nvim_set_hl(0, 'SnacksNotifierTitleDebug', { fg = "#9198a1" })
-vim.api.nvim_set_hl(0, 'SnacksNotifierTitleError', { fg = "#f85149" })
-vim.api.nvim_set_hl(0, 'SnacksNotifierTitleInfo', { fg = "#4493f8" })
-vim.api.nvim_set_hl(0, 'SnacksNotifierTitleTrace', { fg = "#9198a1" })
-vim.api.nvim_set_hl(0, 'SnacksNotifierTitleWarn', { fg = "#d29922" })
+vim.api.nvim_set_hl(0, 'SnacksNotifierMinimal', { link = 'NormalFloat' })
+vim.api.nvim_set_hl(0, 'SnacksNotifierTitleDebug', { fg = '#9198a1' })
+vim.api.nvim_set_hl(0, 'SnacksNotifierTitleError', { fg = '#f85149' })
+vim.api.nvim_set_hl(0, 'SnacksNotifierTitleInfo', { fg = '#4493f8' })
+vim.api.nvim_set_hl(0, 'SnacksNotifierTitleTrace', { fg = '#9198a1' })
+vim.api.nvim_set_hl(0, 'SnacksNotifierTitleWarn', { fg = '#d29922' })
 vim.api.nvim_set_hl(0, 'SnacksNotifierTrace', {
-  bg = "#010409",
-  fg = "#f0f6fc"
+  bg = '#010409',
+  fg = '#f0f6fc',
 })
 vim.api.nvim_set_hl(0, 'SnacksNotifierWarn', {
-  bg = "#010409",
-  fg = "#f0f6fc"
+  bg = '#010409',
+  fg = '#f0f6fc',
 })
 vim.api.nvim_set_hl(0, 'SnippetTabstop', {
-  bg = "#111d2e",
-  blend = 85
+  bg = '#111d2e',
+  blend = 85,
 })
-vim.api.nvim_set_hl(0, 'Special', { fg = "#79c0ff" })
-vim.api.nvim_set_hl(0, 'SpecialChar', { fg = "#a5d6ff" })
+vim.api.nvim_set_hl(0, 'Special', { fg = '#79c0ff' })
+vim.api.nvim_set_hl(0, 'SpecialChar', { fg = '#a5d6ff' })
 vim.api.nvim_set_hl(0, 'SpecialComment', {
   bold = true,
-  fg = "#9198a1",
-  italic = true
+  fg = '#9198a1',
+  italic = true,
 })
-vim.api.nvim_set_hl(0, 'SpecialKey', { fg = "#9198a1" })
+vim.api.nvim_set_hl(0, 'SpecialKey', { fg = '#9198a1' })
 vim.api.nvim_set_hl(0, 'SpellBad', {
-  sp = "#f85149",
-  undercurl = true
+  sp = '#f85149',
+  undercurl = true,
 })
 vim.api.nvim_set_hl(0, 'SpellCap', {
-  sp = "#d29922",
-  undercurl = true
+  sp = '#d29922',
+  undercurl = true,
 })
 vim.api.nvim_set_hl(0, 'SpellLocal', {
-  sp = "#4493f8",
-  undercurl = true
+  sp = '#4493f8',
+  undercurl = true,
 })
 vim.api.nvim_set_hl(0, 'SpellRare', {
-  sp = "#ab7df8",
-  undercurl = true
+  sp = '#ab7df8',
+  undercurl = true,
 })
-vim.api.nvim_set_hl(0, 'Statement', { fg = "#ff7b72" })
+vim.api.nvim_set_hl(0, 'Statement', { fg = '#ff7b72' })
 vim.api.nvim_set_hl(0, 'StatusLine', {
-  bg = "#010409",
-  fg = "#9198a1"
+  bg = '#010409',
+  fg = '#9198a1',
 })
 vim.api.nvim_set_hl(0, 'StatusLineNC', {
-  bg = "#010409",
-  fg = "#9198a1"
+  bg = '#010409',
+  fg = '#9198a1',
 })
 vim.api.nvim_set_hl(0, 'StatusLineTerm', {
-  bg = "#010409",
-  fg = "#9198a1"
+  bg = '#010409',
+  fg = '#9198a1',
 })
 vim.api.nvim_set_hl(0, 'StatusLineTermNC', {
-  bg = "#010409",
-  fg = "#9198a1"
+  bg = '#010409',
+  fg = '#9198a1',
 })
-vim.api.nvim_set_hl(0, 'StorageClass', { fg = "#ff7b72" })
-vim.api.nvim_set_hl(0, 'String', { fg = "#a5d6ff" })
-vim.api.nvim_set_hl(0, 'Structure', { fg = "#ff7b72" })
+vim.api.nvim_set_hl(0, 'StorageClass', { fg = '#ff7b72' })
+vim.api.nvim_set_hl(0, 'String', { fg = '#a5d6ff' })
+vim.api.nvim_set_hl(0, 'Structure', { fg = '#ff7b72' })
 vim.api.nvim_set_hl(0, 'Substitute', {
-  bg = "#da3633",
-  fg = "#0d1117"
+  bg = '#da3633',
+  fg = '#0d1117',
 })
 vim.api.nvim_set_hl(0, 'TabLine', {
-  bg = "#010409",
-  fg = "#9198a1"
+  bg = '#010409',
+  fg = '#9198a1',
 })
-vim.api.nvim_set_hl(0, 'TabLineFill', { bg = "#010409" })
+vim.api.nvim_set_hl(0, 'TabLineFill', { bg = '#010409' })
 vim.api.nvim_set_hl(0, 'TabLineSel', {
-  bg = "#0d1117",
-  fg = "#f0f6fc"
+  bg = '#0d1117',
+  fg = '#f0f6fc',
 })
-vim.api.nvim_set_hl(0, 'Tag', { fg = "#7ee787" })
-vim.api.nvim_set_hl(0, 'TelescopeBorder', { link = "FloatBorder" })
+vim.api.nvim_set_hl(0, 'Tag', { fg = '#7ee787' })
+vim.api.nvim_set_hl(0, 'TelescopeBorder', { link = 'FloatBorder' })
 vim.api.nvim_set_hl(0, 'TelescopeMatching', {
   bold = true,
-  fg = "#4493f8"
+  fg = '#4493f8',
 })
 vim.api.nvim_set_hl(0, 'TelescopeMultiSelection', {
-  bg = "#111d2e",
+  bg = '#111d2e',
   blend = 85,
-  fg = "#f0f6fc"
+  fg = '#f0f6fc',
 })
-vim.api.nvim_set_hl(0, 'TelescopeNormal', { link = "NormalFloat" })
+vim.api.nvim_set_hl(0, 'TelescopeNormal', { link = 'NormalFloat' })
 vim.api.nvim_set_hl(0, 'TelescopePreviewBorder', {
-  bg = "#010409",
-  fg = "#3d444d"
+  bg = '#010409',
+  fg = '#3d444d',
 })
 vim.api.nvim_set_hl(0, 'TelescopePreviewNormal', {
-  bg = "#010409",
-  fg = "#f0f6fc"
+  bg = '#010409',
+  fg = '#f0f6fc',
 })
 vim.api.nvim_set_hl(0, 'TelescopePreviewTitle', {
-  bg = "#010409",
-  fg = "#f0f6fc"
+  bg = '#010409',
+  fg = '#f0f6fc',
 })
 vim.api.nvim_set_hl(0, 'TelescopePromptBorder', {
-  bg = "#010409",
-  fg = "#3d444d"
+  bg = '#010409',
+  fg = '#3d444d',
 })
 vim.api.nvim_set_hl(0, 'TelescopePromptNormal', {
-  bg = "#010409",
-  fg = "#f0f6fc"
+  bg = '#010409',
+  fg = '#f0f6fc',
 })
-vim.api.nvim_set_hl(0, 'TelescopePromptPrefix', { fg = "#4493f8" })
+vim.api.nvim_set_hl(0, 'TelescopePromptPrefix', { fg = '#4493f8' })
 vim.api.nvim_set_hl(0, 'TelescopePromptTitle', {
-  bg = "#010409",
+  bg = '#010409',
   bold = true,
-  fg = "#f0f6fc"
+  fg = '#f0f6fc',
 })
 vim.api.nvim_set_hl(0, 'TelescopeResultsBorder', {
-  bg = "#010409",
-  fg = "#3d444d"
+  bg = '#010409',
+  fg = '#3d444d',
 })
 vim.api.nvim_set_hl(0, 'TelescopeResultsNormal', {
-  bg = "#010409",
-  fg = "#f0f6fc"
+  bg = '#010409',
+  fg = '#f0f6fc',
 })
 vim.api.nvim_set_hl(0, 'TelescopeResultsTitle', {
-  bg = "#010409",
-  fg = "#f0f6fc"
+  bg = '#010409',
+  fg = '#f0f6fc',
 })
-vim.api.nvim_set_hl(0, 'TelescopeSelection', { link = "PmenuSel" })
-vim.api.nvim_set_hl(0, 'TelescopeSelectionCaret', { fg = "#4493f8" })
-vim.api.nvim_set_hl(0, 'TelescopeTitle', { link = "FloatTitle" })
-vim.api.nvim_set_hl(0, 'TermCursor', { link = "Cursor" })
+vim.api.nvim_set_hl(0, 'TelescopeSelection', { link = 'PmenuSel' })
+vim.api.nvim_set_hl(0, 'TelescopeSelectionCaret', { fg = '#4493f8' })
+vim.api.nvim_set_hl(0, 'TelescopeTitle', { link = 'FloatTitle' })
+vim.api.nvim_set_hl(0, 'TermCursor', { link = 'Cursor' })
 vim.api.nvim_set_hl(0, 'TermCursorNC', {
-  bg = "#9198a1",
-  fg = "#0d1117"
+  bg = '#9198a1',
+  fg = '#0d1117',
 })
 vim.api.nvim_set_hl(0, 'Title', {
   bold = true,
-  fg = "#4493f8"
+  fg = '#4493f8',
 })
 vim.api.nvim_set_hl(0, 'Todo', {
   bold = true,
-  fg = "#d29922"
+  fg = '#d29922',
 })
 vim.api.nvim_set_hl(0, 'TodoBgFIX', {
-  bg = "#da3633",
+  bg = '#da3633',
   bold = true,
-  fg = "#ffffff"
+  fg = '#ffffff',
 })
 vim.api.nvim_set_hl(0, 'TodoBgHACK', {
-  bg = "#9e6a03",
+  bg = '#9e6a03',
   bold = true,
-  fg = "#0d1117"
+  fg = '#0d1117',
 })
 vim.api.nvim_set_hl(0, 'TodoBgNOTE', {
-  bg = "#238636",
+  bg = '#238636',
   bold = true,
-  fg = "#ffffff"
+  fg = '#ffffff',
 })
 vim.api.nvim_set_hl(0, 'TodoBgPERF', {
-  bg = "#8957e5",
+  bg = '#8957e5',
   bold = true,
-  fg = "#ffffff"
+  fg = '#ffffff',
 })
 vim.api.nvim_set_hl(0, 'TodoBgTEST', {
-  bg = "#8957e5",
+  bg = '#8957e5',
   bold = true,
-  fg = "#ffffff"
+  fg = '#ffffff',
 })
 vim.api.nvim_set_hl(0, 'TodoBgTODO', {
-  bg = "#1f6feb",
+  bg = '#1f6feb',
   bold = true,
-  fg = "#ffffff"
+  fg = '#ffffff',
 })
 vim.api.nvim_set_hl(0, 'TodoBgWARN', {
-  bg = "#9e6a03",
+  bg = '#9e6a03',
   bold = true,
-  fg = "#0d1117"
+  fg = '#0d1117',
 })
-vim.api.nvim_set_hl(0, 'TodoFgFIX', { fg = "#f85149" })
-vim.api.nvim_set_hl(0, 'TodoFgHACK', { fg = "#d29922" })
-vim.api.nvim_set_hl(0, 'TodoFgNOTE', { fg = "#3fb950" })
-vim.api.nvim_set_hl(0, 'TodoFgPERF', { fg = "#ab7df8" })
-vim.api.nvim_set_hl(0, 'TodoFgTEST', { fg = "#ab7df8" })
-vim.api.nvim_set_hl(0, 'TodoFgTODO', { fg = "#4493f8" })
-vim.api.nvim_set_hl(0, 'TodoFgWARN', { fg = "#d29922" })
-vim.api.nvim_set_hl(0, 'TodoSignFIX', { fg = "#f85149" })
-vim.api.nvim_set_hl(0, 'TodoSignHACK', { fg = "#d29922" })
-vim.api.nvim_set_hl(0, 'TodoSignNOTE', { fg = "#3fb950" })
-vim.api.nvim_set_hl(0, 'TodoSignPERF', { fg = "#ab7df8" })
-vim.api.nvim_set_hl(0, 'TodoSignTEST', { fg = "#ab7df8" })
-vim.api.nvim_set_hl(0, 'TodoSignTODO', { fg = "#4493f8" })
-vim.api.nvim_set_hl(0, 'TodoSignWARN', { fg = "#d29922" })
-vim.api.nvim_set_hl(0, 'TreesitterContext', { bg = "#151b23" })
+vim.api.nvim_set_hl(0, 'TodoFgFIX', { fg = '#f85149' })
+vim.api.nvim_set_hl(0, 'TodoFgHACK', { fg = '#d29922' })
+vim.api.nvim_set_hl(0, 'TodoFgNOTE', { fg = '#3fb950' })
+vim.api.nvim_set_hl(0, 'TodoFgPERF', { fg = '#ab7df8' })
+vim.api.nvim_set_hl(0, 'TodoFgTEST', { fg = '#ab7df8' })
+vim.api.nvim_set_hl(0, 'TodoFgTODO', { fg = '#4493f8' })
+vim.api.nvim_set_hl(0, 'TodoFgWARN', { fg = '#d29922' })
+vim.api.nvim_set_hl(0, 'TodoSignFIX', { fg = '#f85149' })
+vim.api.nvim_set_hl(0, 'TodoSignHACK', { fg = '#d29922' })
+vim.api.nvim_set_hl(0, 'TodoSignNOTE', { fg = '#3fb950' })
+vim.api.nvim_set_hl(0, 'TodoSignPERF', { fg = '#ab7df8' })
+vim.api.nvim_set_hl(0, 'TodoSignTEST', { fg = '#ab7df8' })
+vim.api.nvim_set_hl(0, 'TodoSignTODO', { fg = '#4493f8' })
+vim.api.nvim_set_hl(0, 'TodoSignWARN', { fg = '#d29922' })
+vim.api.nvim_set_hl(0, 'TreesitterContext', { bg = '#151b23' })
 vim.api.nvim_set_hl(0, 'TreesitterContextBottom', {
-  sp = "#3d444d",
-  underline = true
+  sp = '#3d444d',
+  underline = true,
 })
 vim.api.nvim_set_hl(0, 'TreesitterContextLineNumber', {
-  bg = "#151b23",
-  fg = "#9198a1"
+  bg = '#151b23',
+  fg = '#9198a1',
 })
 vim.api.nvim_set_hl(0, 'TreesitterContextLineNumberBottom', {
-  bg = "#151b23",
-  fg = "#9198a1",
-  underline = true
+  bg = '#151b23',
+  fg = '#9198a1',
+  underline = true,
 })
-vim.api.nvim_set_hl(0, 'TreesitterContextSeparator', { fg = "#3d444d" })
+vim.api.nvim_set_hl(0, 'TreesitterContextSeparator', { fg = '#3d444d' })
 vim.api.nvim_set_hl(0, 'TroubleBasename', {
   bold = true,
-  fg = "#4493f8"
+  fg = '#4493f8',
 })
-vim.api.nvim_set_hl(0, 'TroubleCode', { fg = "#9198a1" })
+vim.api.nvim_set_hl(0, 'TroubleCode', { fg = '#9198a1' })
 vim.api.nvim_set_hl(0, 'TroubleCount', {
-  bg = "#1f6feb",
+  bg = '#1f6feb',
   bold = true,
-  fg = "#ffffff"
+  fg = '#ffffff',
 })
-vim.api.nvim_set_hl(0, 'TroubleDirectory', { fg = "#9198a1" })
-vim.api.nvim_set_hl(0, 'TroubleFilename', { fg = "#4493f8" })
-vim.api.nvim_set_hl(0, 'TroubleIconArray', { fg = "#ffa657" })
-vim.api.nvim_set_hl(0, 'TroubleIconBoolean', { fg = "#79c0ff" })
-vim.api.nvim_set_hl(0, 'TroubleIconClass', { fg = "#d2a8ff" })
-vim.api.nvim_set_hl(0, 'TroubleIconConstant', { fg = "#79c0ff" })
-vim.api.nvim_set_hl(0, 'TroubleIconConstructor', { fg = "#d2a8ff" })
-vim.api.nvim_set_hl(0, 'TroubleIconDirectory', { fg = "#4493f8" })
-vim.api.nvim_set_hl(0, 'TroubleIconEnum', { fg = "#d2a8ff" })
-vim.api.nvim_set_hl(0, 'TroubleIconEnumMember', { fg = "#79c0ff" })
-vim.api.nvim_set_hl(0, 'TroubleIconEvent', { fg = "#ffa657" })
-vim.api.nvim_set_hl(0, 'TroubleIconField', { fg = "#ffa657" })
-vim.api.nvim_set_hl(0, 'TroubleIconFile', { fg = "#f0f6fc" })
-vim.api.nvim_set_hl(0, 'TroubleIconFunction', { fg = "#d2a8ff" })
-vim.api.nvim_set_hl(0, 'TroubleIconInterface', { fg = "#d2a8ff" })
-vim.api.nvim_set_hl(0, 'TroubleIconKey', { fg = "#ff7b72" })
-vim.api.nvim_set_hl(0, 'TroubleIconMethod', { fg = "#d2a8ff" })
-vim.api.nvim_set_hl(0, 'TroubleIconModule', { fg = "#ff7b72" })
-vim.api.nvim_set_hl(0, 'TroubleIconNamespace', { fg = "#ff7b72" })
-vim.api.nvim_set_hl(0, 'TroubleIconNull', { fg = "#79c0ff" })
-vim.api.nvim_set_hl(0, 'TroubleIconNumber', { fg = "#79c0ff" })
-vim.api.nvim_set_hl(0, 'TroubleIconObject', { fg = "#d2a8ff" })
-vim.api.nvim_set_hl(0, 'TroubleIconOperator', { fg = "#f0f6fc" })
-vim.api.nvim_set_hl(0, 'TroubleIconPackage', { fg = "#ff7b72" })
-vim.api.nvim_set_hl(0, 'TroubleIconProperty', { fg = "#ffa657" })
-vim.api.nvim_set_hl(0, 'TroubleIconString', { fg = "#a5d6ff" })
-vim.api.nvim_set_hl(0, 'TroubleIconStruct', { fg = "#d2a8ff" })
-vim.api.nvim_set_hl(0, 'TroubleIconTypeParameter', { fg = "#ffa657" })
-vim.api.nvim_set_hl(0, 'TroubleIconVariable', { fg = "#ffa657" })
-vim.api.nvim_set_hl(0, 'TroubleIndent', { fg = "#2f353d" })
-vim.api.nvim_set_hl(0, 'TroubleIndentFoldClosed', { fg = "#f0f6fc" })
-vim.api.nvim_set_hl(0, 'TroubleIndentFoldOpen', { fg = "#2f353d" })
-vim.api.nvim_set_hl(0, 'TroubleIndentLast', { link = "TroubleIndent" })
-vim.api.nvim_set_hl(0, 'TroubleIndentMiddle', { link = "TroubleIndent" })
-vim.api.nvim_set_hl(0, 'TroubleIndentTop', { link = "TroubleIndent" })
-vim.api.nvim_set_hl(0, 'TroubleIndentWs', { link = "TroubleIndent" })
+vim.api.nvim_set_hl(0, 'TroubleDirectory', { fg = '#9198a1' })
+vim.api.nvim_set_hl(0, 'TroubleFilename', { fg = '#4493f8' })
+vim.api.nvim_set_hl(0, 'TroubleIconArray', { fg = '#ffa657' })
+vim.api.nvim_set_hl(0, 'TroubleIconBoolean', { fg = '#79c0ff' })
+vim.api.nvim_set_hl(0, 'TroubleIconClass', { fg = '#d2a8ff' })
+vim.api.nvim_set_hl(0, 'TroubleIconConstant', { fg = '#79c0ff' })
+vim.api.nvim_set_hl(0, 'TroubleIconConstructor', { fg = '#d2a8ff' })
+vim.api.nvim_set_hl(0, 'TroubleIconDirectory', { fg = '#4493f8' })
+vim.api.nvim_set_hl(0, 'TroubleIconEnum', { fg = '#d2a8ff' })
+vim.api.nvim_set_hl(0, 'TroubleIconEnumMember', { fg = '#79c0ff' })
+vim.api.nvim_set_hl(0, 'TroubleIconEvent', { fg = '#ffa657' })
+vim.api.nvim_set_hl(0, 'TroubleIconField', { fg = '#ffa657' })
+vim.api.nvim_set_hl(0, 'TroubleIconFile', { fg = '#f0f6fc' })
+vim.api.nvim_set_hl(0, 'TroubleIconFunction', { fg = '#d2a8ff' })
+vim.api.nvim_set_hl(0, 'TroubleIconInterface', { fg = '#d2a8ff' })
+vim.api.nvim_set_hl(0, 'TroubleIconKey', { fg = '#ff7b72' })
+vim.api.nvim_set_hl(0, 'TroubleIconMethod', { fg = '#d2a8ff' })
+vim.api.nvim_set_hl(0, 'TroubleIconModule', { fg = '#ff7b72' })
+vim.api.nvim_set_hl(0, 'TroubleIconNamespace', { fg = '#ff7b72' })
+vim.api.nvim_set_hl(0, 'TroubleIconNull', { fg = '#79c0ff' })
+vim.api.nvim_set_hl(0, 'TroubleIconNumber', { fg = '#79c0ff' })
+vim.api.nvim_set_hl(0, 'TroubleIconObject', { fg = '#d2a8ff' })
+vim.api.nvim_set_hl(0, 'TroubleIconOperator', { fg = '#f0f6fc' })
+vim.api.nvim_set_hl(0, 'TroubleIconPackage', { fg = '#ff7b72' })
+vim.api.nvim_set_hl(0, 'TroubleIconProperty', { fg = '#ffa657' })
+vim.api.nvim_set_hl(0, 'TroubleIconString', { fg = '#a5d6ff' })
+vim.api.nvim_set_hl(0, 'TroubleIconStruct', { fg = '#d2a8ff' })
+vim.api.nvim_set_hl(0, 'TroubleIconTypeParameter', { fg = '#ffa657' })
+vim.api.nvim_set_hl(0, 'TroubleIconVariable', { fg = '#ffa657' })
+vim.api.nvim_set_hl(0, 'TroubleIndent', { fg = '#2f353d' })
+vim.api.nvim_set_hl(0, 'TroubleIndentFoldClosed', { fg = '#f0f6fc' })
+vim.api.nvim_set_hl(0, 'TroubleIndentFoldOpen', { fg = '#2f353d' })
+vim.api.nvim_set_hl(0, 'TroubleIndentLast', { link = 'TroubleIndent' })
+vim.api.nvim_set_hl(0, 'TroubleIndentMiddle', { link = 'TroubleIndent' })
+vim.api.nvim_set_hl(0, 'TroubleIndentTop', { link = 'TroubleIndent' })
+vim.api.nvim_set_hl(0, 'TroubleIndentWs', { link = 'TroubleIndent' })
 vim.api.nvim_set_hl(0, 'TroubleNormal', {
-  bg = "#010409",
-  fg = "#f0f6fc"
+  bg = '#010409',
+  fg = '#f0f6fc',
 })
-vim.api.nvim_set_hl(0, 'TroubleNormalNC', { link = "TroubleNormal" })
-vim.api.nvim_set_hl(0, 'TroublePos', { fg = "#9198a1" })
+vim.api.nvim_set_hl(0, 'TroubleNormalNC', { link = 'TroubleNormal' })
+vim.api.nvim_set_hl(0, 'TroublePos', { fg = '#9198a1' })
 vim.api.nvim_set_hl(0, 'TroublePreview', {
-  bg = "#111d2e",
-  blend = 85
+  bg = '#111d2e',
+  blend = 85,
 })
-vim.api.nvim_set_hl(0, 'TroubleSource', { fg = "#9198a1" })
-vim.api.nvim_set_hl(0, 'TroubleText', { fg = "#f0f6fc" })
-vim.api.nvim_set_hl(0, 'Type', { fg = "#ffa657" })
-vim.api.nvim_set_hl(0, 'Typedef', { fg = "#ff7b72" })
+vim.api.nvim_set_hl(0, 'TroubleSource', { fg = '#9198a1' })
+vim.api.nvim_set_hl(0, 'TroubleText', { fg = '#f0f6fc' })
+vim.api.nvim_set_hl(0, 'Type', { fg = '#ffa657' })
+vim.api.nvim_set_hl(0, 'Typedef', { fg = '#ff7b72' })
 vim.api.nvim_set_hl(0, 'Underlined', {
-  fg = "#4493f8",
-  underline = true
+  fg = '#4493f8',
+  underline = true,
 })
-vim.api.nvim_set_hl(0, 'VertSplit', { link = "WinSeparator" })
+vim.api.nvim_set_hl(0, 'VertSplit', { link = 'WinSeparator' })
 vim.api.nvim_set_hl(0, 'Visual', {
-  bg = "#111d2e",
-  blend = 85
+  bg = '#111d2e',
+  blend = 85,
 })
-vim.api.nvim_set_hl(0, 'VisualNOS', { link = "Visual" })
-vim.api.nvim_set_hl(0, 'WarningMsg', { fg = "#d29922" })
-vim.api.nvim_set_hl(0, 'WhichKey', { fg = "#4493f8" })
-vim.api.nvim_set_hl(0, 'WhichKeyBorder', { link = "FloatBorder" })
-vim.api.nvim_set_hl(0, 'WhichKeyDesc', { fg = "#f0f6fc" })
-vim.api.nvim_set_hl(0, 'WhichKeyFloat', { link = "NormalFloat" })
-vim.api.nvim_set_hl(0, 'WhichKeyGroup', { fg = "#ab7df8" })
-vim.api.nvim_set_hl(0, 'WhichKeySeparator', { fg = "#9198a1" })
-vim.api.nvim_set_hl(0, 'WhichKeyValue', { fg = "#9198a1" })
-vim.api.nvim_set_hl(0, 'Whitespace', { fg = "#9198a1" })
-vim.api.nvim_set_hl(0, 'WildMenu', { link = "PmenuSel" })
+vim.api.nvim_set_hl(0, 'VisualNOS', { link = 'Visual' })
+vim.api.nvim_set_hl(0, 'WarningMsg', { fg = '#d29922' })
+vim.api.nvim_set_hl(0, 'WhichKey', { fg = '#4493f8' })
+vim.api.nvim_set_hl(0, 'WhichKeyBorder', { link = 'FloatBorder' })
+vim.api.nvim_set_hl(0, 'WhichKeyDesc', { fg = '#f0f6fc' })
+vim.api.nvim_set_hl(0, 'WhichKeyFloat', { link = 'NormalFloat' })
+vim.api.nvim_set_hl(0, 'WhichKeyGroup', { fg = '#ab7df8' })
+vim.api.nvim_set_hl(0, 'WhichKeySeparator', { fg = '#9198a1' })
+vim.api.nvim_set_hl(0, 'WhichKeyValue', { fg = '#9198a1' })
+vim.api.nvim_set_hl(0, 'Whitespace', { fg = '#9198a1' })
+vim.api.nvim_set_hl(0, 'WildMenu', { link = 'PmenuSel' })
 vim.api.nvim_set_hl(0, 'WinBar', {
-  bg = "#0d1117",
+  bg = '#0d1117',
   bold = true,
-  fg = "#f0f6fc"
+  fg = '#f0f6fc',
 })
 vim.api.nvim_set_hl(0, 'WinBarNC', {
-  bg = "#0d1117",
-  fg = "#9198a1"
+  bg = '#0d1117',
+  fg = '#9198a1',
 })
-vim.api.nvim_set_hl(0, 'WinSeparator', { fg = "#3d444d" })
-vim.api.nvim_set_hl(0, 'lCursor', { link = "Cursor" })
+vim.api.nvim_set_hl(0, 'WinSeparator', { fg = '#3d444d' })
+vim.api.nvim_set_hl(0, 'lCursor', { link = 'Cursor' })
 
 -- Terminal colors
 vim.g.terminal_color_0 = '#2f3742'

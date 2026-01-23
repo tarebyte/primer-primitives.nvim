@@ -10,6 +10,13 @@ local palettes = {
   { id = 'dark_high_contrast', file = 'primer_dark_high_contrast' },
 }
 
+--- Escape a string for Lua single-quoted literal
+---@param s string The string to escape
+---@return string
+local function escape_string(s)
+  return "'" .. s:gsub('\\', '\\\\'):gsub("'", "\\'"):gsub('\n', '\\n') .. "'"
+end
+
 --- Serialize a value to Lua code
 ---@param value any The value to serialize
 ---@param indent number The current indentation level
@@ -19,7 +26,7 @@ local function serialize(value, indent)
   local spaces = string.rep('  ', indent)
 
   if type(value) == 'string' then
-    return string.format('%q', value)
+    return escape_string(value)
   elseif type(value) == 'number' then
     return tostring(value)
   elseif type(value) == 'boolean' then
@@ -58,7 +65,7 @@ local function serialize(value, indent)
       elseif #parts <= 4 and not next(value, next(value)) then
         return '{ ' .. table.concat(parts, ', ') .. ' }'
       else
-        return '{\n' .. spaces .. '  ' .. table.concat(parts, ',\n' .. spaces .. '  ') .. '\n' .. spaces .. '}'
+        return '{\n' .. spaces .. '  ' .. table.concat(parts, ',\n' .. spaces .. '  ') .. ',\n' .. spaces .. '}'
       end
     end
   else

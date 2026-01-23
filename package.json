@@ -8,7 +8,9 @@
     "generate": "nvim -l scripts/generate.lua",
     "extras": "node scripts/generate-extras.mjs",
     "build": "npm run extract && npm run generate",
-    "test": "node --test scripts/*.test.mjs"
+    "test": "node --test scripts/*.test.mjs",
+    "format": "stylua lua/ colors/ scripts/generate.lua",
+    "format:check": "stylua --check lua/ colors/ scripts/generate.lua"
   },
   "repository": {
     "type": "git",
