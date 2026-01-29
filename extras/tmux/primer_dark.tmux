@@ -9,20 +9,20 @@
 #   Or copy the settings below directly into your tmux.conf
 
 # Status bar
-set -g status-style "fg=#9198a1,bg=#010409"
-set -g status-left "#[fg=#ffffff,bg=#1f6feb,bold] #S #[fg=#1f6feb,bg=#010409,nobold]"
+set -g status-style "fg=#9198a1,bg=#0d1117"
+set -g status-left "#[fg=#8957e5,bold] #S #[fg=#9198a1,nobold]"
 set -g status-right "#[fg=#9198a1]%Y-%m-%d %H:%M "
 set -g status-left-length 50
 set -g status-right-length 50
 
 # Window status
-set -g window-status-format " #I:#W "
-set -g window-status-current-format "#[fg=#4493f8,bg=#151b23,bold] #I:#W #[fg=#151b23,bg=#010409,nobold]"
+set -g window-status-format "#[fg=#656c76] #I:#W "
+set -g window-status-current-format "#[fg=#f0f6fc,bold] #I:#W #[nobold]"
 set -g window-status-separator ""
 
 # Pane borders
 set -g pane-border-style "fg=#2f353d"
-set -g pane-active-border-style "fg=#4493f8"
+set -g pane-active-border-style "fg=#656c76"
 
 # Message style
 set -g message-style "fg=#f0f6fc,bg=#010409"
@@ -32,7 +32,7 @@ set -g message-command-style "fg=#f0f6fc,bg=#010409"
 set -g mode-style "fg=#f0f6fc,bg=#111d2e"
 
 # Clock mode
-set -g clock-mode-colour "#4493f8"
+set -g clock-mode-colour "#9198a1"
 
 # Copy mode match highlighting
 set -g copy-mode-match-style "fg=#f0f6fc,bg=#272215"

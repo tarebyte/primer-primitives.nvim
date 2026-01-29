@@ -10,19 +10,19 @@
 
 # Status bar
 set -g status-style "fg=#b7bdc8,bg=#010409"
-set -g status-left "#[fg=#ffffff,bg=#194fb1,bold] #S #[fg=#194fb1,bg=#010409,nobold]"
+set -g status-left "#[fg=#6921d7,bold] #S #[fg=#b7bdc8,nobold]"
 set -g status-right "#[fg=#b7bdc8]%Y-%m-%d %H:%M "
 set -g status-left-length 50
 set -g status-right-length 50
 
 # Window status
-set -g window-status-format " #I:#W "
-set -g window-status-current-format "#[fg=#74b9ff,bg=#151b23,bold] #I:#W #[fg=#151b23,bg=#010409,nobold]"
+set -g window-status-format "#[fg=#656c76] #I:#W "
+set -g window-status-current-format "#[fg=#ffffff,bold] #I:#W #[nobold]"
 set -g window-status-separator ""
 
 # Pane borders
 set -g pane-border-style "fg=#b7bdc8"
-set -g pane-active-border-style "fg=#74b9ff"
+set -g pane-active-border-style "fg=#b7bdc8"
 
 # Message style
 set -g message-style "fg=#ffffff,bg=#010409"
@@ -32,7 +32,7 @@ set -g message-command-style "fg=#ffffff,bg=#010409"
 set -g mode-style "fg=#ffffff,bg=#0a1522"
 
 # Clock mode
-set -g clock-mode-colour "#74b9ff"
+set -g clock-mode-colour "#b7bdc8"
 
 # Copy mode match highlighting
 set -g copy-mode-match-style "fg=#ffffff,bg=#241d0d"

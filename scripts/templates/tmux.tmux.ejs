@@ -9,20 +9,20 @@
 #   Or copy the settings below directly into your tmux.conf
 
 # Status bar
-set -g status-style "fg=<%= fg.muted %>,bg=<%= canvas.inset %>"
-set -g status-left "#[fg=<%= fg.on_emphasis %>,bg=<%= accent.emphasis %>,bold] #S #[fg=<%= accent.emphasis %>,bg=<%= canvas.inset %>,nobold]"
+set -g status-style "fg=<%= fg.muted %>,bg=<%= canvas.default %>"
+set -g status-left "#[fg=<%= done.emphasis %>,bold] #S #[fg=<%= fg.muted %>,nobold]"
 set -g status-right "#[fg=<%= fg.muted %>]%Y-%m-%d %H:%M "
 set -g status-left-length 50
 set -g status-right-length 50
 
 # Window status
-set -g window-status-format " #I:#W "
-set -g window-status-current-format "#[fg=<%= accent.fg %>,bg=<%= canvas.subtle %>,bold] #I:#W #[fg=<%= canvas.subtle %>,bg=<%= canvas.inset %>,nobold]"
+set -g window-status-format "#[fg=<%= fg.disabled %>] #I:#W "
+set -g window-status-current-format "#[fg=<%= fg.default %>,bold] #I:#W #[nobold]"
 set -g window-status-separator ""
 
 # Pane borders
 set -g pane-border-style "fg=<%= border.muted %>"
-set -g pane-active-border-style "fg=<%= accent.fg %>"
+set -g pane-active-border-style "fg=<%= border.emphasis %>"
 
 # Message style
 set -g message-style "fg=<%= fg.default %>,bg=<%= canvas.overlay %>"
@@ -32,7 +32,7 @@ set -g message-command-style "fg=<%= fg.default %>,bg=<%= canvas.overlay %>"
 set -g mode-style "fg=<%= fg.default %>,bg=<%= accent.muted %>"
 
 # Clock mode
-set -g clock-mode-colour "<%= accent.fg %>"
+set -g clock-mode-colour "<%= fg.muted %>"
 
 # Copy mode match highlighting
 set -g copy-mode-match-style "fg=<%= fg.default %>,bg=<%= attention.muted %>"

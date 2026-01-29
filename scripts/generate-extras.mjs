@@ -190,6 +190,7 @@ export function parseLuaPalette(content, config) {
     attention: {},
     severe: {},
     done: {},
+    neutral: {},
     scale: {},
     syntax: {},
     ansi: {},
