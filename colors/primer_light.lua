@@ -49,7 +49,7 @@ vim.api.nvim_set_hl(0, '@exception', { link = 'Exception' })
 vim.api.nvim_set_hl(0, '@field', { fg = '#953800' })
 vim.api.nvim_set_hl(0, '@float', { link = 'Float' })
 vim.api.nvim_set_hl(0, '@function', { link = 'Function' })
-vim.api.nvim_set_hl(0, '@function.builtin', { fg = '#6639ba' })
+vim.api.nvim_set_hl(0, '@function.builtin', { fg = '#cf222e' })
 vim.api.nvim_set_hl(0, '@function.call', { link = 'Function' })
 vim.api.nvim_set_hl(0, '@function.macro', { link = 'Macro' })
 vim.api.nvim_set_hl(0, '@function.method', { link = 'Function' })
@@ -694,7 +694,7 @@ vim.api.nvim_set_hl(0, 'LspSignatureActiveParameter', {
   fg = '#0969da',
   underline = true,
 })
-vim.api.nvim_set_hl(0, 'Macro', { fg = '#0550ae' })
+vim.api.nvim_set_hl(0, 'Macro', { fg = '#cf222e' })
 vim.api.nvim_set_hl(0, 'MasonError', { fg = '#d1242f' })
 vim.api.nvim_set_hl(0, 'MasonHeader', {
   bg = '#0969da',

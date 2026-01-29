@@ -149,7 +149,7 @@ function M.build(p)
   groups.PreProc = { fg = p.syntax.keyword }
   groups.Include = { fg = p.syntax.keyword }
   groups.Define = { fg = p.syntax.keyword }
-  groups.Macro = { fg = p.syntax.constant }
+  groups.Macro = { fg = p.syntax.keyword }
   groups.PreCondit = { fg = p.syntax.keyword }
 
   groups.Type = { fg = p.syntax.variable }
@@ -228,7 +228,7 @@ function M.build(p)
 
   -- Functions
   groups['@function'] = { link = 'Function' }
-  groups['@function.builtin'] = { fg = p.syntax.func }
+  groups['@function.builtin'] = { fg = p.syntax.keyword }
   groups['@function.call'] = { link = 'Function' }
   groups['@function.macro'] = { link = 'Macro' }
   groups['@function.method'] = { link = 'Function' }

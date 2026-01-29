@@ -13,6 +13,12 @@ return {
     muted = '<%= fg.muted %>',
     subtle = '<%= fg.subtle %>',
     on_emphasis = '<%= fg.on_emphasis %>',
+    on_inverse = '<%= fg.on_inverse %>',
+    disabled = '<%= fg.disabled %>',
+    link = '<%= fg.link %>',
+    neutral = '<%= fg.neutral %>',
+    black = '<%= fg.black %>',
+    white = '<%= fg.white %>',
   },
 
   -- Canvas (backgrounds)
@@ -21,12 +27,18 @@ return {
     inset = '<%= canvas.inset %>',
     subtle = '<%= canvas.subtle %>',
     overlay = '<%= canvas.overlay %>',
+    disabled = '<%= canvas.disabled %>',
+    emphasis = '<%= canvas.emphasis %>',
+    inverse = '<%= canvas.inverse %>',
   },
 
   -- Border
   border = {
     default = '<%= border.default %>',
     muted = '<%= border.muted %>',
+    emphasis = '<%= border.emphasis %>',
+    disabled = '<%= border.disabled %>',
+    translucent = '<%= border.translucent %>',
   },
 
   -- Accent
@@ -34,6 +46,8 @@ return {
     fg = '<%= accent.fg %>',
     emphasis = '<%= accent.emphasis %>',
     muted = '<%= accent.muted %>',
+    border_emphasis = '<%= accent.border_emphasis %>',
+    border_muted = '<%= accent.border_muted %>',
   },
 
   -- Semantic: Danger
@@ -41,6 +55,8 @@ return {
     fg = '<%= danger.fg %>',
     emphasis = '<%= danger.emphasis %>',
     muted = '<%= danger.muted %>',
+    border_emphasis = '<%= danger.border_emphasis %>',
+    border_muted = '<%= danger.border_muted %>',
   },
 
   -- Semantic: Success
@@ -48,6 +64,8 @@ return {
     fg = '<%= success.fg %>',
     emphasis = '<%= success.emphasis %>',
     muted = '<%= success.muted %>',
+    border_emphasis = '<%= success.border_emphasis %>',
+    border_muted = '<%= success.border_muted %>',
   },
 
   -- Semantic: Attention/Warning
@@ -55,6 +73,8 @@ return {
     fg = '<%= attention.fg %>',
     emphasis = '<%= attention.emphasis %>',
     muted = '<%= attention.muted %>',
+    border_emphasis = '<%= attention.border_emphasis %>',
+    border_muted = '<%= attention.border_muted %>',
   },
 
   -- Semantic: Severe
@@ -62,6 +82,8 @@ return {
     fg = '<%= severe.fg %>',
     emphasis = '<%= severe.emphasis %>',
     muted = '<%= severe.muted %>',
+    border_emphasis = '<%= severe.border_emphasis %>',
+    border_muted = '<%= severe.border_muted %>',
   },
 
   -- Semantic: Done
@@ -69,6 +91,62 @@ return {
     fg = '<%= done.fg %>',
     emphasis = '<%= done.emphasis %>',
     muted = '<%= done.muted %>',
+    border_emphasis = '<%= done.border_emphasis %>',
+    border_muted = '<%= done.border_muted %>',
+  },
+
+  -- Semantic: Open
+  open = {
+    fg = '<%= open.fg %>',
+    emphasis = '<%= open.emphasis %>',
+    muted = '<%= open.muted %>',
+    border_emphasis = '<%= open.border_emphasis %>',
+    border_muted = '<%= open.border_muted %>',
+  },
+
+  -- Semantic: Closed
+  closed = {
+    fg = '<%= closed.fg %>',
+    emphasis = '<%= closed.emphasis %>',
+    muted = '<%= closed.muted %>',
+    border_emphasis = '<%= closed.border_emphasis %>',
+    border_muted = '<%= closed.border_muted %>',
+  },
+
+  -- Semantic: Draft
+  draft = {
+    fg = '<%= draft.fg %>',
+    emphasis = '<%= draft.emphasis %>',
+    muted = '<%= draft.muted %>',
+    border_emphasis = '<%= draft.border_emphasis %>',
+    border_muted = '<%= draft.border_muted %>',
+  },
+
+  -- Semantic: Neutral
+  neutral = {
+    fg = '<%= neutral.fg %>',
+    emphasis = '<%= neutral.emphasis %>',
+    muted = '<%= neutral.muted %>',
+    border_emphasis = '<%= neutral.border_emphasis %>',
+    border_muted = '<%= neutral.border_muted %>',
+  },
+
+  -- Semantic: Sponsors
+  sponsors = {
+    fg = '<%= sponsors.fg %>',
+    emphasis = '<%= sponsors.emphasis %>',
+    muted = '<%= sponsors.muted %>',
+    border_emphasis = '<%= sponsors.border_emphasis %>',
+    border_muted = '<%= sponsors.border_muted %>',
+  },
+
+  -- Semantic: Upsell
+  upsell = {
+    fg = '<%= upsell.fg %>',
+    emphasis = '<%= upsell.emphasis %>',
+    muted = '<%= upsell.muted %>',
+    border_emphasis = '<%= upsell.border_emphasis %>',
+    border_muted = '<%= upsell.border_muted %>',
   },
 
   -- Color scales
@@ -81,12 +159,105 @@ return {
   syntax = {
     comment = '<%= syntax.comment %>',
     constant = '<%= syntax.constant %>',
+    constant_other_reference_link = '<%= syntax.constant_other_reference_link %>',
     entity = '<%= syntax.entity %>',
     keyword = '<%= syntax.keyword %>',
     string = '<%= syntax.string %>',
+    string_regexp = '<%= syntax.string_regexp %>',
     variable = '<%= syntax.variable %>',
     func = '<%= syntax.func %>',
     tag = '<%= syntax.tag %>',
+    storage_modifier_import = '<%= syntax.storage_modifier_import %>',
+    bracket_highlighter_angle = '<%= syntax.bracket_highlighter_angle %>',
+    bracket_highlighter_unmatched = '<%= syntax.bracket_highlighter_unmatched %>',
+    carriage_return_bg = '<%= syntax.carriage_return_bg %>',
+    carriage_return_text = '<%= syntax.carriage_return_text %>',
+    invalid_illegal_bg = '<%= syntax.invalid_illegal_bg %>',
+    invalid_illegal_text = '<%= syntax.invalid_illegal_text %>',
+    markup_bold = '<%= syntax.markup_bold %>',
+    markup_italic = '<%= syntax.markup_italic %>',
+    markup_heading = '<%= syntax.markup_heading %>',
+    markup_list = '<%= syntax.markup_list %>',
+    markup_inserted_bg = '<%= syntax.markup_inserted_bg %>',
+    markup_inserted_text = '<%= syntax.markup_inserted_text %>',
+    markup_deleted_bg = '<%= syntax.markup_deleted_bg %>',
+    markup_deleted_text = '<%= syntax.markup_deleted_text %>',
+    markup_changed_bg = '<%= syntax.markup_changed_bg %>',
+    markup_changed_text = '<%= syntax.markup_changed_text %>',
+    markup_ignored_bg = '<%= syntax.markup_ignored_bg %>',
+    markup_ignored_text = '<%= syntax.markup_ignored_text %>',
+    meta_diff_range = '<%= syntax.meta_diff_range %>',
+    sublimelinter_gutter_mark = '<%= syntax.sublimelinter_gutter_mark %>',
+  },
+
+  -- CodeMirror editor colors
+  codemirror = {
+    bg = '<%= codemirror.bg %>',
+    fg = '<%= codemirror.fg %>',
+    cursor = '<%= codemirror.cursor %>',
+    selection_bg = '<%= codemirror.selection_bg %>',
+    activeline_bg = '<%= codemirror.activeline_bg %>',
+    matching_bracket = '<%= codemirror.matching_bracket %>',
+    gutters_bg = '<%= codemirror.gutters_bg %>',
+    line_number = '<%= codemirror.line_number %>',
+    gutter_marker_default = '<%= codemirror.gutter_marker_default %>',
+    gutter_marker_muted = '<%= codemirror.gutter_marker_muted %>',
+    syntax_comment = '<%= codemirror.syntax_comment %>',
+    syntax_constant = '<%= codemirror.syntax_constant %>',
+    syntax_entity = '<%= codemirror.syntax_entity %>',
+    syntax_keyword = '<%= codemirror.syntax_keyword %>',
+    syntax_storage = '<%= codemirror.syntax_storage %>',
+    syntax_string = '<%= codemirror.syntax_string %>',
+    syntax_support = '<%= codemirror.syntax_support %>',
+    syntax_variable = '<%= codemirror.syntax_variable %>',
+  },
+
+  -- Diff colors
+  diff = {
+    addition_line_bg = '<%= diff.addition_line_bg %>',
+    addition_line_fg = '<%= diff.addition_line_fg %>',
+    addition_num_bg = '<%= diff.addition_num_bg %>',
+    addition_num_fg = '<%= diff.addition_num_fg %>',
+    addition_word_bg = '<%= diff.addition_word_bg %>',
+    addition_word_fg = '<%= diff.addition_word_fg %>',
+    deletion_line_bg = '<%= diff.deletion_line_bg %>',
+    deletion_line_fg = '<%= diff.deletion_line_fg %>',
+    deletion_num_bg = '<%= diff.deletion_num_bg %>',
+    deletion_num_fg = '<%= diff.deletion_num_fg %>',
+    deletion_word_bg = '<%= diff.deletion_word_bg %>',
+    deletion_word_fg = '<%= diff.deletion_word_fg %>',
+    hunk_line_bg = '<%= diff.hunk_line_bg %>',
+    hunk_line_fg = '<%= diff.hunk_line_fg %>',
+    hunk_num_bg = '<%= diff.hunk_num_bg %>',
+    hunk_num_fg = '<%= diff.hunk_num_fg %>',
+    hunk_num_bg_hover = '<%= diff.hunk_num_bg_hover %>',
+    hunk_num_fg_hover = '<%= diff.hunk_num_fg_hover %>',
+    empty_line_bg = '<%= diff.empty_line_bg %>',
+    empty_num_bg = '<%= diff.empty_num_bg %>',
+    expander_icon = '<%= diff.expander_icon %>',
+  },
+
+  -- Display scale colors (0-9)
+  scales = {
+    auburn = { '<%= scales.auburn[0] %>', '<%= scales.auburn[1] %>', '<%= scales.auburn[2] %>', '<%= scales.auburn[3] %>', '<%= scales.auburn[4] %>', '<%= scales.auburn[5] %>', '<%= scales.auburn[6] %>', '<%= scales.auburn[7] %>', '<%= scales.auburn[8] %>', '<%= scales.auburn[9] %>' },
+    blue = { '<%= scales.blue[0] %>', '<%= scales.blue[1] %>', '<%= scales.blue[2] %>', '<%= scales.blue[3] %>', '<%= scales.blue[4] %>', '<%= scales.blue[5] %>', '<%= scales.blue[6] %>', '<%= scales.blue[7] %>', '<%= scales.blue[8] %>', '<%= scales.blue[9] %>' },
+    brown = { '<%= scales.brown[0] %>', '<%= scales.brown[1] %>', '<%= scales.brown[2] %>', '<%= scales.brown[3] %>', '<%= scales.brown[4] %>', '<%= scales.brown[5] %>', '<%= scales.brown[6] %>', '<%= scales.brown[7] %>', '<%= scales.brown[8] %>', '<%= scales.brown[9] %>' },
+    coral = { '<%= scales.coral[0] %>', '<%= scales.coral[1] %>', '<%= scales.coral[2] %>', '<%= scales.coral[3] %>', '<%= scales.coral[4] %>', '<%= scales.coral[5] %>', '<%= scales.coral[6] %>', '<%= scales.coral[7] %>', '<%= scales.coral[8] %>', '<%= scales.coral[9] %>' },
+    cyan = { '<%= scales.cyan[0] %>', '<%= scales.cyan[1] %>', '<%= scales.cyan[2] %>', '<%= scales.cyan[3] %>', '<%= scales.cyan[4] %>', '<%= scales.cyan[5] %>', '<%= scales.cyan[6] %>', '<%= scales.cyan[7] %>', '<%= scales.cyan[8] %>', '<%= scales.cyan[9] %>' },
+    gray = { '<%= scales.gray[0] %>', '<%= scales.gray[1] %>', '<%= scales.gray[2] %>', '<%= scales.gray[3] %>', '<%= scales.gray[4] %>', '<%= scales.gray[5] %>', '<%= scales.gray[6] %>', '<%= scales.gray[7] %>', '<%= scales.gray[8] %>', '<%= scales.gray[9] %>' },
+    green = { '<%= scales.green[0] %>', '<%= scales.green[1] %>', '<%= scales.green[2] %>', '<%= scales.green[3] %>', '<%= scales.green[4] %>', '<%= scales.green[5] %>', '<%= scales.green[6] %>', '<%= scales.green[7] %>', '<%= scales.green[8] %>', '<%= scales.green[9] %>' },
+    indigo = { '<%= scales.indigo[0] %>', '<%= scales.indigo[1] %>', '<%= scales.indigo[2] %>', '<%= scales.indigo[3] %>', '<%= scales.indigo[4] %>', '<%= scales.indigo[5] %>', '<%= scales.indigo[6] %>', '<%= scales.indigo[7] %>', '<%= scales.indigo[8] %>', '<%= scales.indigo[9] %>' },
+    lemon = { '<%= scales.lemon[0] %>', '<%= scales.lemon[1] %>', '<%= scales.lemon[2] %>', '<%= scales.lemon[3] %>', '<%= scales.lemon[4] %>', '<%= scales.lemon[5] %>', '<%= scales.lemon[6] %>', '<%= scales.lemon[7] %>', '<%= scales.lemon[8] %>', '<%= scales.lemon[9] %>' },
+    lime = { '<%= scales.lime[0] %>', '<%= scales.lime[1] %>', '<%= scales.lime[2] %>', '<%= scales.lime[3] %>', '<%= scales.lime[4] %>', '<%= scales.lime[5] %>', '<%= scales.lime[6] %>', '<%= scales.lime[7] %>', '<%= scales.lime[8] %>', '<%= scales.lime[9] %>' },
+    olive = { '<%= scales.olive[0] %>', '<%= scales.olive[1] %>', '<%= scales.olive[2] %>', '<%= scales.olive[3] %>', '<%= scales.olive[4] %>', '<%= scales.olive[5] %>', '<%= scales.olive[6] %>', '<%= scales.olive[7] %>', '<%= scales.olive[8] %>', '<%= scales.olive[9] %>' },
+    orange = { '<%= scales.orange[0] %>', '<%= scales.orange[1] %>', '<%= scales.orange[2] %>', '<%= scales.orange[3] %>', '<%= scales.orange[4] %>', '<%= scales.orange[5] %>', '<%= scales.orange[6] %>', '<%= scales.orange[7] %>', '<%= scales.orange[8] %>', '<%= scales.orange[9] %>' },
+    pine = { '<%= scales.pine[0] %>', '<%= scales.pine[1] %>', '<%= scales.pine[2] %>', '<%= scales.pine[3] %>', '<%= scales.pine[4] %>', '<%= scales.pine[5] %>', '<%= scales.pine[6] %>', '<%= scales.pine[7] %>', '<%= scales.pine[8] %>', '<%= scales.pine[9] %>' },
+    pink = { '<%= scales.pink[0] %>', '<%= scales.pink[1] %>', '<%= scales.pink[2] %>', '<%= scales.pink[3] %>', '<%= scales.pink[4] %>', '<%= scales.pink[5] %>', '<%= scales.pink[6] %>', '<%= scales.pink[7] %>', '<%= scales.pink[8] %>', '<%= scales.pink[9] %>' },
+    plum = { '<%= scales.plum[0] %>', '<%= scales.plum[1] %>', '<%= scales.plum[2] %>', '<%= scales.plum[3] %>', '<%= scales.plum[4] %>', '<%= scales.plum[5] %>', '<%= scales.plum[6] %>', '<%= scales.plum[7] %>', '<%= scales.plum[8] %>', '<%= scales.plum[9] %>' },
+    purple = { '<%= scales.purple[0] %>', '<%= scales.purple[1] %>', '<%= scales.purple[2] %>', '<%= scales.purple[3] %>', '<%= scales.purple[4] %>', '<%= scales.purple[5] %>', '<%= scales.purple[6] %>', '<%= scales.purple[7] %>', '<%= scales.purple[8] %>', '<%= scales.purple[9] %>' },
+    red = { '<%= scales.red[0] %>', '<%= scales.red[1] %>', '<%= scales.red[2] %>', '<%= scales.red[3] %>', '<%= scales.red[4] %>', '<%= scales.red[5] %>', '<%= scales.red[6] %>', '<%= scales.red[7] %>', '<%= scales.red[8] %>', '<%= scales.red[9] %>' },
+    teal = { '<%= scales.teal[0] %>', '<%= scales.teal[1] %>', '<%= scales.teal[2] %>', '<%= scales.teal[3] %>', '<%= scales.teal[4] %>', '<%= scales.teal[5] %>', '<%= scales.teal[6] %>', '<%= scales.teal[7] %>', '<%= scales.teal[8] %>', '<%= scales.teal[9] %>' },
+    yellow = { '<%= scales.yellow[0] %>', '<%= scales.yellow[1] %>', '<%= scales.yellow[2] %>', '<%= scales.yellow[3] %>', '<%= scales.yellow[4] %>', '<%= scales.yellow[5] %>', '<%= scales.yellow[6] %>', '<%= scales.yellow[7] %>', '<%= scales.yellow[8] %>', '<%= scales.yellow[9] %>' },
   },
 
   -- ANSI colors
@@ -99,6 +270,7 @@ return {
     magenta = '<%= ansi.magenta %>',
     cyan = '<%= ansi.cyan %>',
     white = '<%= ansi.white %>',
+    gray = '<%= ansi.gray %>',
     bright_black = '<%= ansi.bright_black %>',
     bright_red = '<%= ansi.bright_red %>',
     bright_green = '<%= ansi.bright_green %>',

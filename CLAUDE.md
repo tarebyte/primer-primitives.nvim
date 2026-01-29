@@ -93,17 +93,64 @@ npm update @primer/primitives && npm run build
 
 ### Palettes (`lua/primer-primitives/palettes/*.lua`)
 
-Each palette file exports a table with:
+Each palette file exports a table with all colors from the Primer Primitives design system:
+
+**Core Configuration:**
 - `name` - Colorscheme name (e.g., `primer_dark`)
 - `background` - `'dark'` or `'light'`
 - `blend` - Transparency level for selection highlights (60-85)
-- `fg` - Foreground colors (`default`, `muted`, `subtle`, `on_emphasis`)
-- `canvas` - Background colors (`default`, `inset`, `subtle`, `overlay`)
-- `border` - Border colors (`default`, `muted`)
-- `accent`, `danger`, `success`, `attention`, `severe`, `done` - Semantic colors (`fg`, `emphasis`, `muted`)
-- `syntax` - Syntax highlighting colors (`comment`, `constant`, `entity`, `keyword`, `string`, `variable`, `func`, `tag`)
-- `ansi` - Terminal colors (16 ANSI colors)
-- `scale` - Base scale colors (`black`, `white`)
+
+**Foreground Colors (`fg`):**
+- `default`, `muted`, `subtle`, `on_emphasis`, `on_inverse`, `disabled`, `link`, `neutral`, `black`, `white`
+
+**Background Colors (`canvas`):**
+- `default`, `inset`, `subtle`, `overlay`, `disabled`, `emphasis`, `inverse`
+
+**Border Colors (`border`):**
+- `default`, `muted`, `emphasis`, `disabled`, `translucent`
+
+**Semantic Colors** (each with `fg`, `emphasis`, `muted`, `border_emphasis`, `border_muted`):
+- `accent` - Primary accent (blue)
+- `danger` - Error/destructive actions (red)
+- `success` - Success states (green)
+- `attention` - Warnings (yellow)
+- `severe` - Severe warnings (orange)
+- `done` - Completed states (purple)
+- `open` - Open issues/PRs (green)
+- `closed` - Closed issues/PRs (red)
+- `draft` - Draft states (gray)
+- `neutral` - Neutral states (gray)
+- `sponsors` - GitHub Sponsors (pink)
+- `upsell` - Upgrade prompts (purple)
+
+**Syntax Highlighting (`syntax`):**
+- Core: `comment`, `constant`, `entity`, `keyword`, `string`, `variable`, `func`, `tag`
+- Extended: `constant_other_reference_link`, `string_regexp`, `storage_modifier_import`
+- Brackets: `bracket_highlighter_angle`, `bracket_highlighter_unmatched`
+- Errors: `carriage_return_bg`, `carriage_return_text`, `invalid_illegal_bg`, `invalid_illegal_text`
+- Markup: `markup_bold`, `markup_italic`, `markup_heading`, `markup_list`, `markup_inserted_*`, `markup_deleted_*`, `markup_changed_*`, `markup_ignored_*`
+- Diff: `meta_diff_range`, `sublimelinter_gutter_mark`
+
+**CodeMirror Editor Colors (`codemirror`):**
+- Editor: `bg`, `fg`, `cursor`, `selection_bg`, `activeline_bg`, `matching_bracket`
+- Gutters: `gutters_bg`, `line_number`, `gutter_marker_default`, `gutter_marker_muted`
+- Syntax: `syntax_comment`, `syntax_constant`, `syntax_entity`, `syntax_keyword`, `syntax_storage`, `syntax_string`, `syntax_support`, `syntax_variable`
+
+**Diff Colors (`diff`):**
+- Addition: `addition_line_bg/fg`, `addition_num_bg/fg`, `addition_word_bg/fg`
+- Deletion: `deletion_line_bg/fg`, `deletion_num_bg/fg`, `deletion_word_bg/fg`
+- Hunk: `hunk_line_bg/fg`, `hunk_num_bg/fg`, `hunk_num_bg_hover/fg_hover`
+- Other: `empty_line_bg`, `empty_num_bg`, `expander_icon`
+
+**Display Scale Colors (`scales`):**
+- 19 color ramps, each with 10 shades (0-9): `auburn`, `blue`, `brown`, `coral`, `cyan`, `gray`, `green`, `indigo`, `lemon`, `lime`, `olive`, `orange`, `pine`, `pink`, `plum`, `purple`, `red`, `teal`, `yellow`
+
+**ANSI Terminal Colors (`ansi`):**
+- Standard: `black`, `red`, `green`, `yellow`, `blue`, `magenta`, `cyan`, `white`, `gray`
+- Bright: `bright_black`, `bright_red`, `bright_green`, `bright_yellow`, `bright_blue`, `bright_magenta`, `bright_cyan`, `bright_white`
+
+**Base Scale (`scale`):**
+- `black`, `white`
 
 ### Highlights (`lua/primer-primitives/highlights.lua`)
 
@@ -197,12 +244,23 @@ The extraction script maps primer/primitives tokens to our palette structure:
 |-----------|-------------------------|
 | `fg.default` | `fgColor-default` |
 | `fg.muted` | `fgColor-muted` |
+| `fg.disabled` | `fgColor-disabled` |
+| `fg.link` | `fgColor-link` |
 | `canvas.default` | `bgColor-default` |
 | `canvas.inset` | `bgColor-inset` |
+| `canvas.emphasis` | `bgColor-emphasis` |
+| `border.default` | `borderColor-default` |
+| `border.emphasis` | `borderColor-emphasis` |
 | `accent.fg` | `fgColor-accent` |
 | `accent.emphasis` | `bgColor-accent-emphasis` |
 | `accent.muted` | `bgColor-accent-muted` (blended) |
-| `syntax.comment` | `codeMirror-syntax-fgColor-comment` |
+| `accent.border_emphasis` | `borderColor-accent-emphasis` |
+| `accent.border_muted` | `borderColor-accent-muted` (blended) |
+| `syntax.comment` | `color-prettylights-syntax-comment` |
+| `syntax.markup_*` | `color-prettylights-syntax-markup-*` |
+| `codemirror.*` | `codeMirror-*` |
+| `diff.*` | `diffBlob-*` |
+| `scales.<color>[n]` | `display-<color>-scale-<n>` |
 | `ansi.*` | `color-ansi-*` |
 
 Alpha colors (8-digit hex) are blended with the background to produce opaque 6-digit hex values.
