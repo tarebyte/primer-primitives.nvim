@@ -10,7 +10,7 @@
 
 # Status bar
 set -g status-style "fg=#b7bdc8,bg=#010409"
-set -g status-left "#[fg=#6921d7,bold] #S #[fg=#b7bdc8,nobold]"
+set -g status-left "#[fg=#d3abff,bold] #S #[fg=#b7bdc8,nobold]"
 set -g status-right "#[fg=#b7bdc8]%Y-%m-%d %H:%M "
 set -g status-left-length 50
 set -g status-right-length 50
