@@ -28,23 +28,23 @@ function M.build(p)
   groups.TermCursor = { link = 'Cursor' }
   groups.TermCursorNC = { fg = p.canvas.default, bg = p.fg.muted }
 
-  -- Line numbers
-  groups.LineNr = { fg = p.fg.subtle }
-  groups.LineNrAbove = { fg = p.fg.subtle }
-  groups.LineNrBelow = { fg = p.fg.subtle }
+  -- Line numbers (using CodeMirror colors for editor consistency)
+  groups.LineNr = { fg = p.codemirror.line_number }
+  groups.LineNrAbove = { fg = p.codemirror.line_number }
+  groups.LineNrBelow = { fg = p.codemirror.line_number }
   groups.CursorLineNr = { fg = p.fg.default, bold = true }
   groups.CursorLineFold = { fg = p.fg.subtle, bg = p.canvas.subtle }
   groups.CursorLineSign = { bg = p.canvas.subtle }
   groups.SignColumn = { fg = p.fg.subtle, bg = p.canvas.default }
   groups.FoldColumn = { fg = p.fg.subtle, bg = p.canvas.default }
 
-  -- Cursor line/column
-  groups.CursorLine = { bg = p.canvas.subtle }
+  -- Cursor line/column (using CodeMirror active line color)
+  groups.CursorLine = { bg = p.codemirror.activeline_bg }
   groups.CursorColumn = { link = 'CursorLine' }
-  groups.ColorColumn = { bg = p.canvas.subtle }
+  groups.ColorColumn = { bg = p.codemirror.activeline_bg }
 
-  -- Visual selection
-  groups.Visual = { bg = p.accent.muted, blend = blend }
+  -- Visual selection (using CodeMirror selection color)
+  groups.Visual = { bg = p.codemirror.selection_bg }
   groups.VisualNOS = { link = 'Visual' }
 
   -- Search
@@ -53,11 +53,11 @@ function M.build(p)
   groups.CurSearch = { link = 'IncSearch' }
   groups.Substitute = { fg = p.canvas.default, bg = p.danger.emphasis }
 
-  -- Diff
-  groups.DiffAdd = { bg = p.success.muted }
-  groups.DiffChange = { bg = p.attention.muted }
-  groups.DiffDelete = { bg = p.danger.muted }
-  groups.DiffText = { bg = p.attention.emphasis }
+  -- Diff (using GitHub's actual diff colors)
+  groups.DiffAdd = { bg = p.diff.addition_line_bg }
+  groups.DiffChange = { bg = p.diff.hunk_line_bg }
+  groups.DiffDelete = { bg = p.diff.deletion_line_bg }
+  groups.DiffText = { bg = p.diff.addition_word_bg }
 
   -- Spelling
   groups.SpellBad = { sp = p.danger.fg, undercurl = true }
@@ -113,7 +113,7 @@ function M.build(p)
   groups.Conceal = { fg = p.fg.subtle }
   groups.Directory = { fg = p.accent.fg }
   groups.EndOfBuffer = { fg = p.fg.subtle }
-  groups.MatchParen = { bg = p.accent.muted, bold = true, blend = blend }
+  groups.MatchParen = { fg = p.codemirror.matching_bracket, bg = p.codemirror.selection_bg, bold = true }
   groups.NonText = { fg = p.fg.subtle }
   groups.SpecialKey = { fg = p.fg.subtle }
   groups.Title = { fg = p.accent.fg, bold = true }
@@ -200,12 +200,12 @@ function M.build(p)
   -- Strings
   groups['@string'] = { link = 'String' }
   groups['@string.documentation'] = { fg = p.syntax.comment }
-  groups['@string.regexp'] = { fg = p.syntax.string }
+  groups['@string.regexp'] = { fg = p.syntax.string_regexp }
   groups['@string.escape'] = { fg = p.syntax.constant }
   groups['@string.special'] = { fg = p.syntax.constant }
   groups['@string.special.symbol'] = { fg = p.syntax.constant }
   groups['@string.special.path'] = { fg = p.syntax.string }
-  groups['@string.special.url'] = { fg = p.accent.fg, underline = true }
+  groups['@string.special.url'] = { fg = p.fg.link, underline = true }
 
   -- Characters
   groups['@character'] = { link = 'Character' }
@@ -271,26 +271,26 @@ function M.build(p)
   groups['@comment.todo'] = { fg = p.attention.fg, bold = true }
   groups['@comment.note'] = { fg = p.accent.fg, bold = true }
 
-  -- Markup
-  groups['@markup.strong'] = { fg = p.fg.default, bold = true }
-  groups['@markup.italic'] = { fg = p.fg.default, italic = true }
+  -- Markup (using GitHub's prettylights markup colors)
+  groups['@markup.strong'] = { fg = p.syntax.markup_bold, bold = true }
+  groups['@markup.italic'] = { fg = p.syntax.markup_italic, italic = true }
   groups['@markup.strikethrough'] = { fg = p.fg.default, strikethrough = true }
   groups['@markup.underline'] = { underline = true }
-  groups['@markup.heading'] = { link = 'Title' }
-  groups['@markup.heading.1'] = { fg = p.accent.fg, bold = true }
-  groups['@markup.heading.2'] = { fg = p.accent.fg, bold = true }
-  groups['@markup.heading.3'] = { fg = p.accent.fg, bold = true }
-  groups['@markup.heading.4'] = { fg = p.accent.fg, bold = true }
-  groups['@markup.heading.5'] = { fg = p.accent.fg, bold = true }
-  groups['@markup.heading.6'] = { fg = p.accent.fg, bold = true }
+  groups['@markup.heading'] = { fg = p.syntax.markup_heading, bold = true }
+  groups['@markup.heading.1'] = { fg = p.syntax.markup_heading, bold = true }
+  groups['@markup.heading.2'] = { fg = p.syntax.markup_heading, bold = true }
+  groups['@markup.heading.3'] = { fg = p.syntax.markup_heading, bold = true }
+  groups['@markup.heading.4'] = { fg = p.syntax.markup_heading, bold = true }
+  groups['@markup.heading.5'] = { fg = p.syntax.markup_heading, bold = true }
+  groups['@markup.heading.6'] = { fg = p.syntax.markup_heading, bold = true }
   groups['@markup.quote'] = { fg = p.fg.muted, italic = true }
   groups['@markup.math'] = { fg = p.syntax.constant }
-  groups['@markup.link'] = { fg = p.accent.fg }
-  groups['@markup.link.label'] = { fg = p.accent.fg }
-  groups['@markup.link.url'] = { fg = p.accent.fg, underline = true }
+  groups['@markup.link'] = { fg = p.fg.link }
+  groups['@markup.link.label'] = { fg = p.fg.link }
+  groups['@markup.link.url'] = { fg = p.fg.link, underline = true }
   groups['@markup.raw'] = { fg = p.syntax.string }
   groups['@markup.raw.block'] = { fg = p.syntax.string }
-  groups['@markup.list'] = { fg = p.fg.default }
+  groups['@markup.list'] = { fg = p.syntax.markup_list }
   groups['@markup.list.checked'] = { fg = p.success.fg }
   groups['@markup.list.unchecked'] = { fg = p.fg.muted }
 
@@ -315,7 +315,7 @@ function M.build(p)
   groups['@text.todo'] = { link = 'Todo' }
   groups['@define'] = { link = 'Define' }
   groups['@macro'] = { link = 'Macro' }
-  groups['@string.regex'] = { fg = p.syntax.string }
+  groups['@string.regex'] = { fg = p.syntax.string_regexp }
   groups['@parameter'] = { fg = p.fg.default }
   groups['@method'] = { link = 'Function' }
   groups['@method.call'] = { link = 'Function' }
@@ -425,10 +425,10 @@ function M.build(p)
   groups.DiagnosticSignOk = { fg = p.success.fg }
 
   groups.DiagnosticDeprecated = { strikethrough = true, sp = p.danger.fg }
-  groups.DiagnosticUnnecessary = { fg = p.fg.subtle }
+  groups.DiagnosticUnnecessary = { fg = p.fg.disabled }
 
   -- ============================================================
-  -- Git Signs
+  -- Git Signs (using GitHub's actual diff colors)
   -- ============================================================
 
   groups.GitSignsAdd = { fg = p.success.fg }
@@ -437,9 +437,9 @@ function M.build(p)
   groups.GitSignsAddNr = { fg = p.success.fg }
   groups.GitSignsChangeNr = { fg = p.attention.fg }
   groups.GitSignsDeleteNr = { fg = p.danger.fg }
-  groups.GitSignsAddLn = { bg = p.success.muted }
-  groups.GitSignsChangeLn = { bg = p.attention.muted }
-  groups.GitSignsDeleteLn = { bg = p.danger.muted }
+  groups.GitSignsAddLn = { bg = p.diff.addition_line_bg }
+  groups.GitSignsChangeLn = { bg = p.diff.hunk_line_bg }
+  groups.GitSignsDeleteLn = { bg = p.diff.deletion_line_bg }
 
   -- ============================================================
   -- Telescope
@@ -468,7 +468,7 @@ function M.build(p)
   -- ============================================================
 
   groups.CmpItemAbbr = { fg = p.fg.default }
-  groups.CmpItemAbbrDeprecated = { fg = p.fg.subtle, strikethrough = true }
+  groups.CmpItemAbbrDeprecated = { fg = p.fg.disabled, strikethrough = true }
   groups.CmpItemAbbrMatch = { fg = p.accent.fg, bold = true }
   groups.CmpItemAbbrMatchFuzzy = { fg = p.accent.fg }
   groups.CmpItemMenu = { fg = p.fg.muted }
@@ -659,7 +659,7 @@ function M.build(p)
   groups.BlinkCmpScrollBarThumb = { link = 'PmenuThumb' }
   groups.BlinkCmpScrollBarGutter = { link = 'PmenuSbar' }
   groups.BlinkCmpLabel = { fg = p.fg.default }
-  groups.BlinkCmpLabelDeprecated = { fg = p.fg.subtle, strikethrough = true }
+  groups.BlinkCmpLabelDeprecated = { fg = p.fg.disabled, strikethrough = true }
   groups.BlinkCmpLabelMatch = { fg = p.accent.fg, bold = true }
   groups.BlinkCmpLabelDetail = { fg = p.fg.muted }
   groups.BlinkCmpLabelDescription = { fg = p.fg.muted }
@@ -762,10 +762,10 @@ function M.build(p)
   -- sidekick.nvim
   -- ============================================================
 
-  -- Diff display
-  groups.SidekickDiffContext = { bg = p.attention.muted }
-  groups.SidekickDiffAdd = { bg = p.success.muted }
-  groups.SidekickDiffDelete = { bg = p.danger.muted }
+  -- Diff display (using GitHub's actual diff colors)
+  groups.SidekickDiffContext = { bg = p.diff.hunk_line_bg }
+  groups.SidekickDiffAdd = { bg = p.diff.addition_line_bg }
+  groups.SidekickDiffDelete = { bg = p.diff.deletion_line_bg }
 
   -- UI elements
   groups.SidekickSign = { fg = p.done.fg }
@@ -1156,16 +1156,16 @@ function M.build(p)
   groups.MiniNotifyNormal = { link = 'NormalFloat' }
   groups.MiniNotifyTitle = { link = 'FloatTitle' }
 
-  -- mini.diff
+  -- mini.diff (using GitHub's actual diff colors)
   groups.MiniDiffSignAdd = { fg = p.success.fg }
   groups.MiniDiffSignChange = { fg = p.attention.fg }
   groups.MiniDiffSignDelete = { fg = p.danger.fg }
-  groups.MiniDiffOverAdd = { bg = p.success.muted }
-  groups.MiniDiffOverChange = { bg = p.attention.muted }
-  groups.MiniDiffOverChangeBuf = { bg = p.attention.muted }
+  groups.MiniDiffOverAdd = { bg = p.diff.addition_line_bg }
+  groups.MiniDiffOverChange = { bg = p.diff.hunk_line_bg }
+  groups.MiniDiffOverChangeBuf = { bg = p.diff.hunk_line_bg }
   groups.MiniDiffOverContext = { bg = p.canvas.subtle }
   groups.MiniDiffOverContextBuf = { bg = p.canvas.subtle }
-  groups.MiniDiffOverDelete = { bg = p.danger.muted }
+  groups.MiniDiffOverDelete = { bg = p.diff.deletion_line_bg }
 
   -- mini.indentscope
   groups.MiniIndentscopeSymbol = { fg = p.border.default }
